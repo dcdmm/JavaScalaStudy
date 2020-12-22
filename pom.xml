@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!--
+    clean
+        * 删除target目录
+    compile
+        * 编译src/main/java下的.java文件为字节码.class文件===>target/classes
+        * 拷贝src/resource下的所有文件===>target/classes
+    compiler.testCompile
+        * 编译src/test/java下的.java文件为字节码.class文件===>target/test-classes
+    test
+        * 执行clean和compile.testCompile
+        * 测试src/test/java下的.java文件并在target/surefire-reports目录下生成测试报告
+    package
+        * 执行test
+        * 根据用户配置,将target/classes目录打包为jar包或war包
+    install
+        * 执行package
+        * 将打包jar包或war包保存到本地仓库(C:\Users\dcdmmcomeon\.m2\repository)
+    -->
+
+    <modelVersion>4.0.0</modelVersion> <!-- Maven模型的版本 -->
+
+    <!-- 坐标:唯一标识一个项目 -->
+    <groupId>org.example</groupId> <!-- 组织id(一般是公司域名的倒写) -->
+    <artifactId>JavaScalaStudy</artifactId> <!-- 项目名称 -->
+    <version>1.0-SNAPSHOT</version> <!-- 项目的版本好 -->
+
+    <packaging>jar</packaging> <!-- 项目打包的类型(默认为jar) -->
+
+    <!-- 配置属性 -->
+    <properties>
+        <!-- 编码设置 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <!-- jdk版本设置 -->
+        <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <!--
+        自定义全局变量(统一管理)
+        此时56行代码可改为<version>${junit.version}}</version>
+         -->
+        <junit.version>4.13</junit.version>
+    </properties>
+
+    <!-- 依赖 -->
+    <dependencies>
+        <!-- 单元测试junit依赖 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <!--
+            依赖的范围
+                              compile    test    provided
+            对主程序是否有效       YES       NO        YES
+            对测试程序是否有效     YES       YES        YES
+            是否参与打包          YES       NO         NO
+            是否参与部署          YES       NO         NO
+            -->
+            <scope>compile</scope> <!-- 默认为compile-->
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>19.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <!-- 效果:将src/main/java下的.properties文件和.xml文件也拷贝到target/classes目录下 -->
+            <resource>
+                <!-- 指定resources插件处理哪个目录下的资源文件 -->
+                <directory>src/main/java</directory>
+                <!-- 不包含directory指定目录下的以下文件 -->
+                <includes>
+                    <include>
+                        **/*.properties
+                    </include>
+                    <include>
+                        **/*.xml
+                    </include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+
+            <!-- 效果:不拷贝src/main/resources下的.properties文件和.xml文件到target/classes目录下 -->
+            <resource>
+                <directory>src/main/resources</directory>
+                <!-- 包含directory指定目录下的以下文件 -->
+                <excludes>
+                    <exclude>
+                        **/*.properties
+                    </exclude>
+                    <exclude>
+                        **/*.xml
+                    </exclude>
+                </excludes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+</project>
