@@ -1,5 +1,3 @@
-package c_oop;
-
 import org.junit.Test;
 
 /**

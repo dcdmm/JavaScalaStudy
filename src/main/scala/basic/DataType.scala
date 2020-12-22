@@ -1,0 +1,5 @@
+package basic
+
+object DataType {
+
+}
