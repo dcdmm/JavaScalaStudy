@@ -1,7 +1,7 @@
 package a_basic;
 
 /**
- * 算法运算符
+ * 算术运算符
  */
 public class ArithmeticOperator {
     public static void main(String[] args) {

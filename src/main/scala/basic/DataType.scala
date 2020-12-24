@@ -1,5 +1,0 @@
-package basic
-
-object DataType {
-
-}
