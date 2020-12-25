@@ -1,7 +1,7 @@
 package a_basic;
 
 /**
- * 数据类型精度大小(注意:[byte, short]不能和char进行直接转换):
+ * 数据类型精度大小(注意:[byte, short]不能与char自动类型转换):
  * byte-->short-->int-->long-->float-->double
  * char-->int-->long-->float-->double
  */
@@ -17,7 +17,7 @@ public class BasicDataTypeConversion {
         double d = 2.31;
         System.out.println(c + d); // int + double --> double
 
-        short s = 12;
+        short s = 98;
         // char c1 = s; // 报错:java: 不兼容的类型: 从short转换到char可能会有损失
 
         // 强制类型转换

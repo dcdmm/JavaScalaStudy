@@ -1,4 +1,4 @@
-package basic
+package sa_basic
 
 /**
  * 变量(var/val);必须初始化

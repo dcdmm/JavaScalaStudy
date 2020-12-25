@@ -1,9 +1,9 @@
-package basic
+package sa_basic
 
 /**
- * 数据类型精度大小(注意:[byte, short]不能和char进行直接转换):
- * byte-->short-->int-->long-->float-->double
- * char-->int-->long-->float-->double
+ * 数据类型精度大小(注意:[Byte, Short]不能和Char自动类型转换):
+ * Byte-->Short-->Int-->Long-->Float-->Double
+ * Char-->Int-->Long-->Float-->Double
  */
 object NumericalDataTypeConversion {
     def main(args: Array[String]): Unit = {
@@ -11,11 +11,11 @@ object NumericalDataTypeConversion {
         val a = 'a'
         val b = 20
         // 精度低数据类型自动提升为精度高数据类型
-        println(a + b) // char + int --> int
+        println(a + b) // Char + Int --> int
 
         val c = 223
         val d = 2.31
-        println(c + d) // int + double --> double
+        println(c + d) // Int + Double --> Double
 
         val s:Short = 12
         // val c1:Char = s // 报错:type mismatch;

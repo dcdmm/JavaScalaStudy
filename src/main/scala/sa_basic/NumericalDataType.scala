@@ -1,4 +1,4 @@
-package basic
+package sa_basic
 
 /**
  * Scala数值类型:

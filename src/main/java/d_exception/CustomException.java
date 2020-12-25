@@ -21,7 +21,7 @@ class CustomExceptionStudent {
         CustomExceptionStudent tk = new CustomExceptionStudent();
         try {
             tk.regist_id(-2323);
-        } catch (CustomException e) { // CustomException继承自Exception类,必须对异常显式地进行处理(编译时异常)
+        } catch (CustomException e) { // CustomException继承自Exception类(编译时异常),必须对异常显式地进行处理
             e.printStackTrace();
         }
     }

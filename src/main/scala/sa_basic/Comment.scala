@@ -1,4 +1,4 @@
-package basic
+package sa_basic
 
 /**
  * 类注释:import语句之后,类定义之前
