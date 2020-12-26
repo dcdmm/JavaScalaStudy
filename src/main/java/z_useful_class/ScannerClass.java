@@ -12,11 +12,15 @@ public class ScannerClass {
         String str = sc.nextLine();
         System.out.println(str);
 
+        System.out.println("*********************************");
+
         // next()方法在遇到有效字符前所遇到的空格、tab键、enter键都不能当作结束符,next()方法会自动将其去掉,
         // 只有当next()方法遇到有效字符之后,next()方法才将其后输入的空格键、Tab键或Enter键等视为分隔符或结束符,
         // 所以next()不能得到带有空格的字符串,只能得到部分字符串(空格前面的)。
         String st = sc.next();
         System.out.println(st);
+
+        System.out.println("*********************************");
 
         int in = sc.nextInt(); // the int scanned from the input
         System.out.println("整数:" + in);

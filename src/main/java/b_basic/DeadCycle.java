@@ -3,7 +3,7 @@ package b_basic;
 /**
  * 常见死循环的写法
  */
-public class DeadCicle {
+public class DeadCycle {
     public static void main(String[] args) {
         // 写法一:
         /*

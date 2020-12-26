@@ -24,7 +24,7 @@ public class CycleStructure_for {
         for (int j = 1; j <= 10; ) {
             sum_j += j;
             System.out.println(j);
-            j++; // 控制条件语句必须有
+            j++; // 必须有控制条件语句
         }
         /*
         执行流程:
