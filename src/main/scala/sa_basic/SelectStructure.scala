@@ -9,8 +9,9 @@ object SelectStructure {
         val b = 20
         if (a == b)
             println("相等")
-        else
+        else {
             println("不相等")
+        }
 
         val max = if (a > b) a else {
             a
@@ -27,15 +28,15 @@ object SelectStructure {
         println("****************************")
 
         val grade = 67
-        if (grade >= 90) {
+        if (grade >= 90)
             println("成绩很优秀")
-        } else if (grade >= 80) {
+        else if (grade >= 80)
             println("成绩还可以")
-        } else if (grade >= 70) {
+        else if (grade >= 70)
             println("一般")
-        } else if (grade >= 60) {
+        else if (grade >= 60)
             println("刚刚及格")
-        } else {
+        else {
             println("不及格")
             println("垃圾!!!")
         }
