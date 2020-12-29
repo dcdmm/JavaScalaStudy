@@ -27,7 +27,7 @@ public class InnerClass_1 {
             @Override
             public int compareTo(@NotNull Object o) {
                 System.out.println(name);
-                name = "duanchao";
+                name = "duanchao"; // 可以被修改
                 System.out.println(name);
                 System.out.println(age);
                 // age = 10000; // 报错

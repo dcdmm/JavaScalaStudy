@@ -4,6 +4,15 @@ import org.junit.Test;
 
 /**
  * Thread类常见方法
+ * *. public void run()
+ * *. public void start()
+ * *. public static Thread currentThread()
+ * *. public final String getName()
+ * *. public final void setName(String name)
+ * *. public final void join(long millis) throws InterruptedException
+ * *. public static void sleep(long millis) throws InterruptedException
+ * *. public static void yield()
+ * *. public final boolean isAlive()
  */
 public class GeneralMethod extends Thread {
     public static void main(String[] args) {
@@ -26,8 +35,8 @@ public class GeneralMethod extends Thread {
             if (i == 20) {
                 try {
                     /*
-                    * 如果某个线程在另一个线程t上调用t.join(),此线程将被挂起,知道目标线程t结束才恢复(即阻塞调用此方法的线程)
-                    * 也可以在调用join()时带上一个超时参数(单位为毫秒),这样如果目标线程在这段时间到期时还没有结束的话,join()方法总能返回
+                     * 如果某个线程在另一个线程t上调用t.join(),此线程将被挂起,知道目标线程t结束才恢复(即阻塞调用此方法的线程)
+                     * 也可以在调用join()时带上一个超时参数(单位为毫秒),这样如果目标线程在这段时间到期时还没有结束的话,join()方法总能返回
                      */
                     thread.join();
                 } catch (InterruptedException e) {

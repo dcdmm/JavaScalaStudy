@@ -2,8 +2,8 @@ package c_oop;
 
 /**
  * 内部类-0
- * 1. 静态内部类
- * 2. 成员内部类
+ * 1. 静态内部类(类似静态成员变量)
+ * 2. 成员内部类(类似一般成员变量)
  */
 public class InnerClass_0 {
     String name = "outer";
@@ -47,6 +47,13 @@ public class InnerClass_0 {
             System.out.println(this.name); // 内部类的成员变量
             System.out.println(InnerClass_0.this.name); // 外部类的成员变量
         }
+    }
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        System.out.println(d.name);
+
+        // Bird b = new Bird(); // 报错:main方法为静态方法,Bird成员内部类为非静态属性
     }
 }
 
