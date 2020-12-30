@@ -1,7 +1,7 @@
 package e_concurrency;
 
 /**
- * synchronized关键字同步方法
+ * synchronized(关键字)同步方法解决共享资源冲突
  */
 public class SynchronizedMethod {
     public static void main(String[] args) {

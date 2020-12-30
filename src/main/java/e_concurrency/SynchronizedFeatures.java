@@ -59,6 +59,7 @@ class SynchronizedFeatures1 {
         }
 
         public void doOtherThings() {
+            // 若下面this改为Counter.class则为全局锁(锁住整个Class)
             synchronized (this) { // 锁为当前对象(即Counter类的实例counter)
                 System.out.println(Thread.currentThread().getName() + " doOtherThings");
             }
@@ -69,7 +70,7 @@ class SynchronizedFeatures1 {
     public static void main(String[] var0) {
         /*
         synchronized同步方法count()和doOtherThings()方法中的同步代码块共用一把同步锁(即Counter类的实例counter)
-        故只有线程Thread-0释放该同步锁时,Thread-1线程才能从阻塞状态恢复(执行doOtherThings()方法)
+        则只有线程Thread-0释放该同步锁时,Thread-1线程才能从阻塞状态恢复(执行doOtherThings()方法)
         故输出为:
         Thread-0 sleep
         Thread-0 awake
