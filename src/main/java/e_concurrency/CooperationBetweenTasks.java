@@ -26,7 +26,8 @@ public class CooperationBetweenTasks implements Runnable {
             2. wait(),nofity(),nofityAll()的调用者必须是synchronized同步代码块(或synchronized同步方法)的同步监视器
              */
             synchronized (this) { // 同步监视器:this
-                notifyAll(); // 等价于:this.notifyAll()
+                // 唤醒处于等待状态的线程
+                notify(); // 等价于:this.notifyAll()
                 if (number <= 100) {
                     try {
                         Thread.sleep(100); // 调用sleep()方法时,锁并没有被释放.调用yield也属于这种情况
@@ -51,9 +52,12 @@ public class CooperationBetweenTasks implements Runnable {
         CooperationBetweenTasks cbt = new CooperationBetweenTasks();
         Thread thread0 = new Thread(cbt);
         Thread thread1 = new Thread(cbt);
+        Thread thread2 = new Thread(cbt);
         thread0.setName("线程一");
         thread1.setName("线程二");
+        thread2.setName("线程三");
         thread0.start();
         thread1.start();
+        thread2.start();
     }
 }

@@ -11,7 +11,7 @@ public class ThreadPriority extends Thread {
     @Override
     public void run() {
         for (int i = 0; i < 50; i++) {
-            System.out.println("ThreadPriority:" + Thread.currentThread().getPriority()); // Returns this thread's priority.
+            System.out.println("ThreadPriority:" + Thread.currentThread().getPriority() + ":   " + i); // Returns this thread's priority.
         }
     }
 
@@ -21,7 +21,8 @@ public class ThreadPriority extends Thread {
         tp.start();
         Thread.currentThread().setPriority(Thread.MIN_PRIORITY); // 更改主线程线程优先级
         for (int i = 0; i < 50; i++) {
-            System.out.println("main:" + Thread.currentThread().getPriority());
+            System.out.println("main:" + Thread.currentThread().getPriority() + ":   " + i);
         }
+        // 执行结果交替出现
     }
 }

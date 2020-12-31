@@ -157,7 +157,7 @@ class DeadLockB {
 }
 
 
-class DeadLockTest implements Runnable { // 死锁案例3
+class DeadLockABTest implements Runnable { // 死锁案例3
     DeadLockA a = new DeadLockA();
     DeadLockB b = new DeadLockB();
 
@@ -175,7 +175,7 @@ class DeadLockTest implements Runnable { // 死锁案例3
     }
 
     public static void main(String[] args) {
-        DeadLockTest dlt = new DeadLockTest();
+        DeadLockABTest dlt = new DeadLockABTest();
         new Thread(dlt).start(); // Causes this thread to begin execution
         dlt.init();
         /*

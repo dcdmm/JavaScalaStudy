@@ -15,8 +15,8 @@ package e_concurrency;
 public class EstablishThread {
     public static void main(String[] args) {
         /*
-        方式2(更好,推荐):
-        1. 创建一个实现Runnable接口并编程run()方法的类A
+        方式2(推荐):
+        1. 创建一个实现了Runnable接口(run()方法提供方法定义)方法的类A
         2. 创建类A的实例a
         3. 创建Thread类(将a作为参数传递给构造器)的实例
          */
@@ -82,7 +82,7 @@ class EstablishMethodOne extends Thread { // 方式1:继承Thread类
     }
 
     @Override
-    public void run() {
+    public void run() { // 不能抛出异常
         // 所要执行的任务指令
         while (ticket > 0) {
             try {
