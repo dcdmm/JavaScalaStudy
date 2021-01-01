@@ -4,6 +4,11 @@ import java.util.concurrent.*;
 
 /**
  * 线程的创建:线程池
+ * 好处:
+ * 1.降低资源消耗;通过重复利用已创建的线程降低线程创建和销毁造成的消耗
+ * 2.提高响应速度;当任务到达时,可以不需要等待线程创建就能立即执行
+ * 3.提高线程的可管理性;线程是稀缺资源,如果无限制的创建,不仅会消耗系统资源,会降低系统的稳定性,使用线程池可以进行统一的分配丶监控和调优
+ *
  * public class ThreadPoolExecutor extends AbstractExecutorService
  * * 属性设置/获取
  * * public void setMaximumPoolSize(int maximumPoolSize)

@@ -5,7 +5,7 @@ package e_concurrency;
  */
 public class CooperationBetweenTasksExample {
     public static void main(String[] args) {
-        Cleck cl = new Cleck(); // 共享数据
+        Cleck cl = new Cleck(); // 共享资源
 
         Producer p0 = new Producer(cl);
         p0.setName("生产者-0");
