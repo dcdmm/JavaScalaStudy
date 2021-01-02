@@ -65,6 +65,7 @@ class DeadLockReentrantLock { // 死锁案例2(通过ReentrantLock类)
         StringBuffer str2 = new StringBuffer();
         ReentrantLock lock1 = new ReentrantLock();
         ReentrantLock lock2 = new ReentrantLock();
+
         new Thread(() -> {
             lock1.lock();
             try {
@@ -176,12 +177,12 @@ class DeadLockABTest implements Runnable { // 死锁案例3
 
     public static void main(String[] args) {
         DeadLockABTest dlt = new DeadLockABTest();
-        new Thread(dlt).start(); // Causes this thread to begin execution
-        dlt.init();
         /*
         // 此时不会发生死锁,因为主线程执行完后副线程才被启动
         dlt.init();
         new Thread(dlt).start();
         */
+        new Thread(dlt).start(); // Causes this thread to begin execution
+        dlt.init();
     }
 }

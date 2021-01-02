@@ -8,7 +8,7 @@ package c_oop;
  *    * paramName表示可变参数名称
  */
 public class VariableParameters {
-    public void print(int year, String... names) { // 可变参数必须为最后一个参数
+    public void print(int year, String... names) { // 可变参数位置必须位于最后
         int count = names.length;    // 可变参数元素的个数
         System.out.println("本次参加考试的有" + count + "人，名单如下：");
         for (int i = 0; i < names.length; i++) {

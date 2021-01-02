@@ -14,9 +14,10 @@ object Define {
         fun_3("Runoob", "Scala", "Python")
     }
 
+    // 形参及形参类型:n1: Int, n2: Int, oper: Char
     def fun_0(n1: Int, n2: Int, oper: Char): Any = { // 返回值类型为Any(Scala中一切数据都是对象,都是Any的子类)
         if (oper == '+') {
-            // n1 = 10 // 报错:reassignment to val;Scala函数的形参默认为val,不能在函数中进行修改
+            // n1 = 10 // 报错:reassignment to val;Scala函数形参为val,不能在函数中被修改
             return n1 + n2 // Int类型
         } else if (oper == '-') {
             return n1 - n2 // Int类型

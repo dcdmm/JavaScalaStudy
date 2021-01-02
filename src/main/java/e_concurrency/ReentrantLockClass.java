@@ -39,6 +39,8 @@ public class ReentrantLockClass implements Runnable { // 实现Runnable接口
     public void run() {
         while (true) {
             lock.lock(); // Acquires the lock
+
+            // 共享资源的操作部分
             try {
                 if (ticket > 0) {
                     try {
@@ -51,7 +53,9 @@ public class ReentrantLockClass implements Runnable { // 实现Runnable接口
                 } else {
                     break;
                 }
-            } finally {
+            }
+
+            finally {
                 lock.unlock(); // Attempts to release this lock
             }
         }

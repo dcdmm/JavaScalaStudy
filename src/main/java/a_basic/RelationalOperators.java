@@ -20,7 +20,7 @@ public class RelationalOperators {
         double x = 65.0;
         char y = 65;
         char m = 'A';
-        // 基本数据类型:比较变量保存的数据是否相等(类型不一定要求相等)
+        // 基本数据类型:比较变量保存的数据是否相等(类型不一定要求相同)
         System.out.println(j == k);
         System.out.println(j == x);
         System.out.println(j == s);
