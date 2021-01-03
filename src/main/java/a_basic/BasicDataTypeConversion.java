@@ -1,7 +1,8 @@
 package a_basic;
 
 /**
- * 数据类型精度大小(注意:[byte, short]不能与char自动类型转换):
+ * 基本数据类型之间的转换
+ *数据类型精度大小(注意:[byte, short]不能与char自动类型转换):
  * byte-->short-->int-->long-->float-->double
  * char-->int-->long-->float-->double
  */

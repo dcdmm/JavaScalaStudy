@@ -3,7 +3,7 @@ import org.junit.Test;
 /**
  * 单元测试:方法可以独立测试
  */
-public class junitTest {
+public class junitTest { // 类修饰符必须为public
 
     // 测试方法上必须使用@Test(或其他注解)进行修饰
     @Test

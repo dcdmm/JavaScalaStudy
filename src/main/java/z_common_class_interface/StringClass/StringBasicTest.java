@@ -1,9 +1,9 @@
-package z_useful_class.StringClass;
+package z_common_class_interface.StringClass;
 
 import org.junit.Test;
 
 /**
- * Java String基础
+ * 字符串:Java String基础
  * public final class String implements java.io.Serializable, Comparable<String>, CharSequence
  * private final byte[] value;===>The value is used for character storage.
  * <p>
@@ -46,16 +46,16 @@ public class StringBasicTest {
 
     @Test
     public void test2() {
-        // 字符串常量池中
+        // a,b,c,d,e1字符串常量池中
         String a = "hello";
         final String a1 = "hello"; // 常量(final修饰)
         String b = "world";
         String c = "hello" + "world";
         String d = "helloworld";
-
-        // 堆空间中(变量参与拼接)
-        String e = a + "world";
         String e1 = a1 + "world";
+
+        // e,f,h堆空间中(变量参与拼接)
+        String e = a + "world";
         String f = "hello" + b;
         String h = a + b;
 

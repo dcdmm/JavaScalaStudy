@@ -1,4 +1,4 @@
-package z_useful_class.StringClass;
+package z_common_class_interface.StringClass;
 
 import org.junit.Test;
 
@@ -19,7 +19,7 @@ public class String_0APITest {
         String s1 = new String("duan"); // 创建了2个对象===>1.字符串常量池:"duan";2.堆空间:String("duan")
         String s2 = "duan";
         System.out.println(s1 == s2); // false
-        System.out.println(s1.intern() == s2); // 返回字符串常量池中的该字符串(若没有则创建)
+        System.out.println(s1.intern() == s2); // true;返回该字符串在字符串常量池中的表示形式(若没有则创建)
     }
 
     @Test

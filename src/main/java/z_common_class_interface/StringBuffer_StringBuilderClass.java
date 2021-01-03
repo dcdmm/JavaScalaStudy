@@ -1,15 +1,15 @@
-package z_useful_class;
+package z_common_class_interface;
 
 import org.junit.Test;
 
 /**
- * StringBuffer/StringBuilder
- * 区别:StringBuffer线程安全(所有公开方法都被synchronized关键字修饰),StringBuilder线程不安全
+ * 字符串:StringBuffer/StringBuilder
+ * 区别:StringBuffer类线程安全(更快),所有public方法都被synchronized关键字修饰;StringBuilder类线程不安全
  * public final class StringBuffer extends AbstractStringBuilder implements java.io.Serializable, Comparable<StringBuffer>, CharSequence
  * public final class StringBuilder extends AbstractStringBuilder implements java.io.Serializable, Comparable<StringBuilder>, CharSequence
  * byte[] value; ===>The value is used for character storage.
  */
-public class StringBuffer_StringBuilderClass {
+public class StringBuffer_StringBuilderClass { // StringBuilder类同理
     @Test
     public void testConstructors() {
         /*
@@ -169,5 +169,12 @@ public class StringBuffer_StringBuilderClass {
         StringBuffer sb = new StringBuffer("duandmm");
         sb.setCharAt(0, 'A'); // The character at the specified index is set to ch.
         System.out.println(sb);
+    }
+
+    @Test
+    public void testtoString() {
+        StringBuffer sb = new StringBuffer("hello python");
+        String str = sb.toString(); // StringBuffer转换为String
+        System.out.println(str);
     }
 }

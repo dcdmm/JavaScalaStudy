@@ -1,8 +1,7 @@
 package b_basic;
 
 /**
- * 带标签的循环
- * 可以让break,continue的使用更加灵活
+ * 带标签的循环(可以让break,continue的使用更加灵活)
  */
 public class CycleLabel {
     public static void main(String[] args) {

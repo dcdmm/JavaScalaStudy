@@ -79,9 +79,7 @@ class EqualsMethodTest {
 //        }
 //    }
 
-    // 系统导入的equals方法(快捷键:alt + insert)
-
-
+    // 自动导入的equals方法(快捷键:alt + insert)
     @Override
     public boolean equals(Object o) {
         System.out.println("=======EqualsMethodTest重写的equals方法!=======");

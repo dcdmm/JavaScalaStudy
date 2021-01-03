@@ -1,4 +1,4 @@
-package z_useful_class;
+package z_common_class_interface;
 
 import java.util.Scanner; // 导包
 

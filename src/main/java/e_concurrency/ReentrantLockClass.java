@@ -3,11 +3,9 @@ package e_concurrency;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * ReentrantLock类解决共享资源冲突
- * 与使用synchronized关键字相比,代码缺乏优雅性,但是对于解决某些类型的问题来说,更加灵活
+ * ReentrantLock类解决共享资源冲突(与使用synchronized关键字相比,代码缺乏优雅性,但是对于解决某些类型的问题来说,更加灵活)
  *
  * It is recommended practice to always immediately follow a call to lock with a try block, most typically in a before/after construction such as:
- *
  *
  *  class X {
  *    private final ReentrantLock lock = new ReentrantLock();
