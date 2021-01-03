@@ -13,20 +13,20 @@ public class StringEstablish {
         System.out.println("*******************************************");
 
         // Initializes a newly created String object so that it represents an empty character sequence.
-        String str1 = new String(); // 对象
+        String str1 = new String(); // 对象(new)
         System.out.println("str1:" + str1);
 
         System.out.println("*******************************************");
 
         // Initializes a newly created String object so that it represents the same sequence of characters as the argument; in other words, the newly created string is a copy of the argument string.
-        String str2 = new String("duanchao"); // 对象
+        String str2 = new String("duanchao");
         System.out.println("str2:" + str2);
 
         System.out.println("*******************************************");
 
         // Allocates a new String so that it represents the sequence of characters currently contained in the character array argument.
         char[] arr = {'d', 'u', 'a', 'n', 'c', 'h', 'a', 'o'};
-        String str3 = new String(arr); // 对象
+        String str3 = new String(arr);
         System.out.println("str3:" + str3);
 
         // Allocates a new String that contains characters from a subarray of the character array argument.
@@ -36,7 +36,7 @@ public class StringEstablish {
             offset - The initial offset
             count - The length
          */
-        String str4 = new String(arr, 0, 3); // 对象
+        String str4 = new String(arr, 0, 3);
         System.out.println("str4:" + str4);
 
         System.out.println("*******************************************");
