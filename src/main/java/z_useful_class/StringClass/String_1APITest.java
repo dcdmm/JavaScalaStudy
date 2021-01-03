@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Java字符串常用API
+ * Java String常用API
  */
 public class String_1APITest {
     @Test
@@ -34,7 +34,7 @@ public class String_1APITest {
             System.out.println(i + "-->" + (char) i);
         }
 
-        System.out.println("*****************************");
+        System.out.println("********************************************");
 
         // Converts this string to a new character array.
         char[] arrchar = s1.toCharArray();

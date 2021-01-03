@@ -3,7 +3,7 @@ package z_useful_class.StringClass;
 import org.junit.Test;
 
 /**
- * Java字符串基础
+ * Java String基础
  * public final class String implements java.io.Serializable, Comparable<String>, CharSequence
  * private final byte[] value;===>The value is used for character storage.
  * <p>
@@ -23,7 +23,6 @@ public class StringBasicTest {
         s1 = "abcd"; // 数据发生改变后,变量的内存地址发生了改变(不可变数据类型)
         System.out.println(s1 == s2);
     }
-
 
     @Test
     public void test1() {
@@ -54,7 +53,7 @@ public class StringBasicTest {
         String c = "hello" + "world";
         String d = "helloworld";
 
-        // 堆空间中(含对象参与拼接)
+        // 堆空间中(变量参与拼接)
         String e = a + "world";
         String e1 = a1 + "world";
         String f = "hello" + b;
