@@ -1,4 +1,4 @@
-package z_common_class_interface.StringClass;
+package z_common$class$interface.StringClass;
 
 import org.junit.Test;
 

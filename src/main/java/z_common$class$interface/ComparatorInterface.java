@@ -1,10 +1,10 @@
-package z_common_class_interface;
+package z_common$class$interface;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
 /**
- * 比较器:Comparator接口
+ * Comparator接口
  * Comparators can be passed to a sort method (such as Collections.sort or Arrays.sort) to allow precise control over the sort order.
  */
 public class ComparatorInterface {
@@ -43,7 +43,7 @@ public class ComparatorInterface {
     public static void main(String[] args) {
         String[] arrString = {"AA", "KK", "BB", "CC", "FF", "ZZ", "EE"};
         //
-        Arrays.sort(arrString, new Comparator() { // 相比于comparable接口更加灵活(不改变对象自身)
+        Arrays.sort(arrString, new Comparator() { // 相比于comparable接口更加灵活(不需要修改类)
             @Override
             public int compare(Object o1, Object o2) {
                 if (o1 instanceof String && o2 instanceof String) {
@@ -56,7 +56,6 @@ public class ComparatorInterface {
                     整数0表示object o1等于object o2
                     此时Arrays.sort排序后正序输出,相反则逆序输出
                      */
-
                     return -s1.compareTo(s2);
                 }
                 throw new RuntimeException("类型不一致");

@@ -1,4 +1,4 @@
-package z_dataStructure.array;
+package z_data$structure.array;
 
 /**
  * 二维数组(一维数组的嵌套)

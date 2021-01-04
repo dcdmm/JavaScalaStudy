@@ -1,14 +1,13 @@
-package z_common_class_interface;
+package z_common$class$interface;
 
 import org.jetbrains.annotations.NotNull;
-
 import java.util.Arrays;
 
 /**
- * 比较器:Comparable接口
+ * 类比较:Comparable接口
  * Lists (and arrays) of objects that implement this interface can be sorted automatically by Collections.sort (and Arrays.sort).
  */
-public class ComparableInterface implements Comparable { // 实现Comparable接口(compareTo方法)
+public class ComparableInterface implements Comparable { // 实现Comparable接口
     private String name;
     private int age;
 
@@ -42,7 +41,7 @@ public class ComparableInterface implements Comparable { // 实现Comparable接�
     }
 
     @Override
-    public int compareTo(@NotNull Object o) {
+    public int compareTo(@NotNull Object o) { // 实现compareTo方法
         if (o instanceof ComparableInterface) {
             ComparableInterface ci = (ComparableInterface) o;
             /*

@@ -34,7 +34,7 @@ class FinalKeywardTest {
     }
 
     public static void main(String[] args) {
-        final int AGE = 20; // 常量;不能被修改;命名规范:全部大小
+        final int AGE = 20; // 常量(必须被初始化:显式初始化,构造器初始化,代码块初始化);不能被修改;命名规范:全部大小
         // AGE = 30; // 报错:java: 无法为最终变量AGE分配值
         final FinalKeyward fk = new FinalKeyward(); // fk为引用数据类型
         // fk = new FinalKeyward(); // 报错:java: 无法为最终变量fk分配值

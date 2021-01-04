@@ -1,4 +1,4 @@
-package z_dataStructure.array;
+package z_data$structure.array;
 
 /**
  * 数组基础知识-1

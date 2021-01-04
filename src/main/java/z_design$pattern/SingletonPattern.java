@@ -1,4 +1,4 @@
-package z_design_pattern;
+package z_design$pattern;
 
 /**
  * 单例模式(只存在一个对象实例)

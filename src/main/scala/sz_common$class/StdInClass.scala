@@ -1,4 +1,4 @@
-package sz_userful_class
+package sz_common$class
 import scala.io.StdIn
 
 /**

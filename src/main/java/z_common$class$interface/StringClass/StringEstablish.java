@@ -1,4 +1,4 @@
-package z_common_class_interface.StringClass;
+package z_common$class$interface.StringClass;
 
 import java.io.UnsupportedEncodingException;
 
@@ -52,8 +52,5 @@ public class StringEstablish {
         // Constructs a new String by decoding the specified array of bytes using the platform's default charset.
         System.out.println(new String(arrbytegbk, "utf-8")); // utf-8字符集解码
         System.out.println(new String(arrbytegbk, "gbk")); // gbk字符集解码
-
-        System.out.println("*******************************************");
-
     }
 }

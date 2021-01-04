@@ -1,15 +1,16 @@
-package z_common_class_interface;
+package z_common$class$interface;
 
 import org.junit.Test;
 
 /**
  * 字符串:StringBuffer/StringBuilder
  * 区别:StringBuffer类线程安全(更快),所有public方法都被synchronized关键字修饰;StringBuilder类线程不安全
+ * <p>
  * public final class StringBuffer extends AbstractStringBuilder implements java.io.Serializable, Comparable<StringBuffer>, CharSequence
  * public final class StringBuilder extends AbstractStringBuilder implements java.io.Serializable, Comparable<StringBuilder>, CharSequence
  * byte[] value; ===>The value is used for character storage.
  */
-public class StringBuffer_StringBuilderClass { // StringBuilder类同理
+public class StringBuffer_StringBuilderClass { // StringBuilder类方法使用同理
     @Test
     public void testConstructors() {
         /*
