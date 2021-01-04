@@ -30,10 +30,6 @@ public class SuperKeyward {
 class SubSuperKeyword extends SuperKeyward {
     int age = 24;
 
-    /*
-     * 如果子类的构造器没有显式地调用超类的构造器,则将自动地调用超类默认(没有参数)的构造器
-     * 如果超类没有不带参数的构造器,并且在子类的构造器中又没有显式地调用超类的其他构造器,则Java编译器将报告错误。
-     */
     public SubSuperKeyword() {
         super(); // 显式地调用父类的(无参)构造方法;必须为构造器的第一条语句出现
         // this("dc", 25); // 此时不能通过this调用其他构造器

@@ -11,7 +11,7 @@ public class ThisKeyword {
     private String name;
 
     public ThisKeyword() {
-        this("dc"); // 调用本类的hisKeyword(String name)构造方法,可以实现构造器的默认参数的效果
+        this("dc"); // 调用本类的ThisKeyword(String name)构造方法,可以实现构造器的默认参数的效果
     }
 
     public ThisKeyword(String name) {

@@ -1,4 +1,4 @@
-package e_enumeration$annotations.enumeration;
+package e_enumeration$annotation.enumeration;
 
 /**
  * 枚举类的使用
@@ -18,7 +18,7 @@ public class Establish {
 
         System.out.println("***************************************************");
 
-        EnumClass winter = EnumClass.valueOf("WINTER"); // 返回该名称的枚举类对象常量
+        EnumClass winter = EnumClass.valueOf("WINTER"); // 返回该字符串对应的枚举类对象常量
         System.out.println(winter);
 
         System.out.println("***************************************************");
@@ -47,8 +47,7 @@ interface isShow {
 
 enum EnumClass implements isShow { // 通过enum关键字声明;默认继承于java.lang.Enum类
     // 枚举类对象常量(若只有一个,则可以作为单例模式的一种实现方式)
-    SPRING("春天", "春暖花开") { //
-
+    SPRING("春天", "春暖花开") {
         @Override
         public void show() {
             System.out.println("****春天来了!****"); // 匿名实现
@@ -69,14 +68,6 @@ enum EnumClass implements isShow { // 通过enum关键字声明;默认继承于j
     EnumClass(String seasonName, String seasonDesc) { // 省略了private
         this.seasonName = seasonName;
         this.seasonDesc = seasonDesc;
-    }
-
-    public String getSeasonName() {
-        return seasonName;
-    }
-
-    public String getSeasonDesc() {
-        return seasonDesc;
     }
 
     @Override
