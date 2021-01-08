@@ -45,12 +45,13 @@ class DownwardTransformationInstanceofTest {
         DownwardTransformationInstanceof dti = new Sub0DownwardTransformationInstanceof(); // 向上转型
         dti.eat();
         System.out.println("******************************************************");
+
         Sub0DownwardTransformationInstanceof s0dti = (Sub0DownwardTransformationInstanceof) dti; // 向下转型(强制类型转换)
         s0dti.eat();
         System.out.println(s0dti.payment);
         System.out.println("******************************************************");
-        // Sub1DownwardTransformationInstanceof s1dti = (Sub1DownwardTransformationInstanceof) dti; // 报错:ClassCastException异常
 
+        // Sub1DownwardTransformationInstanceof s1dti = (Sub1DownwardTransformationInstanceof) dti; // 报错:ClassCastException异常
         // 为了避免在向下转型时出现ClassCastException异常,可以在进行向下转型之前,先使用instanceof关键字进行判断
         if (dti instanceof Sub1DownwardTransformationInstanceof) {
             Sub1DownwardTransformationInstanceof s1dti = (Sub1DownwardTransformationInstanceof) dti;

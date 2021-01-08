@@ -12,7 +12,6 @@ public class SelectStructure_if {
         } else {
             System.out.println("不相等");
         }
-
         System.out.println("****************************");
 
         double grade = 42.5;

@@ -24,7 +24,6 @@ object SelectStructure {
         // Scala没有三元操作符
         val min = if (a > b) b else a // 使用if/else实现Java三元运算符的功能
         println("min:" + min)
-
         println("****************************")
 
         val grade = 67

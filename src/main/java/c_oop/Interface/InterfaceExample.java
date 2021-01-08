@@ -11,8 +11,10 @@ public class InterfaceExample {
         Print pr = new Print();
         com.plugin(pr); // 非匿名实现类的非匿名对象
         System.out.println("*******************************************");
+
         com.plugin(new MP3()); // 非匿名实现类的匿名实现类
         System.out.println("*******************************************");
+
         com.plugin(new USB() { // 匿名实现类的匿名对象
             @Override
             public void install() {

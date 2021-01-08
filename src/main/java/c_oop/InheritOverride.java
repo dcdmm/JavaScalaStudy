@@ -74,9 +74,11 @@ class SubInheritOverride extends InheritOverride {
         // System.out.println(sc.name); // 报错:java: name 在 oop.InheritBasic 中是 private 访问控制
         System.out.println(sc.getName());
         System.out.println("**********************************");
+
         sc.sing(); // 调用子类的sing方法(重写)
         sc.dance();
         System.out.println("**********************************");
+
         SubInheritOverride.print();
         InheritOverride io = new SubInheritOverride();
         io.sing();

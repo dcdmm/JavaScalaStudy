@@ -38,6 +38,7 @@ class StaticKeywardTest {
         sk0.showStatic(); // 通过实例名.方法名 访问静态方法
         StaticKeyward.showStatic(); // 通过类名.方法名 访问静态方法(推荐)
         System.out.println("**********************************************");
+
         StaticKeyward sk1 = new StaticKeyward();
         System.out.println(sk1.name);
         System.out.println(StaticKeyward.name);

@@ -83,6 +83,7 @@ public class CodeBlock {
         // 普通代码块:对象生成时都会被执行一次
         Leaf leaf1 = new Leaf();
         System.out.println("*****************************");
+
         Leaf leaf2 = new Leaf(); // 此时类已经初始化,不会再执行静态代码块
     }
 }

@@ -10,11 +10,13 @@ public class SelfIncreasing {
         System.out.println(a);
         System.out.println(b);
         System.out.println("******************************************");
+
         int c = 5;
         int d = c++; // 先赋值后自增,故c=6,d=5
         System.out.println(c);
         System.out.println(d);
         System.out.println("******************************************");
+
         int e = 5;
         int f = ++e; // 先自增后赋值,故e=f=6
         System.out.println(e);

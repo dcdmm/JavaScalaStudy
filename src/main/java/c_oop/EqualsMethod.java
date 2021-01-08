@@ -16,6 +16,7 @@ public class EqualsMethod {
         System.out.println(s1 == s2); // false
         System.out.println(s1.equals(s2)); // true
         System.out.println("********************************************");
+
         EqualsMethodTest emt1 = new EqualsMethodTest("duanchao", 24);
         EqualsMethodTest emt2 = new EqualsMethodTest("duanchao", 24);
         System.out.println(emt1 == emt2); // false

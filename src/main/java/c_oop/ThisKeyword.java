@@ -54,11 +54,13 @@ class ThisKeywordTest {
         System.out.println(tk0.getObject()); // tk0的引用
         System.out.println(tk1.getObject()); // tk1的引用
         System.out.println("**************************");
+
         tk0.setName("duanmengmeng");
         System.out.println(tk0.getName());
         tk0.getMethod("duanchao");
         System.out.println(tk0.getName());
         System.out.println("**************************");
+
         System.out.println(tk0.area());
     }
 }

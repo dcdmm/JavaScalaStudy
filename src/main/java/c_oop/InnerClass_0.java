@@ -66,6 +66,7 @@ class InnerClass_0Test {
         System.out.println(InnerClass_0.Dog.age); // 通过类名.变量名 访问静态变量(推荐)
         System.out.println(dog.age); // 通过实例名.变量名 访问静态变量
         System.out.println("*************************************");
+
         InnerClass_0 ic0 = new InnerClass_0();
         InnerClass_0.Bird bird = ic0.new Bird(); // 成员内部内的实例化
         bird.showBird();

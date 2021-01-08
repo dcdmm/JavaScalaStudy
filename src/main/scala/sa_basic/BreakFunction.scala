@@ -18,7 +18,6 @@ object BreakFunction {
                 }
             }
         )
-
         println("****************************************")
 
         for (i <- 0 to 10) {

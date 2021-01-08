@@ -6,7 +6,6 @@ package sb_fp
 object Recursion {
     def main(args: Array[String]): Unit = {
         println(FibonaccRecursion(12))
-
         println("******************************")
 
         hanoi(3) // 3层汉诺塔

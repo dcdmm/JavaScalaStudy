@@ -9,6 +9,7 @@ public class ToStringMethod {
         System.out.println(str.toString()); // 内部重写了toString方法(类似类的还有Date,file,包装类......)
         System.out.println(str); // 与上等价
         System.out.println("***************************************************");
+
         ToStringTest s = new ToStringTest("duanchao", 22);
         System.out.println(s.toString());
         System.out.println(s);

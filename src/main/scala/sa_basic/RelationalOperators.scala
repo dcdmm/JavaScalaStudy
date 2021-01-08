@@ -13,6 +13,7 @@ object RelationalOperators {
         println(a >= b) // 大于等于
         println(a <= b) // 小于等于
         println("**********************************************")
+
         val j = 65
         val k = 65
         val s:Short = 65
@@ -28,6 +29,7 @@ object RelationalOperators {
         println(j == y)
         println(j == m)
         println("**********************************************")
+
         // 引用数据类型:比较两个对象的地址值是否相同
         val arr1 = Array(1, 2, 3, 4)
         val arr2 = Array(1, 2, 3, 4)

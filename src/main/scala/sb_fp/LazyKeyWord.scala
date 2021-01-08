@@ -9,6 +9,7 @@ object LazyKeyWord {
     def main(args: Array[String]): Unit = {
         lazy val res = sum(10, 20) // 没有进行初始化
         println("**********************************")
+
         println("res" + res) // 使用该变量时,才会进行初始化
     }
 

@@ -20,6 +20,7 @@ public class CycleStructure_for {
          */
         System.out.println(sum_i); // sum0=55;i=1~10
         System.out.println("*****************************************");
+
         int sum_j = 0;
         for (int j = 1; j <= 10; ) {
             sum_j += j;
@@ -36,6 +37,7 @@ public class CycleStructure_for {
         */
         System.out.println(sum_j); // sum1=55;j=1~10;与上等价
         System.out.println("*****************************************");
+
         int sum_k = 0;
         for (int k = 1; k <= 10; ) {
             k++;

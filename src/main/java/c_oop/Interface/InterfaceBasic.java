@@ -97,9 +97,11 @@ class InterfaceBasicTest {
         ib.fly();
         System.out.println(ib.stop());
         System.out.println("*******************************************");
+
         Attackable ak = new Bullet("空尖弹");
         ak.attack();
         System.out.println("*******************************************");
+
         Structure st = new Bullet("达姆弹");
         System.out.println(st.getName());
         st.printShow();

@@ -13,6 +13,7 @@ public class RelationalOperators {
         System.out.println(a >= b); // 大于等于
         System.out.println(a <= b); // 小于等于
         System.out.println("**********************************************");
+
         int j = 65;
         int k = 65;
         short s = 65;

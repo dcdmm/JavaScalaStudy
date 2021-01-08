@@ -60,9 +60,11 @@ class SubSuperKeyword extends SuperKeyward {
         SubSuperKeyword ssk0 = new SubSuperKeyword();
         ssk0.showAge();
         System.out.println("******************************************************************");
+
         SubSuperKeyword ssk1 = new SubSuperKeyword("duanchao", 222);
         ssk1.showAge();
         System.out.println("******************************************************************");
+
         SubSuperKeyword ssk2 = new SubSuperKeyword("duanchao", 333, "man");
         ssk2.showAge();
     }
