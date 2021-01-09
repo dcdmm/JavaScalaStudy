@@ -3,7 +3,7 @@ package z_common_class_interface.StringClass;
 import org.junit.Test;
 
 /**
- * Java String类常用API
+ * String类常用API
  */
 public class API_0Test {
     @Test

@@ -3,13 +3,13 @@ package z_common_class_interface.StringClass;
 import org.junit.Test;
 
 /**
- * 字符串:Java String基础
- * public final class String implements java.io.Serializable, Comparable<String>, CharSequence
+ * 字符串:String类基础
+ * public final class String implements java.io.Serializable, Comparable< String >, CharSequence
  * private final byte[] value;===>The value is used for character storage.
- * <p>
+ *
  * *. final:不可被继承
  * *. java.io.Serializable:可序列化
- * *. Comparable<String>:可比较大小
+ * *. Comparable< String >:可比较大小
  */
 public class StringBasicTest {
     @Test
@@ -32,7 +32,6 @@ public class StringBasicTest {
         String s4 = new String("javaEE");
         System.out.println(s1 == s2); // ture
         System.out.println(s3 == s4); // false
-
         System.out.println("**********************************************");
 
         StringTestClass stc = new StringTestClass("tom", 12);

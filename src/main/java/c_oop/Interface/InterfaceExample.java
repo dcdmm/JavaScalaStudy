@@ -3,7 +3,7 @@ package c_oop.Interface;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * 接口的应用
+ * 接口案例
  */
 public class InterfaceExample {
     public static void main(String[] args) {

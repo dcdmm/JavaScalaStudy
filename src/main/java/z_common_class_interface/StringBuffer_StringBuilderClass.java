@@ -3,14 +3,30 @@ package z_common_class_interface;
 import org.junit.Test;
 
 /**
- * 字符串:StringBuffer/StringBuilder
- * 区别:StringBuffer类线程安全(更快),所有public方法都被synchronized关键字修饰;StringBuilder类线程不安全
- * <p>
- * public final class StringBuffer extends AbstractStringBuilder implements java.io.Serializable, Comparable<StringBuffer>, CharSequence
- * public final class StringBuilder extends AbstractStringBuilder implements java.io.Serializable, Comparable<StringBuilder>, CharSequence
+ * 字符串:StringBuffer类;StringBuilder类
+ * 区别:StringBuffer类线程安全(方法大多被synchronized关键字修饰);StringBuilder类线程不安全(更快)
+ *
+ * public final class StringBuffer extends AbstractStringBuilder implements java.io.Serializable, Comparable< StringBuffer >, CharSequence
+ * public final class StringBuilder extends AbstractStringBuilder implements java.io.Serializable, Comparable< StringBuilder >, CharSequence
  * byte[] value; ===>The value is used for character storage.
+ *
+ * 常见方法:
+ * 增:
+ * 1. add(int i)/add(double d)/add(char c)/add(String str)/append(char[] str)/append(char[] str, int offset, int len)
+ * 2. insert(int offset, int i)/insert(int offset, double d)/insert(int offset, char c)/insert(int offset, String str)/insert(int index, char[] str)/insert(int index, char[] str, int offset, int len)
+ * 删:delete(int start, int end)
+ * 改:replace(int start, int end, String str)/setCharAt(int index, char ch)
+ * 查:
+ * 1. indexOf(String str)/indexOf(String str, int fromIndex)
+ * 2. substring(int start)/substring(int start, int end)
+ * 3. charAt(int index)
+ * 其他:
+ * *. length()
+ * *. capactiy()
+ * *. reverse()
+ * *. toString()
  */
-public class StringBuffer_StringBuilderClass { // StringBuilder类方法使用同理
+public class StringBuffer_StringBuilderClass { // StringBuilder类同理
     @Test
     public void testConstructors() {
         /*
@@ -74,7 +90,24 @@ public class StringBuffer_StringBuilderClass { // StringBuilder类方法使用�
         sb.append(arrchar, 0, 4);
 
         /*
-        扩容机制:
+        源代码扩容机制(以append(String str)为例):
+        public synchronized StringBuffer append(String str) {
+            toStringCache = null;
+            super.append(str);
+            return this;
+        }
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++
+        public AbstractStringBuilder append(String str) {
+            if (str == null) {
+                return appendNull();
+            }
+            int len = str.length();
+            ensureCapacityInternal(count + len);
+            putStringAt(count, str);
+            count += len;
+            return this;
+        }
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void ensureCapacityInternal(int minimumCapacity) {
             // overflow-conscious code
             int oldCapacity = value.length >> coder;
@@ -84,17 +117,24 @@ public class StringBuffer_StringBuilderClass { // StringBuilder类方法使用�
             }
         }
 
+        private final void putStringAt(int index, String str) {
+            if (getCoder() != str.coder()) {
+                inflate();
+            }
+            str.getBytes(value, index, coder);
+        }
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++
         private int newCapacity(int minCapacity) {
             // overflow-conscious code
             int oldCapacity = value.length >> coder;
             int newCapacity = (oldCapacity << 1) + 2; // 默认扩容为原来容量的2倍+2
             if (newCapacity - minCapacity < 0) {
                 newCapacity = minCapacity;
-        }
-        int SAFE_BOUND = MAX_ARRAY_SIZE >> coder;
-        return (newCapacity <= 0 || SAFE_BOUND - newCapacity < 0)
-            ? hugeCapacity(minCapacity)
-            : newCapacity;
+            }
+            int SAFE_BOUND = MAX_ARRAY_SIZE >> coder;
+            return (newCapacity <= 0 || SAFE_BOUND - newCapacity < 0)
+                ? hugeCapacity(minCapacity)
+                : newCapacity;
         }
          */
     }
@@ -136,6 +176,13 @@ public class StringBuffer_StringBuilderClass { // StringBuilder类方法使用�
     }
 
     @Test
+    public void test_setCharAt() {
+        StringBuffer sb = new StringBuffer("duandmm");
+        sb.setCharAt(0, 'A'); // The character at the specified index is set to ch.
+        System.out.println(sb);
+    }
+
+    @Test
     public void test_reverse() {
         StringBuffer sb = new StringBuffer("duanchao");
         sb.reverse(); // Causes this character sequence to be replaced by the reverse of the sequence.
@@ -163,13 +210,6 @@ public class StringBuffer_StringBuilderClass { // StringBuilder类方法使用�
         System.out.println(sb.charAt(0)); // Returns the char value in this sequence at the specified index.
         System.out.println(sb.charAt(1));
         System.out.println(sb.charAt(2));
-    }
-
-    @Test
-    public void test_setCharAt() {
-        StringBuffer sb = new StringBuffer("duandmm");
-        sb.setCharAt(0, 'A'); // The character at the specified index is set to ch.
-        System.out.println(sb);
     }
 
     @Test

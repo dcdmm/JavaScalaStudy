@@ -40,9 +40,11 @@ public class Establish {
     }
 }
 
+
 interface isShow {
     void show();
 }
+
 
 @SuppressWarnings("unused")
 class PastClass implements isShow {
@@ -88,7 +90,7 @@ class PastClass implements isShow {
 }
 
 
-// 与PastClass等价(但更加简洁)
+// 与PastClass类等价(但更加简洁)
 enum EnumClass implements isShow { // 通过enum关键字声明;默认继承于java.lang.Enum类
     // 枚举类对象常量(若只有一个,则可以作为单例模式的一种实现方式)
     SPRING("春天", "春暖花开") {

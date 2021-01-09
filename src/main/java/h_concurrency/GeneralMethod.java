@@ -18,14 +18,14 @@ public class GeneralMethod extends Thread {
     public static void main(String[] args) {
         ThreadMethod thread = new ThreadMethod();
         /*
-        void	setName(String name):
-        Changes the name of this thread to be equal to the argument name.
+        void setName(String name):
+            Changes the name of this thread to be equal to the argument name.
          */
         thread.setName("thread线程1");
         Thread.currentThread().setName("主线程"); // 主线程重命名
         /*
         void start():
-        Causes this thread to begin execution; the Java Virtual Machine calls the run method of this thread.
+            Causes this thread to begin execution; the Java Virtual Machine calls the run method of this thread.
          */
         thread.start();
         thread.start(); // 报错: (同一个对象/线程)start方法不能被重复调用
@@ -52,8 +52,8 @@ public class GeneralMethod extends Thread {
         ThreadMethod thread = new ThreadMethod();
         /*
         void run():
-        If this thread was constructed using a separate Runnable run object, then that Runnable object's run method is called;
-        otherwise, this method does nothing and returns.
+            If this thread was constructed using a separate Runnable run object, then that Runnable object's run method is called;
+            otherwise, this method does nothing and returns.
          */
         thread.run(); // 注意:只是方法的调用,不能启动线程
     }
@@ -66,28 +66,28 @@ class ThreadMethod extends Thread {
         for (int i = 0; i < 100; i++) {
             try {
                 /*
-                static void    sleep(long millis):
-                Causes the currently executing thread to sleep (temporarily cease execution) for the specified number of milliseconds, subject to the precision and accuracy of system timers and schedulers.
+                static void sleep(long millis):
+                    Causes the currently executing thread to sleep (temporarily cease execution) for the specified number of milliseconds, subject to the precision and accuracy of system timers and schedulers.
                  */
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             /*
-             * static Thread    currentThread():
-             * Returns a reference to the currently executing thread object.
+             * static Thread currentThread():
+             *     Returns a reference to the currently executing thread object.
              *
-             * String	getName():
-             * Returns this thread's name.
+             * String getName():
+             *     Returns this thread's name.
              */
             System.out.println(getName() + ":" + i);
 
             if (i % 10 == 0) {
                 /*
-                static void	yield()    yield():
-                A hint to the scheduler that the current thread is willing to yield its current use of a processor.
-                The scheduler is free to ignore this hint.
-                Yield is a heuristic attempt to improve relative progression between threads that would otherwise over-utilise a CPU.
+                static void	yield():
+                    A hint to the scheduler that the current thread is willing to yield its current use of a processor.
+                    The scheduler is free to ignore this hint.
+                    Yield is a heuristic attempt to improve relative progression between threads that would otherwise over-utilise a CPU.
                  */
                 this.yield();
             }

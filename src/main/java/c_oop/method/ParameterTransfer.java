@@ -1,4 +1,4 @@
-package c_oop;
+package c_oop.method;
 
 /**
  * 参数传递(方法)
@@ -16,7 +16,7 @@ public class ParameterTransfer {
         change_value(s);
         change_quote(arr);
         System.out.println(a); // a不变
-        System.out.println(s); // s不变
+        System.out.println(s); // s不变(String为不可变数据)
         for (int i : arr) { // arr对应位置发生改变
             System.out.println(i);
         }

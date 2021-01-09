@@ -1,7 +1,7 @@
-package c_oop;
+package c_oop.method;
 
 /**
- * 可变参数(函数)
+ * 可变参数(方法)
  * 格式:paramType…paramName
  *    * paramType表示可变参数的类型
  *    * ...是声明可变参数的标识

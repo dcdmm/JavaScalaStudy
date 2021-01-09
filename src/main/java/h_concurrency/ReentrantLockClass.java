@@ -30,7 +30,7 @@ public class ReentrantLockClass implements Runnable { // 实现Runnable接口
      */
     // 也要保证多个线程在同步中使用的是同一个同步锁
     // private static ReentrantLock lock = new ReentrantLock(false); // 若通过继承Thread类创建线程,必须使其为静态属性(内存中只有一个副本)
-    private ReentrantLock lock = new ReentrantLock(false); // 非公平锁(默认);若通过继承Thread类创建线程,此时徐
+    private final ReentrantLock lock = new ReentrantLock(false); // 非公平锁(默认);若通过继承Thread类创建线程,此时徐
     // private ReentrantLock lock = new ReentrantLock(true); // 公平锁
 
     @Override

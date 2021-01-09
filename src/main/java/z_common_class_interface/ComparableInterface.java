@@ -4,9 +4,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
 
 /**
- * 类比较:Comparable接口
+ * Comparable接口
  * Lists (and arrays) of objects that implement this interface can be sorted automatically by Collections.sort (and Arrays.sort).
  */
+@SuppressWarnings("rawtypes")
 public class ComparableInterface implements Comparable { // 实现Comparable接口
     private String name;
     private int age;

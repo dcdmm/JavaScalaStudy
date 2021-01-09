@@ -4,7 +4,7 @@ import org.junit.Test;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Java String类常用API
+ * String类常用API
  */
 public class API_1Test {
     @Test
@@ -25,8 +25,7 @@ public class API_1Test {
         for (byte i : arrbyte0) {
             System.out.println(i + "-->" + (char) i);
         }
-
-        System.out.println();
+        System.out.println("********************************************");
 
         // Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array.
         byte[] arrbyte1 = s1.getBytes("gbk"); // 字节数组(字符集:gbk)

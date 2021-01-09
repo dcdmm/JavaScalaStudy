@@ -1,4 +1,4 @@
-package z_data_structure.array;
+package g_container.array;
 
 /**
  * 数组基础知识-1
@@ -17,8 +17,9 @@ public class Basic1 {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
-        for (int i = 0; i < arr1.length; i++) {
-            System.out.print(arr1[i] + " ");
+
+        for (int i : arr1) {
+            System.out.print(i + " ");
         }
     }
 }

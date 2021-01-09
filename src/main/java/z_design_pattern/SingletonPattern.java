@@ -11,6 +11,7 @@ public class SingletonPattern {
     }
 }
 
+
 /**
  * 饿汉式:线程安全
  */
@@ -29,6 +30,7 @@ class Lazy0 {
     }
 
 }
+
 
 /**
  * 懒汉式:线程不安全

@@ -1,4 +1,4 @@
-package z_data_structure.array;
+package g_container.array;
 
 /**
  * 二维数组(一维数组的嵌套)

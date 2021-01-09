@@ -1,4 +1,4 @@
-package c_oop;
+package c_oop.method;
 
 /**
  * 重载(方法)

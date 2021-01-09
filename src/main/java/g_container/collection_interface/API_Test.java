@@ -1,4 +1,4 @@
-package g_container.collection;
+package g_container.collection_interface;
 
 import org.junit.Test;
 import java.util.ArrayList;
@@ -8,8 +8,24 @@ import java.util.Iterator;
 
 /**
  * Collection接口常见API
+ * 增:
+ * 1. add(E e)
+ * 2. addAll(Collection<? extends E> c)
+ * 删:
+ * 1. remove(Object o)
+ * 2. removeAll(Collection<?> c)
+ * 3. clear()
+ * 改:
+ * 查:
+ * 其他:
+ * *. isEmpty()
+ * *. contains(Object o)
+ * *. containsAll(Collection<?> c)
+ * *. equals()
+ * *. toArray()
+ * *. iterator()
  */
-public class API_0Test {
+public class API_Test {
     @Test
     public void test_size_add_addAll() {
         @SuppressWarnings("rawtypes")
@@ -74,7 +90,7 @@ public class API_0Test {
         coll0.add(new Person());
         System.out.println(coll0.contains(123)); // Returns true if this collection contains the specified element.
         System.out.println(coll0.contains(new String("dcdmm")));
-        System.out.println(coll0.contains(new Person())); // 通过集合元素的equals方法判断是否为同一元素
+        System.out.println(coll0.contains(new Person())); // 通过对象(集合元素)的equals方法判断是否为同一元素
     }
 
     @Test
@@ -91,7 +107,7 @@ public class API_0Test {
     }
 
     @Test
-    public void test_remove_removeAll() { // 通过集合元素的equals方法判断是否为同一元素
+    public void test_remove_removeAll() { // 通过对象(集合元素)的equals方法判断是否为同一元素
         @SuppressWarnings("rawtypes")
         Collection coll0 = new ArrayList();
         coll0.add("AA");
@@ -132,7 +148,7 @@ public class API_0Test {
         Collection coll1 = Arrays.asList("DD", "EE", new String("jack"), "FF");
 
         // 类似数学中的交集运算
-        coll0.retainAll(coll1); // 通过集合元素的equals方法判断是否为同一元素
+        coll0.retainAll(coll1); // 通过对象(集合元素)的equals方法判断是否为同一元素
         System.out.println(coll0);
     }
 

@@ -3,25 +3,22 @@ package z_common_class_interface.StringClass;
 import java.io.UnsupportedEncodingException;
 
 /**
- * String的创建
+ * 字符串(String)的创建
  */
 public class StringEstablish {
     public static void main(String[] args) throws UnsupportedEncodingException {
         String str0 = "duanchao"; // 字面量
         System.out.println("str0:" + str0);
-
         System.out.println("*******************************************");
 
         // Initializes a newly created String object so that it represents an empty character sequence.
-        String str1 = new String(); // 对象(new)
+        String str1 = new String(); // 对象(new关键字)
         System.out.println("str1:" + str1);
-
         System.out.println("*******************************************");
 
         // Initializes a newly created String object so that it represents the same sequence of characters as the argument; in other words, the newly created string is a copy of the argument string.
         String str2 = new String("duanchao");
         System.out.println("str2:" + str2);
-
         System.out.println("*******************************************");
 
         // Allocates a new String so that it represents the sequence of characters currently contained in the character array argument.
@@ -38,7 +35,6 @@ public class StringEstablish {
          */
         String str4 = new String(arr, 0, 3);
         System.out.println("str4:" + str4);
-
         System.out.println("*******************************************");
 
         String name = "段萌萌dmm";
