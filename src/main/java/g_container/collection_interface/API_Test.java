@@ -10,17 +10,19 @@ import java.util.Iterator;
  * Collection接口常见API
  * 增:
  * 1. add(E e)
- * 2. addAll(Collection<? extends E> c)
+ * 2. addAll(Collection< ? extends E > c)
  * 删:
- * 1. remove(Object o)
- * 2. removeAll(Collection<?> c)
+ * 1. remove(Object o)------>equals()
+ * 2. removeAll(Collection< ? > c)------equals()
  * 3. clear()
  * 改:
  * 查:
  * 其他:
  * *. isEmpty()
- * *. contains(Object o)
- * *. containsAll(Collection<?> c)
+ * *. size()
+ * *. contains(Object o)------->equals()
+ * *. containsAll(Collection< ? > c)------equals()
+ * *. retainAll(Collection< ? > c)------equals()
  * *. equals()
  * *. toArray()
  * *. iterator()
@@ -102,8 +104,9 @@ public class API_Test {
         coll0.add("CC");
 
         @SuppressWarnings("rawtypes")
-        Collection coll1 = Arrays.asList("AA", "BB");
-        System.out.println(coll0.containsAll(coll1)); // Returns true if this collection contains the specified element.
+        Collection coll1 = Arrays.asList("AA", new String("BB"));
+        // Returns true if this collection contains the specified element.
+        System.out.println(coll0.containsAll(coll1)); // 通过对象(集合元素)的equals方法判断是否为同一元素
     }
 
     @Test

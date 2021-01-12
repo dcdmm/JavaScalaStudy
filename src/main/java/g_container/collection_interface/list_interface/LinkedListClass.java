@@ -100,6 +100,6 @@ import java.util.LinkedList;
 public class LinkedListClass {
     public static void main(String[] args) {
         @SuppressWarnings("rawtypes")
-        LinkedList ll = new LinkedList();
+        LinkedList ll = new LinkedList(); // 底层通过双向链表实现
     }
 }

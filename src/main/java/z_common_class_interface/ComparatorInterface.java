@@ -42,8 +42,8 @@ public class ComparatorInterface {
 
     public static void main(String[] args) {
         String[] arrString = {"AA", "KK", "BB", "CC", "FF", "ZZ", "EE"};
-        //
-        Arrays.sort(arrString, new Comparator() { // 相比于comparable接口更加灵活(不需要修改类)
+        // 相比于comparable接口更加灵活(不需要修改类),同时存在时使用Comparator接口进行比较
+        Arrays.sort(arrString, new Comparator() {
             @Override
             public int compare(Object o1, Object o2) {
                 if (o1 instanceof String && o2 instanceof String) {

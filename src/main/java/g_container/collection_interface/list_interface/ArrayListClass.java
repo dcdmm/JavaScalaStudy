@@ -3,7 +3,7 @@ package g_container.collection_interface.list_interface;
 import java.util.ArrayList;
 
 /**
- * ArrayList源码分析
+ * ArrayList(线程不安全)源码分析<===>Vector(建议使用ArrayList代替Vector)方法大多被synchronized关键字修饰(线程安全)
  *
  * transient Object[] elementData;===>The array buffer into which the elements of the ArrayList are stored.
  * private int size;===>The size of the ArrayList (the number of elements it contains).
@@ -70,6 +70,6 @@ import java.util.ArrayList;
 public class ArrayListClass {
     public static void main(String[] args) {
         @SuppressWarnings("rawtypes")
-        ArrayList al = new ArrayList();
+        ArrayList al = new ArrayList(); // 底层通过数组实现
     }
 }
