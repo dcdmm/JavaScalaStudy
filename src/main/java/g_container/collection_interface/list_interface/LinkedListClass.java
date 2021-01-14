@@ -4,10 +4,10 @@ import java.util.LinkedList;
 
 /**
  * LindedList源码分析
- *
  * transient int size = 0;
  * transient Node< E > first;===>Pointer to first node.
  * transient Node< E > last;===>Pointer to last node.
+ *
  *
  * // 链表节点(双向链表)
  *     private static class Node< E > {

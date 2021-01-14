@@ -1,4 +1,4 @@
-package h_concurrency;
+package h_concurrency.synchronize;
 
 /**
  * synchronized(关键字)同步代码块解决共享资源冲突

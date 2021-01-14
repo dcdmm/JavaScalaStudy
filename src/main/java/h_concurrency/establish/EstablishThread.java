@@ -1,13 +1,11 @@
-package h_concurrency;
+package h_concurrency.establish;
 
 /**
  * 线程的创建
  * 程序(program):为完成特定任务,用某种语言编写的一组指令的集合(即指一段静态的代码)
- * 进程(process):程序的一次执行过程,或是正在运行的一个程序
- *              是一个动态的过程:有它自身的产生,存在和消亡的过程.
- *              进程作为资源分配的单位,系统运行时会为每个进程进行分配不同的内存区域
- * 线程(thread):进程可进一步细化为线程,是一个程序内部的一条执行路径.
- *             线程作为调度和执行的单位,每个线程拥有独立的运行栈和程序计数器(pc)
+ * 进程(process):程序的一次执行过程,或是正在运行的一个程序是一个动态的过程:有它自身的产生,存在和消亡的过程.进程作为资源分配的单位,
+ * ------------>系统运行时会为每个进程进行分配不同的内存区域
+ * 线程(thread):进程可进一步细化为线程,是一个程序内部的一条执行路径.线程作为调度和执行的单位,每个线程拥有独立的运行栈和程序计数器(pc)
  * 并发:一个处理器可以同时处理多个任务.这是逻辑上的同时发生。
  * 并行:多个处理器同时处理多个不同的任务.这是物理上的同时发生
  * A thread is a thread of execution in a program, The Java Virtual Machine allows an application to have multiple threads of execution running concurrently

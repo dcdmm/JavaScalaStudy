@@ -3,12 +3,14 @@ package g_container.collection_interface.list_interface;
 import java.util.ArrayList;
 
 /**
- * ArrayList(线程不安全)源码分析<===>Vector(建议使用ArrayList代替Vector)方法大多被synchronized关键字修饰(线程安全)
+ * ArrayList源码分析
+ * ArrayList(线程不安全)<===>Vector(建议使用ArrayList代替Vector)方法大多被synchronized关键字修饰(线程安全)
  *
  * transient Object[] elementData;===>The array buffer into which the elements of the ArrayList are stored.
  * private int size;===>The size of the ArrayList (the number of elements it contains).
  * private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
  * private static final Object[] EMPTY_ELEMENTDATA = {};
+ *
  *
  * // 空参构造构造器
  *     public ArrayList() {

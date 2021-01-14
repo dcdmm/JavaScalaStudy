@@ -1,4 +1,4 @@
-package h_concurrency;
+package h_concurrency.synchronize;
 
 import java.util.concurrent.locks.ReentrantLock;
 

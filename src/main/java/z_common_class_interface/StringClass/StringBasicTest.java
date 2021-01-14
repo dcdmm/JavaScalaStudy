@@ -3,7 +3,7 @@ package z_common_class_interface.StringClass;
 import org.junit.Test;
 
 /**
- * 字符串:String类基础
+ * String类基础
  * public final class String implements java.io.Serializable, Comparable< String >, CharSequence
  * private final byte[] value;===>The value is used for character storage.
  *

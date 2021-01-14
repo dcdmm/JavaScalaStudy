@@ -1,4 +1,4 @@
-package h_concurrency;
+package h_concurrency.establish;
 
 import java.util.concurrent.*;
 
@@ -11,23 +11,23 @@ import java.util.concurrent.*;
  *
  * public class ThreadPoolExecutor extends AbstractExecutorService
  * * 属性设置/获取
- * * public void setMaximumPoolSize(int maximumPoolSize)
- * * public int getMaximumPoolSize()
- * * public void setCorePoolSize(int corePoolSize)
- * * public int getCorePoolSize()
- * * public void setThreadFactory(ThreadFactory threadFactory)
- * * public ThreadFactory getThreadFactory()
- * * public void setKeepAliveTime(long time, TimeUnit unit)
- * * public long getKeepAliveTime(TimeUnit unit)
+ * * * * public void setMaximumPoolSize(int maximumPoolSize)
+ * * * * public int getMaximumPoolSize()
+ * * * * public void setCorePoolSize(int corePoolSize)
+ * * * * public int getCorePoolSize()
+ * * * * public void setThreadFactory(ThreadFactory threadFactory)
+ * * * * public ThreadFactory getThreadFactory()
+ * * * * public void setKeepAliveTime(long time, TimeUnit unit)
+ * * * * public long getKeepAliveTime(TimeUnit unit)
  *
  * public abstract class AbstractExecutorService implements ExecutorService
  *
  * public interface ExecutorService extends Executor
- * * < T > Future< T > submit(Callable< T > task)
- * * void shutdown()
+ * * * * < T > Future< T > submit(Callable< T > task)
+ * * * * void shutdown()
  *
  * public interface Executor
- * * public void execute(Runnable command)
+ * * * * public void execute(Runnable command)
  */
 public class EstablishThreadPool {
     public static void main(String[] args) {
