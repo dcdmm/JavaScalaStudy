@@ -2,18 +2,18 @@ package h_concurrency;
 
 /**
  * 线程之间的协作
- * Object===>public final void wait() throws InterruptedException:
- * Causes the current thread to wait until it is awakened, typically by being notified or interrupted.
+ * public final void wait() throws InterruptedException:(继承自Object)
+ *      Causes the current thread to wait until it is awakened, typically by being notified or interrupted.
  *
- * Object===>public final void wait(long timeoutMillis, int nanos) throws InterruptedException
- * Causes the current thread to wait until it is awakened, typically by being notified or interrupted, or until a certain amount of real time has elapsed.
+ * public final void wait(long timeoutMillis, int nanos) throws InterruptedException:(继承自Object)
+ *      Causes the current thread to wait until it is awakened, typically by being notified or interrupted, or until a certain amount of real time has elapsed.
  *
- * Object===>public final void notify():
- * Wakes up a single thread that is waiting on this object's monitor. If any threads are waiting on this object, one of them is chosen to be awakened.
- * The choice is arbitrary and occurs at the discretion of the implementation. A thread waits on an object's monitor by calling one of the wait methods.
+ * public final void notify():(继承自Object)
+ *      Wakes up a single thread that is waiting on this object's monitor. If any threads are waiting on this object, one of them is chosen to be awakened.
+ *      The choice is arbitrary and occurs at the discretion of the implementation. A thread waits on an object's monitor by calling one of the wait methods.
  *
- * Object===>public final void notifyAll():
- * Wakes up all threads that are waiting on this object's monitor. A thread waits on an object's monitor by calling one of the wait methods.
+ * public final void notifyAll():(继承自Object)
+ *      Wakes up all threads that are waiting on this object's monitor. A thread waits on an object's monitor by calling one of the wait methods.
  */
 public class CooperationBetweenTasks implements Runnable {
     private int number = 1;

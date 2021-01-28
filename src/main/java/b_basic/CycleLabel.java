@@ -17,7 +17,6 @@ public class CycleLabel {
                 }
             }
         }
-
         System.out.println("********************");
 
         out_c:
@@ -31,7 +30,6 @@ public class CycleLabel {
                 }
             }
         }
-
         System.out.println("********************");
 
         int m = 0;

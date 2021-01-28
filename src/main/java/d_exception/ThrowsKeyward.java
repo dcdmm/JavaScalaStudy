@@ -23,7 +23,7 @@ public class ThrowsKeyward {
     public static void method3() {
         try {
             method1();
-        } catch (IOException e) {
+        } catch (IOException | RuntimeException e) {
             e.printStackTrace();
         }
     }
@@ -32,7 +32,7 @@ public class ThrowsKeyward {
         method1();
     }
 
-    public static void method1() throws FileNotFoundException, IOException {
+    public static void method1() throws RuntimeException, IOException {
         File file = new File("./src/d_exception/java.txt");
         FileInputStream fis = new FileInputStream(file);
         int data = fis.read();

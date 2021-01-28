@@ -1,9 +1,9 @@
 package sb_fp
 
 /**
- * lazy关键字:定义惰性变量,实现延迟加载(懒加载)
+ * lazy关键字:定义惰性变量,实现延迟加载
  * *. lazy关键字不能修饰var类型变量
- * *. lazy关键字的的修饰变量,只有第一次使用该变量时,才会进行初始化
+ * *. lazy关键字的的修饰变量,只有在第一次使用该变量时,才会进行初始化
  */
 object LazyKeyWord {
     def main(args: Array[String]): Unit = {

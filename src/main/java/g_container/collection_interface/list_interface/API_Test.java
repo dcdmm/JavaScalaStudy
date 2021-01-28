@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * List接口(元素有序,可重复的集合)常见API
+ * List接口(元素有序,且可重复)常见API
  * 增:
  * add(int index, E element)
  * addAll(int index, Collection< ? extends E > c)
@@ -24,8 +24,7 @@ import java.util.List;
 public class API_Test {
     @Test
     public void test_add_addAll() {
-        @SuppressWarnings("rawtypes")
-        List l0 = new ArrayList();
+        List<Object> l0 = new ArrayList<>();
         l0.add(123);
         l0.add(456);
         l0.add("AA");
@@ -35,8 +34,7 @@ public class API_Test {
         l0.add(0, "CC");
         System.out.println(l0);
 
-        @SuppressWarnings("rawtypes")
-        List l1 = Arrays.asList(1, 2, 3);
+        List<Integer> l1 = Arrays.asList(1, 2, 3);
         // Inserts all of the elements in the specified collection into this list at the specified position
         l0.addAll(0, l1);
         System.out.println(l0);
@@ -44,8 +42,7 @@ public class API_Test {
 
     @Test
     public void test_get() {
-        @SuppressWarnings("rawtypes")
-        List l0 = new ArrayList();
+        List<Object> l0 = new ArrayList<>();
         l0.add(123);
         l0.add(456);
         l0.add("AA");
@@ -59,8 +56,7 @@ public class API_Test {
 
     @Test
     public void test_indexOf_lastIndexOf() {
-        @SuppressWarnings("rawtypes")
-        List l0 = new ArrayList();
+        List<Object> l0 = new ArrayList<>();
         l0.add(123);
         l0.add(456);
         l0.add("AA");
@@ -76,8 +72,7 @@ public class API_Test {
 
     @Test
     public void test_remove() {
-        @SuppressWarnings("rawtypes")
-        List l0 = new ArrayList();
+        List<Object> l0 = new ArrayList<>();
         l0.add(123);
         l0.add(456);
         l0.add("AA");
@@ -92,8 +87,7 @@ public class API_Test {
 
     @Test
     public void test_set() {
-        @SuppressWarnings("rawtypes")
-        List l0 = new ArrayList();
+        List<Object> l0 = new ArrayList<>();
         l0.add(123);
         l0.add(456);
         l0.add("AA");
@@ -108,8 +102,7 @@ public class API_Test {
 
     @Test
     public void subList() {
-        @SuppressWarnings("rawtypes")
-        List l0 = new ArrayList();
+        List<Object> l0 = new ArrayList<>();
         l0.add(123);
         l0.add(456);
         l0.add("AA");
@@ -117,8 +110,7 @@ public class API_Test {
         l0.add(456);
 
         //Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive.
-        @SuppressWarnings("rawtypes")
-        List l1 = l0.subList(0, 3); // 左闭右开
+        List<Object> l1 = l0.subList(0, 3); // 左闭右开
         System.out.println(l1);
     }
 }

@@ -25,7 +25,7 @@ object BreakFunction {
                 if (i * j == 21) {
                     println(i)
                     println(j)
-                    break() // 跳出当前整个循环,抛出异常
+                    break() // 跳出当前整个循环,并抛出异常
                 }
             }
         }

@@ -90,7 +90,7 @@ public class StringBuffer_StringBuilderClass { // StringBuilder类同理
         sb.append(arrchar, 0, 4);
 
         /*
-        源代码扩容机制(以append(String str)为例):
+        源代码扩容机制(以append(String str)方法为例):
         public synchronized StringBuffer append(String str) {
             toStringCache = null;
             super.append(str);

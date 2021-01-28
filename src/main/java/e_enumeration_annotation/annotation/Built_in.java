@@ -8,9 +8,9 @@ import java.util.ArrayList;
 public class Built_in {
     public static void main(String[] args) {
         /*
-        all:抑制所有警告
-        unused:抑制没被使用过的代码的警告
-        rawtypes:to suppress warnings relative to un-specific types when using generics on class params
+        "all":抑制所有警告
+        "unused":抑制没被使用过的代码的警告
+        "rawtypes":to suppress warnings relative to un-specific types when using generics on class params
          */
         // 关闭不当的编译器警告信息
         @SuppressWarnings("unused") // 抑制单类型警告;

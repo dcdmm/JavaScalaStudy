@@ -5,11 +5,13 @@ import org.junit.Test;
 /**
  * String类基础
  * public final class String implements java.io.Serializable, Comparable< String >, CharSequence
+ * 注:
+ * 1. final:不可被继承
+ * 2. java.io.Serializable:可序列化
+ * 3. Comparable< String >:可比较大小
+ *
  * private final byte[] value;===>The value is used for character storage.
  *
- * *. final:不可被继承
- * *. java.io.Serializable:可序列化
- * *. Comparable< String >:可比较大小
  */
 public class StringBasicTest {
     @Test

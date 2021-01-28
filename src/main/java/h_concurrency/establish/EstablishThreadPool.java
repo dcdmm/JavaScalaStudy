@@ -10,24 +10,24 @@ import java.util.concurrent.*;
  * 3.提高线程的可管理性;线程是稀缺资源,如果无限制的创建,不仅会消耗系统资源,会降低系统的稳定性,使用线程池可以进行统一的分配丶监控和调优
  *
  * public class ThreadPoolExecutor extends AbstractExecutorService
- * * 属性设置/获取
- * * * * public void setMaximumPoolSize(int maximumPoolSize)
- * * * * public int getMaximumPoolSize()
- * * * * public void setCorePoolSize(int corePoolSize)
- * * * * public int getCorePoolSize()
- * * * * public void setThreadFactory(ThreadFactory threadFactory)
- * * * * public ThreadFactory getThreadFactory()
- * * * * public void setKeepAliveTime(long time, TimeUnit unit)
- * * * * public long getKeepAliveTime(TimeUnit unit)
+ * 属性设置/获取
+ *      public void setMaximumPoolSize(int maximumPoolSize)
+ *      public int getMaximumPoolSize()
+ *      public void setCorePoolSize(int corePoolSize)
+ *      public int getCorePoolSize()
+ *      public void setThreadFactory(ThreadFactory threadFactory)
+ *      public ThreadFactory getThreadFactory()
+ *      public void setKeepAliveTime(long time, TimeUnit unit)
+ *      public long getKeepAliveTime(TimeUnit unit)
  *
  * public abstract class AbstractExecutorService implements ExecutorService
  *
  * public interface ExecutorService extends Executor
- * * * * < T > Future< T > submit(Callable< T > task)
- * * * * void shutdown()
+ *      < T > Future< T > submit(Callable< T > task)
+ *      void shutdown()
  *
  * public interface Executor
- * * * * public void execute(Runnable command)
+ *      public void execute(Runnable command)
  */
 public class EstablishThreadPool {
     public static void main(String[] args) {
@@ -43,7 +43,7 @@ public class EstablishThreadPool {
         ThreadPoolExecutor service1 = (ThreadPoolExecutor) service; // 向下转型
         System.out.println(service == service1); // 同一个引用地址
         /*
-        ThreadPoolExecutor类中定义
+        注:ThreadPoolExecutor类中定义
         public void setMaximumPoolSize(int maximumPoolSize)
             Sets the maximum allowed number of threads.
             This overrides any value set in the constructor.
@@ -60,7 +60,7 @@ public class EstablishThreadPool {
             }
         });
         /*
-        Executor接口中定义
+        注:Executor接口中定义
         public void execute(Runnable command)
             Executes the given task sometime in the future
          */
@@ -76,7 +76,7 @@ public class EstablishThreadPool {
         }); // 没有返回值
 
         /*
-        ExecutorService接口中定义
+        注:ExecutorService接口中定义
         <T> Future<T> submit(Callable<T> task)
             Submits a value-returning task for execution and returns a Future representing the pending results of the task.
             The Future's get method will return the task's result upon successful completion.
@@ -104,7 +104,7 @@ public class EstablishThreadPool {
         System.out.println(the_sum);
 
         /*
-        ExecutorService接口中定义
+        注:ExecutorService接口中定义
         void shutdown()
             Initiates an orderly shutdown in which previously submitted tasks are executed, but no new tasks will be accepted.
             Invocation has no additional effect if already shut down.
