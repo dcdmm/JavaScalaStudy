@@ -8,21 +8,26 @@ import java.util.Iterator;
 
 /**
  * Collection接口常见API
+ * 1. List接口通过equlas()方法比较对象
+ * 2. Set接口
+ *      2.1 HashSet,LinkedHashSet通过equlas()丶hashCode()方法比较对象
+ *      2.2 TreeSet通过Comparator接口或Comparable接口比较对象
+ *
  * 增:
  * 1. add(E e)
  * 2. addAll(Collection< ? extends E > c)
  * 删:
- * 1. remove(Object o)------>通过equals()方法
- * 2. removeAll(Collection< ? > c)------>通过equals()方法
+ * 1. remove(Object o)
+ * 2. removeAll(Collection< ? > c)
  * 3. clear()
  * 改:
  * 查:
  * 其他:
  * *. isEmpty()
  * *. size()
- * *. contains(Object o)------->通过equals()方法
- * *. containsAll(Collection< ? > c)------>通过equals()方法
- * *. retainAll(Collection< ? > c)------>通过equals()方法
+ * *. contains(Object o)
+ * *. containsAll(Collection< ? > c)
+ * *. retainAll(Collection< ? > c)
  * *. equals()
  * *. toArray()
  * *. iterator()
@@ -88,7 +93,7 @@ public class API_Test {
         coll0.add(new Person());
         System.out.println(coll0.contains(123)); // Returns true if this collection contains the specified element.
         System.out.println(coll0.contains(new String("dcdmm")));
-        System.out.println(coll0.contains(new Person())); // 通过对象(集合元素)的equals方法判断是否为同一元素
+        System.out.println(coll0.contains(new Person()));
     }
 
     @Test
@@ -100,11 +105,11 @@ public class API_Test {
 
         Collection<String> coll1 = Arrays.asList("AA", new String("BB"));
         // Returns true if this collection contains the specified element.
-        System.out.println(coll0.containsAll(coll1)); // 通过对象(集合元素)的equals方法判断是否为同一元素
+        System.out.println(coll0.containsAll(coll1));
     }
 
     @Test
-    public void test_remove_removeAll() { // 通过对象(集合元素)的equals方法判断是否为同一元素
+    public void test_remove_removeAll() {
         Collection<String> coll0 = new ArrayList<>();
         coll0.add("AA");
         coll0.add("BB");
@@ -141,7 +146,7 @@ public class API_Test {
         Collection<String> coll1 = Arrays.asList("DD", "EE", new String("jack"), "FF");
 
         // 类似数学中的交集运算
-        coll0.retainAll(coll1); // 通过对象(集合元素)的equals方法判断是否为同一元素
+        coll0.retainAll(coll1);
         System.out.println(coll0);
     }
 
@@ -153,7 +158,6 @@ public class API_Test {
         coll0.add(new String("jack"));
 
         Collection<String> coll1 = Arrays.asList("BB", "AA", new String("jack"));
-        // 通过对象的equals方法判断是否为同一元素
         // ArrayList:Returns true if and only if the specified object is also a list, both lists have the same size, and all corresponding pairs of elements in the two lists are equal.
         System.out.println(coll0.equals(coll1)); // Compares the specified object with this collection for equality.
     }

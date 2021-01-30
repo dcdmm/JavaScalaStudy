@@ -2,7 +2,6 @@ package d_exception;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
@@ -33,7 +32,7 @@ public class ThrowsKeyward {
     }
 
     public static void method1() throws RuntimeException, IOException {
-        File file = new File("./src/d_exception/java.txt");
+        File file = new File("./src/main/resources/java.txt");
         FileInputStream fis = new FileInputStream(file);
         int data = fis.read();
         while (data != -1) {

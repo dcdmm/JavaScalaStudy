@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
 /**
- * LindedList源码分析(双向链表实现;新增和删除操作add和remove效率较高)
+ * LindedList源码分析(双向链表实现;新增(add)和删除(remove)操作效率较高)
  */
 public class LinkedListClass<E> {
     // 链表节点(双向链表)

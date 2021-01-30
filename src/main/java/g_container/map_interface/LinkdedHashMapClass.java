@@ -8,7 +8,7 @@ import java.util.LinkedHashMap;
 public class LinkdedHashMapClass {
     /**
      * static class Entry< K,V> extends HashMap.Node< K,V> {
-     *         Entry< K,V> before, after; // 能够记录添加元素的顺序
+     *         Entry< K,V> before, after; // 记录添加元素的顺序
      *         Entry(int hash, K key, V value, Node< K,V> next) {
      *             super(hash, key, value, next);
      *         }

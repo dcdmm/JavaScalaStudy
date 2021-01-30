@@ -55,7 +55,7 @@ public class ComparableInterface implements Comparable { // 实现Comparable接�
             if (this.age > ci.age) {
                 return 1;
             } else if (this.age < ci.age) {
-                return 1;
+                return -1;
             } else {
                 return 0;
             }

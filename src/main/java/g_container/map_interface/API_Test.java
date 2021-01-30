@@ -12,18 +12,19 @@ import java.util.Set;
  * 1. put(K key, V value)
  * 2. putAll(Map<? extends K,? extends V> m)
  * 删:
- * remove(Object key)------>通过hashcode(),equals()
+ * 1. remove(Object key)
+ * 2. clear()
  * 改:put(K key, V value)
- * 查:get(Object key)------>通过hashcode(),equals()方法
+ * 查:get(Object key)
  * 其他:
  * *. isEmpty()
  * *. size()
  * *. keySet()
  * *. values()
- * *. entrySet
- * *. equals(Object o)------>通过equals()方法
- * *. containsKey(Object key)------>通过hashcode(),equals()方法
- * *. containsValues(Object key)------>通过equals()方法
+ * *. entrySet()
+ * *. equals(Object o)
+ * *. containsKey(Object key)
+ * *. containsValues(Object key)
  */
 public class API_Test {
     @Test

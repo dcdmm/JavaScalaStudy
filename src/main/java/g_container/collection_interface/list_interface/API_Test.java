@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * List接口(元素有序,且可重复)常见API
+ * List接口(元素有序,且可重复,有索引)常见API
  * 增:
  * add(int index, E element)
  * addAll(int index, Collection< ? extends E > c)

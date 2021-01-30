@@ -14,8 +14,7 @@ public class CycleStructure_foreach {
         }
         System.out.println("**************************");
 
-        @SuppressWarnings("rawtypes")
-        Collection coll = new ArrayList();
+        Collection<Object> coll = new ArrayList<>();
         coll.add(123);
         coll.add("tom");
         coll.add("jack");

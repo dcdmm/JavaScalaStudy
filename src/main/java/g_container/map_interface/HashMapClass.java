@@ -790,11 +790,64 @@ public class HashMapClass<K, V> {
     // Computes key.hashCode() and spreads (XORs) higher bits of hash to lower
     static final int hash(Object key) {
         int h;
-        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16); // 调用了key内部的hashcode()方法
     }
 
     Node<K, V> newNode(int hash, K key, V value, Node<K, V> next) {
         return new Node<>(hash, key, value, next);
+    }
+
+    public V put(K key, V value) {
+        return putVal(hash(key), key, value, false, true);
+    }
+
+    final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
+                   boolean evict) {
+        Node<K, V>[] tab;
+        Node<K, V> p;
+        int n, i;
+        if ((tab = table) == null || (n = tab.length) == 0)
+            // 判断数组是否为null,长度是否为0,是则初始化该数组
+            n = (tab = resize()).length;
+        if ((p = tab[i = (n - 1) & hash]) == null) // p在if语句中进行了赋值
+            // 如果table处于(n-1)&hash处的值为null,则新建一个节点插入该位置
+            tab[i] = newNode(hash, key, value, null);
+        else {
+            Node<K, V> e;
+            K k;
+            if (p.hash == hash && ((k = p.key) == key || (key != null && key.equals(k))))
+                // 若p的哈希值与hash相等且p的key与key也相同(通过equlas方法比较),则直接覆盖
+                e = p;
+            else if (p instanceof TreeNode)
+                e = ((TreeNode<K, V>) p).putTreeVal(this, tab, hash, key, value);
+            else {
+                for (int binCount = 0; ; ++binCount) {
+                    if ((e = p.next) == null) { // 若该链表只有一个元素;e在if语句中进行了赋值
+                        p.next = newNode(hash, key, value, null); // 在链表的尾部插入一个新的节点
+                        if (binCount >= TREEIFY_THRESHOLD - 1) // 若此时遍历的链表节点数量大约等于8
+                            treeifyBin(tab, hash);
+                        break;
+                    }
+                    if (e.hash == hash && ((k = e.key) == key || (key != null && key.equals(k))))
+                        // 若e的哈希值与hash相等且e的key与key也相同(通过equlas方法比较),则直接覆盖
+                        break;
+                    p = e; // e赋值为e,进行剩下的循环遍历
+                }
+            }
+            if (e != null) { // existing mapping for key
+                V oldValue = e.value;
+                if (!onlyIfAbsent || oldValue == null)
+                    e.value = value; // 值更新为新的value
+                afterNodeAccess(e);
+                return oldValue;
+            }
+        }
+        ++modCount;
+        if (++size > threshold)
+            // 扩容的临界值:元素数量大约临界值时就进行扩容
+            resize();
+        afterNodeInsertion(evict);
+        return null;
     }
 
     /**
@@ -877,61 +930,8 @@ public class HashMapClass<K, V> {
         return newTab;
     }
 
-    final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
-                   boolean evict) {
-        Node<K, V>[] tab;
-        Node<K, V> p;
-        int n, i;
-        if ((tab = table) == null || (n = tab.length) == 0)
-            // 判断数组是否为null,长度是否为0,是则初始化该数组
-            n = (tab = resize()).length;
-        if ((p = tab[i = (n - 1) & hash]) == null) // p在if语句中进行了赋值
-            // 如果table处于(n-1)&hash处的值为null,则新建一个节点插入该位置
-            tab[i] = newNode(hash, key, value, null);
-        else {
-            Node<K, V> e;
-            K k;
-            if (p.hash == hash && ((k = p.key) == key || (key != null && key.equals(k))))
-                // 若p的哈希值与hash相等且p的key与key也相同(通过equlas方法比较),则直接覆盖
-                e = p;
-            else if (p instanceof TreeNode)
-                e = ((TreeNode<K, V>) p).putTreeVal(this, tab, hash, key, value);
-            else {
-                for (int binCount = 0; ; ++binCount) {
-                    if ((e = p.next) == null) { // 若该链表只有一个元素;e在if语句中进行了赋值
-                        p.next = newNode(hash, key, value, null); // 在链表的尾部插入一个新的节点
-                        if (binCount >= TREEIFY_THRESHOLD - 1) // 若此时遍历的链表节点数量大约等于8
-                            treeifyBin(tab, hash);
-                        break;
-                    }
-                    if (e.hash == hash && ((k = e.key) == key || (key != null && key.equals(k))))
-                        // 若e的哈希值与hash相等且e的key与key也相同(通过equlas方法比较),则直接覆盖
-                        break;
-                    p = e; // e赋值为e,进行剩下的循环遍历
-                }
-            }
-            if (e != null) { // existing mapping for key
-                V oldValue = e.value;
-                if (!onlyIfAbsent || oldValue == null)
-                    e.value = value; // 值更新为新的value
-                afterNodeAccess(e);
-                return oldValue;
-            }
-        }
-        ++modCount;
-        if (++size > threshold)
-            // 元素数量大约临界值时就进行扩容
-            resize();
-        afterNodeInsertion(evict);
-        return null;
-    }
-
-    public V put(K key, V value) {
-        return putVal(hash(key), key, value, false, true);
-    }
-
     @Test
-    public void test() {
+    public void test0() {
         HashMap<Object, Object> map = new HashMap<>();
         map.put(null, null); // key、value都可以为null
         map.put(123, "AA");
@@ -939,5 +939,117 @@ public class HashMapClass<K, V> {
         map.put(345, "CC");
         map.put(456, "DD");
         System.out.println(map); // 无序(和添加顺序不一致)
+    }
+
+    @Test
+    public void test1() {
+        HashMap<Object, Object> hm = new HashMap<>();
+        // 此位置为空===>调用ojb0的hashCode()方法,计算该对象的散列码(散列码是由对象的实例域产生的一个整数.更准确地说,具有不同数据域的对象将产生不同的散列)
+        // 添加ojb0-9
+        HashMapClassClassTest obj0 = new HashMapClassClassTest("duanchao", 12);
+        hm.put(obj0, 9);
+        System.out.println("********************");
+        // 计算ojb1的散列码===>与已经存在的对象obj0的散列码相同
+        // 通过equals()方法比较obj0与obj1===>ojb0与ojb1相同
+        // 使用ojb1-99替换ojb0-9
+        HashMapClassClassTest obj1 = new HashMapClassClassTest("duanchao", 12);
+        hm.put(obj1, 99);
+        System.out.println("********************");
+        // 计算ojb2的散列码===>未与以存在的对象的散列码相同
+        // 添加ojb2-999
+        HashMapClassClassTest obj2 = new HashMapClassClassTest("duanchao", 22);
+        hm.put(obj2, 999);
+        System.out.println("********************");
+        // 计算ojb3的散列码===>与已经存在的对象obj1的散列码相同
+        // 通过equals()方法比较obj3与obj1===>ojb3与ojb1相同
+        // 使用ojb3-9999替换ojb1-99
+        HashMapClassClassTest obj3 = new HashMapClassClassTest("duanchao", 12);
+        hm.put(obj3, 9999);
+        System.out.println(hm);
+    }
+
+    @Test
+    public void test2() {
+        HashMap<Object, Object> hm = new HashMap<>();
+        HashMapClassClassTest aa = new HashMapClassClassTest("AA", 20);
+        HashMapClassClassTest bb = new HashMapClassClassTest("BB", 20);
+        hm.put(aa, 10);
+        hm.put(bb, 10);
+        System.out.println(hm);
+        System.out.println("*******************************************");
+        bb.setName("CC");
+        hm.remove(bb);
+        /*
+        bb-10未被删除
+        1. bb的存储位置由name:"BB"和age:20的散列码决定
+        2. 修改bb后,bb的的散列码改变(即由name:"CC"和age:20的散列码决定)
+        3. 此时删除是修改后的散列码决定的位置,此位置为空,故删除失败
+         */
+        System.out.println(hm);
+        System.out.println("*******************************************");
+        HashMapClassClassTest cc = new HashMapClassClassTest("CC", 20);
+        hm.put(cc, 10);
+        /*
+        cc-10对象添加成功:由上知,由name:"CC"和age:20的散列码决定的位置为空,故添加成功
+         */
+        System.out.println(hm);
+        System.out.println("*******************************************");
+        HashMapClassClassTest newbb = new HashMapClassClassTest("BB", 20);
+        hm.put(newbb, 10);
+        /*
+        newbb-10添加成功
+        1. newbb的存储位置由name:"BB"和age:20的散列码决定===>与bb的存储位置相同
+        2. 通过equals()方法比较newbb与bb===>bb的name属性已经被修改为"CC"===>newbb与bb不相同
+        3. 故newbb-10添加成功
+         */
+        System.out.println(hm);
+    }
+}
+
+class HashMapClassClassTest {
+    private String name;
+    private int age;
+
+    public HashMapClassClassTest(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void etAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        System.out.println("equals()方法被调用!");
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        HashMapClassClassTest that = (HashMapClassClassTest) o;
+
+        if (age != that.age) return false;
+        if (!name.equals(that.name)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        System.out.println("hashCode()方法被调用!");
+        int result = name.hashCode();
+        result = 31 * result + age;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "HashMapNonRepeatableTest{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
