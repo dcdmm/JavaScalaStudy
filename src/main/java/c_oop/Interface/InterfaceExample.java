@@ -31,9 +31,9 @@ public class InterfaceExample {
 
 
 interface USB { // 操作标准
-    public void install();
+    void install();
 
-    public void work();
+    void work();
 }
 
 

@@ -1,4 +1,4 @@
-package g_container.array;
+package f_container.array;
 
 /**
  * 数组常见异常

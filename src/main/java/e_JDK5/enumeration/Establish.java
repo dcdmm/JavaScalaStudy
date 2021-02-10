@@ -1,4 +1,4 @@
-package e_enumeration_annotation.enumeration;
+package e_JDK5.enumeration;
 
 /**
  * 枚举类的使用

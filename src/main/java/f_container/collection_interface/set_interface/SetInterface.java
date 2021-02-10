@@ -1,7 +1,8 @@
-package g_container.collection_interface.set_interface;
+package f_container.collection_interface.set_interface;
 
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
+
 import java.util.*;
 
 /**
@@ -72,33 +73,28 @@ public class SetInterface<E> {
             return m.put(e, PRESENT)==null;
         }
          */
-        TreeSet<Object> ts = new TreeSet<>(); // Comparator接口进行排序
+        TreeSet<SetInterfaceTest> ts = new TreeSet<>(); // Comparator接口进行排序
         ts.add(new SetInterfaceTest("duanchao", 52));
         ts.add(new SetInterfaceTest("jack", 22));
         ts.add(new SetInterfaceTest("tom", 32));
         ts.add(new SetInterfaceTest("jose", 2));
-        Iterator<Object> iterator = ts.iterator();
+        Iterator<SetInterfaceTest> iterator = ts.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
         System.out.println("***********************************************************");
 
-        TreeSet<Object> ts1 = new TreeSet<>(new Comparator<Object>() {  // Comparator接口进行排序
+        TreeSet<SetInterfaceTest> ts1 = new TreeSet<>(new Comparator<SetInterfaceTest>() {  // Comparator接口进行排序
             @Override
-            public int compare(Object o1, Object o2) {
-                if (o1 instanceof SetInterfaceTest && o2 instanceof SetInterfaceTest) {
-                    SetInterfaceTest s1 = (SetInterfaceTest) o1;
-                    SetInterfaceTest s2 = (SetInterfaceTest) o2;
-                    return s1.getName().compareTo(s2.getName());
-                }
-                throw new RuntimeException("类型不一致");
+            public int compare(SetInterfaceTest o1, SetInterfaceTest o2) {
+                return o1.getName().compareTo(o2.getName());
             }
         }); // Comparator接口进行排序
         ts1.add(new SetInterfaceTest("duanchao", 52));
         ts1.add(new SetInterfaceTest("jack", 22));
         ts1.add(new SetInterfaceTest("tom", 32));
         ts1.add(new SetInterfaceTest("jose", 2));
-        Iterator<Object> iterator1 = ts1.iterator();
+        Iterator<SetInterfaceTest> iterator1 = ts1.iterator();
         while (iterator1.hasNext()) {
             System.out.println(iterator1.next());
         }
@@ -106,8 +102,7 @@ public class SetInterface<E> {
 }
 
 
-@SuppressWarnings("rawtypes")
-class SetInterfaceTest implements Comparable {
+class SetInterfaceTest implements Comparable<SetInterfaceTest> {
     private String name;
     private int age;
 
@@ -121,12 +116,8 @@ class SetInterfaceTest implements Comparable {
     }
 
     @Override
-    public int compareTo(@NotNull Object o) { // 实现compareTo方法
-        if (o instanceof SetInterfaceTest) {
-            SetInterfaceTest ci = (SetInterfaceTest) o;
-            return Integer.compare(this.age, ci.age);
-        }
-        throw new RuntimeException("类型不一致");
+    public int compareTo(@NotNull SetInterfaceTest o) { // 实现compareTo方法
+        return Integer.compare(this.age, o.age);
     }
 
     @Override

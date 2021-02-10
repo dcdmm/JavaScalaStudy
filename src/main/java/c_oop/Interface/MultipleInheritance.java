@@ -1,7 +1,7 @@
 package c_oop.Interface;
 
 /**
- * 接口(继承):通过继承(即extends),可以很容易地在接口中添加新的方法声明,还可以通过继承在新接口中组合数个接口
+ * 接口:通过继承(即通过extends关键字),可以很容易地在接口中添加新的方法声明,还可以通过继承在新接口中组合数个接口
  */
 public interface MultipleInheritance {
     void menace();

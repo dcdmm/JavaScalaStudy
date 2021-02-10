@@ -1,4 +1,4 @@
-package g_container.collection_interface;
+package f_container.collection_interface;
 
 import org.junit.Test;
 import java.util.ArrayList;

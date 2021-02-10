@@ -1,6 +1,8 @@
-package g_container.map_interface;
+package f_container.map_interface;
+
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
+
 import java.util.*;
 
 /**
@@ -50,15 +52,10 @@ public class TreeMapClass {
 
     @Test
     public void test1() {
-        TreeMap<Object, Object> tm = new TreeMap<>(new Comparator<Object>() { // Comparator接口进行排序
+        TreeMap<TreeMapClassTest, Integer> tm = new TreeMap<>(new Comparator<TreeMapClassTest>() { // Comparator接口进行排序
             @Override
-            public int compare(Object o1, Object o2) {
-                if (o1 instanceof TreeMapClassTest && o2 instanceof TreeMapClassTest) {
-                    TreeMapClassTest s1 = (TreeMapClassTest) o1;
-                    TreeMapClassTest s2 = (TreeMapClassTest) o2;
-                    return s1.getName().compareTo(s2.getName());
-                }
-                throw new RuntimeException("类型不一致");
+            public int compare(TreeMapClassTest o1, TreeMapClassTest o2) {
+                return o1.getName().compareTo(o2.getName());
             }
         });
         tm.put(new TreeMapClassTest("tom", 22), 111);
@@ -70,8 +67,8 @@ public class TreeMapClass {
         tm.put(new TreeMapClassTest("dcdmm", 82), 666);
         tm.put(new TreeMapClassTest("xiaohei", 12), 666);
         tm.put(new TreeMapClassTest("xiaobai", 18), 666);
-        Set<Map.Entry<Object, Object>> entries = tm.entrySet();
-        Iterator<Map.Entry<Object, Object>> iterator = entries.iterator();
+        Set<Map.Entry<TreeMapClassTest, Integer>> entries = tm.entrySet();
+        Iterator<Map.Entry<TreeMapClassTest, Integer>> iterator = entries.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
@@ -79,8 +76,7 @@ public class TreeMapClass {
 }
 
 
-@SuppressWarnings("rawtypes")
-class TreeMapClassTest implements Comparable {
+class TreeMapClassTest implements Comparable<TreeMapClassTest> {
     private String name;
     private int age;
 
@@ -98,13 +94,9 @@ class TreeMapClassTest implements Comparable {
     }
 
     @Override
-    public int compareTo(@NotNull Object o) { // 实现compareTo方法
+    public int compareTo(@NotNull TreeMapClassTest o) { // 实现compareTo方法
         System.out.println(this + "  与  " + o + "进行比较!");
-        if (o instanceof TreeMapClassTest) {
-            TreeMapClassTest ci = (TreeMapClassTest) o;
-            return Integer.compare(this.age, ci.age);
-        }
-        throw new RuntimeException("类型不一致");
+        return Integer.compare(this.age, o.age);
     }
 
     @Override

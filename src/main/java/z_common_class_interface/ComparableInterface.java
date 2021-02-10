@@ -5,10 +5,9 @@ import java.util.Arrays;
 
 /**
  * Comparable接口
- * Lists (and arrays) of objects that implement this interface can be sorted automatically by Collections.sort (and Arrays.sort).
+ *      Lists (and arrays) of objects that implement this interface can be sorted automatically by Collections.sort (and Arrays.sort).
  */
-@SuppressWarnings("rawtypes")
-public class ComparableInterface implements Comparable { // 实现Comparable接口
+public class ComparableInterface implements Comparable<ComparableInterface> { // 实现Comparable接口
     private String name;
     private int age;
 
@@ -42,25 +41,21 @@ public class ComparableInterface implements Comparable { // 实现Comparable接�
     }
 
     @Override
-    public int compareTo(@NotNull Object o) { // 实现compareTo方法
-        if (o instanceof ComparableInterface) {
-            ComparableInterface ci = (ComparableInterface) o;
-            /*
-            若:
-            正整数表示当前对象大于object o
-            负整数表示当前对象小于object o
-            整数0表示当前对象等于object o
-            此时Arrays.sort排序后正序输出,相反则逆序输出
-             */
-            if (this.age > ci.age) {
-                return 1;
-            } else if (this.age < ci.age) {
-                return -1;
-            } else {
-                return 0;
-            }
+    public int compareTo(@NotNull ComparableInterface o) { // 实现compareTo方法
+        /*
+        若:
+        正整数表示当前对象大于object o
+        负整数表示当前对象小于object o
+        整数0表示当前对象等于object o
+        此时Arrays.sort排序后正序输出,相反则逆序输出
+         */
+        if (this.age > o.age) {
+            return 1;
+        } else if (this.age < o.age) {
+            return -1;
+        } else {
+            return 0;
         }
-        throw new RuntimeException("类型不一致");
     }
 }
 

@@ -68,7 +68,7 @@ class NewFeaturesClass extends DefaultSupter implements NewFeaturesA, NewFeature
 
 class NewFeaturesTest {
     public static void main(String[] args) {
-        NewFeaturesA.methodStatic();
+        NewFeaturesA.methodStatic(); // 只能通过接口来调用
         NewFeaturesClass nfc = new NewFeaturesClass();
         nfc.methodDefault0();
         nfc.methodDefault1();

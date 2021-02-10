@@ -1,10 +1,10 @@
-package g_container;
+package f_container;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * 迭代器:Iterator接口(通过Collection接口下的iterator()方法)
+ * 迭代器:Iterator接口(Collection接口下的iterator()方法返回)
  */
 public class IteratorInterface {
     public static void main(String[] args) {

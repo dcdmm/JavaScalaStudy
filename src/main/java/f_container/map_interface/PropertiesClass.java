@@ -1,15 +1,15 @@
-package g_container.map_interface;
+package f_container.map_interface;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Properties(配置文件的操作类)类的应用
+ * Properties类(配置文件的操作类)的应用;继承自Hashtable
  */
 public class PropertiesClass {
     public static void main(String[] args) throws IOException {
-        Properties p = new Properties(); // 继承自Hashtable
+        Properties p = new Properties();
         FileInputStream fileInputStream = new FileInputStream("./src/main/resources/testing.properties");
         p.load(fileInputStream); // Reads a property list (key and element pairs) from the input byte stream.
         String name = p.getProperty("name"); // Searches for the property with the specified key in this property list.

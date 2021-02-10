@@ -1,4 +1,4 @@
-package g_container.array;
+package f_container.array;
 
 import org.junit.Test;
 import java.util.Arrays;

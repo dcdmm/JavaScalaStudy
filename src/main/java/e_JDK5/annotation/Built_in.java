@@ -1,9 +1,9 @@
-package e_enumeration_annotation.annotation;
+package e_JDK5.annotation;
 
 import java.util.ArrayList;
 
 /**
- * 内置注解(JDK SE5)
+ * 内置注解
  */
 public class Built_in {
     public static void main(String[] args) {
