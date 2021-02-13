@@ -16,10 +16,12 @@ public class CollectionsAPI {
         l.add(24);
         l.add(124);
         System.out.println(l);
+
         // reverse(List<?> list)===>Reverses the order of the elements in the specified list.
         Collections.reverse(l);
         System.out.println(l);
         System.out.println("********************************");
+
         // shuffle(List<?> list)===>Randomly permutes the specified list using a default source of randomness.
         Collections.shuffle(l);
         System.out.println(l);
@@ -36,6 +38,7 @@ public class CollectionsAPI {
         Collections.sort(l0); // List进行排序(默认通过Comparable接口中compareTo()方法进行比较)
         System.out.println(l0);
         System.out.println("*****************************************");
+
         List<String> l1 = new ArrayList<>();
         l1.add("AA");
         l1.add("KK");
@@ -60,8 +63,8 @@ public class CollectionsAPI {
         l.add("EE");
         l.add("DD");
         System.out.println(l);
-        Collections.swap(l, 0, 1);
-        System.out.println(l); // Swaps the elements at the specified positions in the specified list.
+        Collections.swap(l, 0, 1); // Swaps the elements at the specified positions in the specified list.
+        System.out.println(l);
     }
 
     @Test
@@ -121,7 +124,7 @@ public class CollectionsAPI {
         System.out.println(b0); // 替换成功,所有的32被替换为320
         System.out.println(src);
 
-        boolean b1 = Collections.replaceAll(src, 2, 200);
+        boolean b1 = Collections.replaceAll(src, 9999999, 200);
         System.out.println(b1); // 替换失败
     }
 
@@ -132,18 +135,18 @@ public class CollectionsAPI {
         l.add(32);
         l.add(52);
         l.add(12);
-        List<Integer> sl = Collections.synchronizedList(l);// 此时List sl为线程安全
+        List<Integer> sl = Collections.synchronizedList(l);// 此时List sl线程安全
 
         Set<Integer> h = new HashSet<>();
         h.add(22);
         h.add(32);
         h.add(52);
-        Set<Integer> sh = Collections.synchronizedSet(h);// 此时Set sh为线程安全
+        Set<Integer> sh = Collections.synchronizedSet(h);// 此时Set sh线程安全
 
         Map<Integer, Integer> m = new HashMap<>();
         m.put(11, 1);
         m.put(22, 2);
         m.put(33, 3);
-        Map<Integer, Integer> sm = Collections.synchronizedMap(m);// 此时Map sm为线程安全
+        Map<Integer, Integer> sm = Collections.synchronizedMap(m);// 此时Map sm线程安全
     }
 }

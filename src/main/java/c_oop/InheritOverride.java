@@ -56,7 +56,7 @@ class SubInheritOverride extends InheritOverride {
      * 3. 访问权限不能比父类中被重写的方法的访问权限更低.例:如果父类的一个方法被声明为public,那么在子类中重写该方法就不能声明为protected
      * 4. 子类抛出的异常类型不能比父类抛出的异常类型更宽泛(注意:RuntimeException及其所有子类一样宽泛)
      * 5. 声明为final的方法不能被重写
-     * 6. 声明为static的方法不能被重写,但是能够被再次声明
+     * 6. 声明为static的方法不能被重写,但是能够被再次声明(必须仍被声明为静态方法)
      */
     @Override
     public void sing() throws RuntimeException {

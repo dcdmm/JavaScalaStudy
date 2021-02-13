@@ -7,18 +7,18 @@ import java.io.IOException;
 
 /**
  * try {
- * // Code that might generate exceptons
+ *      // Code that might generate exceptons
  * } catch(Type1 id1) {
- * // Handle exceptions of Type1
+ *      // Handle exceptions of Type1
  * } catch(Type2 id2) {
- * // Handle exceptions of Type2
+ *      // Handle exceptions of Type2
  * } catch(Type3 id3) {
- * // Handle exceptions of Type3
+ *      // Handle exceptions of Type3
  * }
  * ******可选******
  * finally {
- * // 无论异常是否被抛出,finally子句总能被执行
- * // 一般用于释放资源,在IO流操作和数据库操作中会见到
+ *      // 无论异常是否被抛出,finally子句总能被执行
+ *     // 一般用于释放资源,在IO流操作和数据库操作中会见到
  * }
  */
 public class TryCatchFinally {

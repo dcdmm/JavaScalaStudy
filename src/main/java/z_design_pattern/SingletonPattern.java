@@ -44,7 +44,7 @@ class Lazy1 {
 
     public static Lazy1 getInstance() {
         if (instance == null) {
-            synchronized (Lazy1.class) { // 使用synchronized关键字解决线程不安全问题
+            synchronized (Lazy1.class) { // 利用synchronized关键字解决线程不安全问题
                 if (instance == null) {
                     instance = new Lazy1();
                 }

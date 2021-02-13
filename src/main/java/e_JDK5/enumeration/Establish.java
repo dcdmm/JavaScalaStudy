@@ -11,14 +11,14 @@ public class Establish {
         System.out.println(spring.getSeasonName());
         System.out.println("***************************************************");
 
-        EnumClass[] eunmarray = EnumClass.values(); // 返回枚举类对象常量组成的数组
+        EnumClass[] eunmarray = EnumClass.values(); // values(String name)方法:返回枚举类对象常量组成的数组
         for (EnumClass i : eunmarray) {
             i.show();
             System.out.println(i);
         }
         System.out.println("***************************************************");
 
-        EnumClass winter = EnumClass.valueOf("WINTER"); // 返回该字符串对应的枚举类对象常量
+        EnumClass winter = EnumClass.valueOf("WINTER"); // valuesOf()方法:返回该字符串对应的枚举类对象常量
         System.out.println(winter);
         System.out.println("***************************************************");
 

@@ -15,7 +15,7 @@ public class SynchronizedMethod {
 }
 
 
-class SynchronizedMethodTest {
+class SynchronizedMethod1 {
     public static void main(String[] args) {
         MethodModeTwo mm = new MethodModeTwo();
         Thread thread0 = new Thread(mm);

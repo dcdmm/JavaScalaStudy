@@ -15,10 +15,10 @@ import java.util.Iterator;
  *
  * 增:
  * 1. add(E e)
- * 2. addAll(Collection< ? extends E > c)
+ * 2. addAll(Collection<? extends E> c)
  * 删:
  * 1. remove(Object o)
- * 2. removeAll(Collection< ? > c)
+ * 2. removeAll(Collection<?> c)
  * 3. clear()
  * 改:
  * 查:
@@ -26,8 +26,8 @@ import java.util.Iterator;
  * *. isEmpty()
  * *. size()
  * *. contains(Object o)
- * *. containsAll(Collection< ? > c)
- * *. retainAll(Collection< ? > c)
+ * *. containsAll(Collection<?> c)
+ * *. retainAll(Collection<?> c)
  * *. equals()
  * *. toArray()
  * *. iterator()

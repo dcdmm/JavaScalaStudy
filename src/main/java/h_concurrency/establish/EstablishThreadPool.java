@@ -23,7 +23,7 @@ import java.util.concurrent.*;
  * public abstract class AbstractExecutorService implements ExecutorService
  *
  * public interface ExecutorService extends Executor
- *      < T > Future< T > submit(Callable< T > task)
+ *      <T> Future<T> submit(Callable<T> task)
  *      void shutdown()
  *
  * public interface Executor

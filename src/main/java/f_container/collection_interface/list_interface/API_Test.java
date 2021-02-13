@@ -9,7 +9,7 @@ import java.util.List;
  * List接口(元素有序,且可重复,有索引)常见API
  * 增:
  * add(int index, E element)
- * addAll(int index, Collection< ? extends E > c)
+ * addAll(int index, Collection<? extends E> c)
  * 删:
  * remove(int index)
  * 改:
