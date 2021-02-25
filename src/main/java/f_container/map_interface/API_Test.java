@@ -93,7 +93,7 @@ public class API_Test {
 
     @Test
     public void test_size_isEmpty() {
-        Map<Object, Object> map = new HashMap<>();
+        Map<String, Integer> map = new HashMap<>();
         map.put("BB", 123);
         map.put("CC", 123);
         map.put("DD", 123);
@@ -104,7 +104,7 @@ public class API_Test {
 
     @Test
     public void test_equals() {
-        Map<Object, Object> map = new HashMap<>();
+        Map<Object, Integer> map = new HashMap<>();
         map.put("BB", 123);
         map.put("CC", 123);
         map.put("DD", 123);

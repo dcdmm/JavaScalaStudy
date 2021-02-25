@@ -9,7 +9,7 @@ package e_JDK5.generics;
  */
 public class GenericClass<T, K, V> { // extends Exception{
     // 泛型类可以有多个类型参数
-    // 泛型类不能为异常类===>既不能抛出也不能捕获泛型类对象
+    // 泛型类不能为异常类===>既不能被抛出(throws)也不能被捕获(try...catch)
     String name;
     int age;
     T school;

@@ -3,7 +3,7 @@ package z_common_class_interface;
 import java.util.Random;
 
 /**
- * Random类:随机数生成
+ * Random类:随机数的生成
  */
 public class RandomClass {
     public static void main(String[] args) {

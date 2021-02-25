@@ -64,6 +64,7 @@ public class GenericWildcardTest {
 
         List<GenericWildcardPerson> list1 = new ArrayList<>();
         list1.add(new GenericWildcardPerson());
+
         List<GenericWildcardStudent> list2 = new ArrayList<>();
         list2.add(new GenericWildcardStudent());
 
@@ -79,6 +80,7 @@ public class GenericWildcardTest {
 
         List<GenericWildcardPerson> list1 = new ArrayList<>();
         list1.add(new GenericWildcardPerson());
+
         List<GenericWildcardStudent> list2 = new ArrayList<>();
         list2.add(new GenericWildcardStudent());
 

@@ -14,7 +14,7 @@ import java.util.List;
 public class GenericClassExtend<E, K, V> {
     @Test
     public void test0() {
-        // 类A是类B的父类,G<A>与G<B>没有联系,G<A>不是G<B>的父类
+        // 类A是类B的父类,G<A>与G<B>不存在继承关系===>G<A>不是G<B>的父类
         List<Object> l1 = null;
         List<String> l2 = null;
         // l1 = l2; // 报错,不兼容的类型
@@ -22,7 +22,7 @@ public class GenericClassExtend<E, K, V> {
 
     @Test
     public void test1() {
-        // 类A是类B的父类,A<E>是B<E>的父类
+        // 类A是类B的父类===>A<E>是B<E>的父类
         List<String> l1 = new ArrayList<String>();
     }
 

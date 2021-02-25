@@ -17,6 +17,7 @@ public class InnerClass_0 {
     static class Dog { // 静态内部类
         String name = "狗";
         static int age = 1;
+
         public void showDog() {
             // 可以直接访问外部类的所有静态成员
             System.out.println(payment);
@@ -32,6 +33,7 @@ public class InnerClass_0 {
     class Bird { // 成员内部类
         String name = "杜鹃";
         static final int age = 3; // 实例内部类中不能定义static成员,除非同时使用final和static修饰
+
         public void showBird() {
             System.out.println("成员内部类:Bird");
         }

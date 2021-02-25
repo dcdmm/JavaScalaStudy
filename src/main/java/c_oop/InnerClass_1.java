@@ -9,13 +9,12 @@ import org.jetbrains.annotations.NotNull;
 public class InnerClass_1 {
     String name = "dc";
 
-    public Comparable gegComparable() {
+    public Comparable<Object> gegComparable() {
         // 局部变量
         int age = 100; // 基本数据类型:不能被内部类修改
         final int[] payment = {30000}; // 引用数据类型:不能被内部类修改其地址,但仍可以修改其内容
 
-//        class MyComparable implements Comparable { // 局部内部类
-//
+//        class MyComparable implements Comparable<Object> { // 局部内部类
 //            @Override
 //            public int compareTo(@NotNull Object o) {
 //                return 0;
@@ -23,7 +22,8 @@ public class InnerClass_1 {
 //        }
 //
 //        return new MyComparable();
-        return new Comparable() {
+
+        return new Comparable<Object>() {
             @Override
             public int compareTo(@NotNull Object o) {
                 System.out.println(name);
@@ -41,7 +41,7 @@ public class InnerClass_1 {
 
     public static void main(String[] args) {
         InnerClass_1 ic1 = new InnerClass_1();
-        ic1.gegComparable().compareTo("dc");
+        Comparable<Object> objectComparable = ic1.gegComparable();// .compareTo("dc");
+        objectComparable.compareTo("dc");
     }
-
 }
