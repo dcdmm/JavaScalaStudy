@@ -10,12 +10,12 @@ import java.io.IOException;
 public class API1_Test {
     @Test
     public void test_createNewFile_delete() throws IOException {
-        File file0 = new File("./src/main/resources/test_createNewFile.txt");
+        File file0 = new File("./src/main/resources/test1.txt");
         if (!file0.exists()) {
             boolean create = file0.createNewFile();
             System.out.println(create); // Atomically creates a new, empty file named by this abstract pathname if and only if a file with this name does not yet exist.
         } else {
-            boolean delete = file0.delete(); // 删除目录要求必须该目录必须为空目录
+            boolean delete = file0.delete(); // 目录的删除要求必须该目录必须为空目录
             System.out.println(delete); // Deletes the file or directory denoted by this abstract pathname.
         }
     }

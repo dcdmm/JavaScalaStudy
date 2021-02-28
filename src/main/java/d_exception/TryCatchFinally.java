@@ -54,7 +54,7 @@ public class TryCatchFinally {
     public void testFinally() {
         FileInputStream fis = null;
         try {
-            File file = new File("./src/main/resources/java.txt");
+            File file = new File("./src/main/resources/test0.txt");
             fis = new FileInputStream(file);
             int data = fis.read();
             while (data != -1) {

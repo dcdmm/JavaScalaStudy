@@ -4,7 +4,7 @@
 | main方法                  | psvm   |
 | System.out.println();    | sout   |
 | Alt + insert             | 快速生成构造器和Getter,Setter,equals,toString等方法   |
-| Alt + Enter              | 快速生成单元测试类/子类等 |
+| Alt + Enter              | 快速生成单元测试类/子类/对象变量名等 |
 
 
 ### 默认值

@@ -11,7 +11,7 @@ public class API0_Test {
 
     @Test
     public void test0() {
-        File file0 = new File("./src/main/resources/java.txt");
+        File file0 = new File("./src/main/resources/test0.txt");
 
         System.out.println(file0.getAbsolutePath()); // 获取绝对路径
         System.out.println(file0.getName()); // Returns the name of the file or directory denoted by this abstract pathname.
@@ -42,8 +42,8 @@ public class API0_Test {
 
     @Test
     public void test_renameTo() {
-        File file0 = new File("./src/main/resources/java.txt");
-        File file1 = new File("./src/main/resources/java.txt");
+        File file0 = new File("./src/main/resources/test0.txt");
+        File file1 = new File("./src/main/resources/test0.txt");
         // Renames the file denoted by this abstract pathname.
         boolean b = file0.renameTo(file1); // 必须保证file0存在,而file1不存在
         System.out.println(b);
@@ -51,20 +51,20 @@ public class API0_Test {
 
     @Test
     public void test_exists() {
-        File file0 = new File("./src/main/resources/java.txt");
+        File file0 = new File("./src/main/resources/test0.txt");
         System.out.println(file0.exists()); // Tests whether the file or directory denoted by this abstract pathname exists.
     }
 
     @Test
     public void test_isDirectory_isFile() { // 若该文件或目录不存在,则isDirectory和isFile返回值均为false
-        File file0 = new File("./src/main/resources/java.txt");
+        File file0 = new File("./src/main/resources/test0.txt");
         System.out.println(file0.isDirectory()); // Tests whether the file denoted by this abstract pathname is a directory.
         System.out.println(file0.isFile()); // Tests whether the file denoted by this abstract pathname is a normal file.
     }
 
     @Test
     public void test_canRead_canWrite_Hidden() { // 若该文件不存在,则canRead,canWrite,isHidden返回值均为false
-        File file0 = new File("./src/main/resources/javfa.txt");
+        File file0 = new File("./src/main/resources/test0.txt");
         System.out.println(file0.canRead()); // Tests whether the application can read the file denoted by this abstract pathname.
         System.out.println(file0.canWrite()); // Tests whether the application can modify the file denoted by this abstract pathname.
         System.out.println(file0.isHidden()); // Tests whether the file named by this abstract pathname is a hidden file.
