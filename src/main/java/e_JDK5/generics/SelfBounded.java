@@ -11,8 +11,8 @@ import java.util.Collections;
  */
 public class SelfBounded<T extends Comparable<? super T>> {
     // <T extends Comparable<? super T>> 解释:
-    // 1. 将T限定为实现了Comparable接口===>可以进行比较
-    // 2. Comparable接口的类型参数为T或T的父类====>扩大范围
+    // 1. 将T限定为实现了Comparable接口===>可以进行比较;自限定类型
+    // 2. Comparable接口的类型参数为T或T的父类====>扩大范围;通配符的使用
     public T min(Collection<T> a) {
         return Collections.min(a); // 这里要求T所属的类必须有compareTo方法
     }

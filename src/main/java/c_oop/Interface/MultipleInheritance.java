@@ -7,7 +7,7 @@ public interface MultipleInheritance {
     void menace();
 }
 
-// 接口只能继承(extends)接口,不能继承抽象类
+// 接口只能继承(extends)自接口,不能继承抽象类
 interface DangerousMonster extends MultipleInheritance {
     void menace(int num); // 重写针对的是类,不包括接口
 

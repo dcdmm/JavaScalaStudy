@@ -9,7 +9,7 @@ import java.util.List;
  * 通配符的使用(结合多态理解)
  */
 public class GenericWildcardTest {
-    public void print0(List<?> list) { // 无限定通配符:任何类型
+    public void print0(List<?> list) { // 无限定通配符:任何类型;List<E>的父类
         Iterator<?> iterator = list.iterator();
         while (iterator.hasNext()) {
             Object next = iterator.next(); // 可以进行读取

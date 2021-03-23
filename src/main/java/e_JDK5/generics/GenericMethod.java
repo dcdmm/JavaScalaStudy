@@ -11,7 +11,7 @@ import java.util.List;
  * @param <E>
  */
 public class GenericMethod<E> {
-    // 普通方法:方法形参类型参数和泛型类类型参数相同
+    // 普通泛型方法:方法形参类型参数和泛型类类型参数相同
     public List<E> copyOf_(E[] arr) {
         ArrayList<E> al = new ArrayList<>();
         for (E i : arr) {

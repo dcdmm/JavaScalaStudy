@@ -10,7 +10,8 @@ package c_oop.keyward;
 public class FinalKeyward {
     int age = 99;
 
-    // final修饰的方法不能被重写;类中所有的private方法都隐式的指定为是final的
+    // final修饰的方法不能被重写;
+    // 注:类中所有的private方法都隐式的被指定为是final的
     final public void show() {
         System.out.println("final");
     }

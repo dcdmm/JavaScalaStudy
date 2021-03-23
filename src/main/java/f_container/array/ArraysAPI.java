@@ -16,6 +16,7 @@ public class ArraysAPI {
         // List<String> strings = Arrays.asList("duan", "chao", "hello", "java"); 与上等价
         System.out.println(strings);
         System.out.println("************************************");
+
         System.out.println(Arrays.asList(new int[]{1, 2, 3, 4, 5})); // 数据类型为基本数据类型时,应使用其包装类的形式
         System.out.println(Arrays.asList(new Integer[]{1, 2, 3, 4, 5}));
         // System.out.println(Arrays.asList(1, 2, 3, 4, 5)); // 与上等价
