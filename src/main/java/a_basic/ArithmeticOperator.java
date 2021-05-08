@@ -24,6 +24,7 @@ public class ArithmeticOperator {
         System.out.println("**********************************");
 
         System.out.println("hello" + "java"); // 字符串的拼接
+        // System.out.println("hello"  * 3); // 报错;python,scala中可以用来表示字符串的重复
         System.out.println("hello" + 100);
         // 运算顺序从左至右;
         System.out.println("hello" + 100 + 200); // 输出"hello100200"

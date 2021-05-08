@@ -56,7 +56,8 @@ public class OtherStream {
         打印流
 
         PrintStream(OutputStream out)
-            参数out:The output stream to which values and objects will be printed
+            @param  out:The output stream to which values and objects will be printed
+
         PrintWriter (Writer out)
          */
         PrintStream printStream = null;

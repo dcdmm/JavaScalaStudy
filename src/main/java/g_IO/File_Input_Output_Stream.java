@@ -19,7 +19,7 @@ public class File_Input_Output_Stream {
         FileOutputStream fileOutputStream = null;
         try {
             File file = new File("./src/main/resources/test0.png");
-            File file1 = new File("./src/main/resources/test1.png");
+            File file1 = new File("./src/main/resources/test0_copy.png");
             fileInputStream = new FileInputStream(file);
             fileOutputStream = new FileOutputStream(file1, false);
 

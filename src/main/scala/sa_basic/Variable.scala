@@ -9,7 +9,7 @@ object Variable {
         age = 1000
         // age = 1000.0 // 报错:不能将该变量重新分配给其他类型
 
-        var payment = 52000 // 类型推导
+        var payment = 52000 // 类型自动推断
         println(payment.isInstanceOf[Int])
 
         val constant = 23 // 不可变变量
