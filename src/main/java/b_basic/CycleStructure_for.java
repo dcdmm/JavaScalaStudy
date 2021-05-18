@@ -40,10 +40,10 @@ public class CycleStructure_for {
 
         int sum_k = 0;
         for (int k = 1; k <= 10; ) {
-            k++;
+            k++; // k=2~11
             sum_k += k;
             System.out.println(k);
         }
-        System.out.println(sum_k); // sum2=65;k=2~11;错误的计算结果
+        System.out.println(sum_k); // sum2=65;错误的计算结果
     }
 }

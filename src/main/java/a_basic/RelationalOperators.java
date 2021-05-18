@@ -28,9 +28,15 @@ public class RelationalOperators {
         System.out.println(j == l);
         System.out.println(j == y);
         System.out.println(j == m);
+        System.out.println("**********************************************");
+
         // 引用数据类型:比较两个对象的地址值是否相同
         int[] arr1 = {1, 2, 3, 4};
         int[] arr2 = {1, 2, 3, 4};
         System.out.println(arr1 == arr2); // false
+
+        String s1 = new String("hello");
+        String s2 = new String("hello");
+        System.out.println(s1 == s2); // false
     }
 }

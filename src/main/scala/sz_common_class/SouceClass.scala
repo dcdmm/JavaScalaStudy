@@ -4,7 +4,8 @@ import java.io.{File, FileWriter}
 import scala.io.Source
 
 /**
- * 文件读写
+ * Source类:文件读取
+ * java.io:文件写入
  */
 object SouceClass {
     def main(args: Array[String]): Unit = {

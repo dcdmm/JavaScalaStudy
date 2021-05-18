@@ -30,9 +30,22 @@ object RelationalOperators {
         println(j == m)
         println("**********************************************")
 
-        // 引用数据类型:比较两个对象的地址值是否相同
+        /*
+        Scala中==,eq,equals中的解释
+        final def ==(arg0: Any): Boolean
+            The expression x == that is equivalent to if (x eq null) that eq null else x.equals(that).
+
+        final def eq(arg0: AnyRef): Boolean
+            Tests whether the argument (that) is a reference to the receiver object (this).
+
+        def equals(arg0: Any): Boolean
+            The equality method for reference types.
+         */
+        // 引用数据类型
         val arr1 = Array(1, 2, 3, 4)
         val arr2 = Array(1, 2, 3, 4)
-        println(arr1 eq arr2) // false
+        println(arr1 == arr2) // 如果比较的对象是null,==调用的是eq方法.如果比较的对象不是null,==调用的是equals方法
+        println(arr1 eq arr2) // 比较的是地址是否相同
+        println(arr1 equals arr2) // 比较的是值是否相等
     }
 }

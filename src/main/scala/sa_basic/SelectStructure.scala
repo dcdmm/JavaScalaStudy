@@ -16,7 +16,7 @@ object SelectStructure {
         val max = if (a > b) a else {
             a
             b
-            // 将执行代码的最后一个表达式的值作为返回值返回
+            // 将执行代码的最后一条语句的值作为返回值返回
             println("最后一行内容") // println()方法没有返回值,故返回Unit的唯一实例()
         }
         println("max:" + max)

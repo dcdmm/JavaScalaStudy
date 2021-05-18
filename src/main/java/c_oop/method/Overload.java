@@ -5,7 +5,11 @@ package c_oop.method;
  */
 public class Overload {
     public static void main(String[] args) {
-        boolean x = compare(3, 4); // 方法的调用
+        // 不能在方法内定义函数
+//        public boolean compare(int a, int b){
+//            return a == b;
+//        }
+        boolean x = new Overload().compare(3, 4); // 方法的调用
         System.out.println(x);
         boolean y = compare(9, 4, 5);
         System.out.println(y);
@@ -13,7 +17,7 @@ public class Overload {
         System.out.println(z);
     }
 
-    public static boolean compare(int a, int b) {  // 返回值为boolean
+    public boolean compare(int a, int b) {  // 返回值为boolean
         return a == b;
     }
 

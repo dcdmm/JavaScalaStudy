@@ -15,6 +15,26 @@ class StringTest {
     }
 
     @Test
+    def test1(): Unit = {
+        val s0 = "java"
+        val s1 = "java"
+        val s2 = new String("java")
+        val s3 = new String("java")
+        // 使用==就可以判断字符串相等,而不需要像Java一样需要使用的equals方法来判断
+        println(s0 == s1) // true
+        println(s2 == s3) // true
+        println(s0 == s2) // true
+
+        println(s0.eq(s1)) // true
+        println(s2.eq(s3)) // false
+        println(s0.eq(s2)) // false
+
+        println(s0 equals s1) // true
+        println(s2 equals s3) // true
+        println(s0 equals s2) // true
+    }
+
+    @Test
     def test_printf(): Unit = {
         val age: Double = 25.6723551
         val school: String = "guangcai"

@@ -1,5 +1,6 @@
 package sa_basic
 
+
 /**
  * 循环结构:for循环
  */
@@ -11,7 +12,7 @@ object CycleStucture_for {
         }
         println("****************************************")
 
-        for (j <- 1 until 3)// 1-3(不包括3)
+        for (j <- 1 until 3) // 1-3(不包括3)
             println(j)
         println("****************************************")
 
@@ -36,9 +37,23 @@ object CycleStucture_for {
         println()
 
         // 控制步长方式二:
-        for (g <- Range(1, 10, 2)) { // 步长为2
+        for (g <- Range(1, 10, 2)) { // 步长为2(步长不能为0)
             println(g)
         }
+
+        println()
+
+        // 控制步长方式三:
+        for (f <- 1 until 10 by 2) {
+            println(f)
+        }
+
+        println()
+
+        for (u <- 10 to 1 by -2) { // 步长为-2
+            println(u)
+        }
+
         println("****************************************")
 
         /*
@@ -49,8 +64,19 @@ object CycleStucture_for {
         }
          */
         // 与上等价
-        for (n <- 1 to 3; m <- 1 to 3) { // 嵌套循环
-            println("n=" + n + " m=" + m)
+        for (n <- 1 to 3; m <- 1 to 3; s <- 1 to 3) { // 嵌套循环
+            println("n=" + n + " m=" + m + " s=" + s)
+        }
+        println("****************************************")
+
+        for (n <- 1 to 3; m = 3 - n; s = -n) { // 引入变量
+            println("n=" + n + " m=" + m + " s=" + s)
+        }
+        println("****************************************")
+
+        // 遍历集合
+        for (i <- Set(1, 2, 3)) {
+            println(i)
         }
     }
 }

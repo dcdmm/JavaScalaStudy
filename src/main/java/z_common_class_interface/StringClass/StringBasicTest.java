@@ -9,9 +9,8 @@ import org.junit.Test;
  * 1. final:不可被继承
  * 2. java.io.Serializable:可序列化
  * 3. Comparable< String >:可比较大小
- *
+ * <p>
  * private final byte[] value;===>The value is used for character storage.
- *
  */
 public class StringBasicTest {
     @Test
