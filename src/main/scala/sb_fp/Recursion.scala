@@ -1,14 +1,40 @@
 package sb_fp
 
+import scala.annotation.tailrec
+
 /**
  * 递归
  */
 object Recursion {
     def main(args: Array[String]): Unit = {
+        println(fact(5))
+        println(tailFact(5))
+        println("******************************")
+
         println(FibonaccRecursion(12))
         println("******************************")
 
         hanoi(3) // 3层汉诺塔
+    }
+
+    def fact(n: Int): Int = {
+        if (n == 1) {
+            return 1
+        }
+        return fact(n - 1) * n
+    }
+
+    // 尾递归实现阶乘
+    def tailFact(n: Int): Int = {
+        @tailrec // 尾递归的注解(提示编译器尾递归优化)
+        def loop(n: Int, currResult: Int): Int = {
+            if (n == 0) {
+                return currResult
+            }
+            return loop(n - 1, currResult * n)
+        }
+
+        loop(n, 1)
     }
 
     // 斐波拉契数列的递归实现

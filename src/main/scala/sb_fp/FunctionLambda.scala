@@ -27,6 +27,6 @@ object FunctionLambda {
         println("*****************************************")
 
         function((a, b) => b - a, 2, 4)
-        function(_ - _, 2, 4) // 与上不等价(与参数顺序有关);等价于function((a, b) => a - b, 2, 4)
+        function(_ - _, 2, 4) // 与上不等价(原因:与参数顺序有关);等价于function((a, b) => a - b, 2, 4)
     }
 }

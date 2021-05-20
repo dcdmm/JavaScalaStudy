@@ -12,7 +12,7 @@ object FunctionTransmit {
 
         // f0,f1为函数
         // val f = func // 报错;missing argument list for method func
-        val f0 = func _
+        val f0 = func _ // 将函数func作为值传递给f0
         val f1: Int => Int = func // 指定函数类型;与上等价
 
         println(f0)
