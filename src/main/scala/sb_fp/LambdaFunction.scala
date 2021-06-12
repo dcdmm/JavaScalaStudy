@@ -3,7 +3,7 @@ package sb_fp
 /**
  * 匿名函数(lambda表达式)
  */
-object FunctionLambda {
+object LambdaFunction {
     def main(args: Array[String]): Unit = {
         // python中的写法为:func = lambda a, b: a + b
         val func = (a: Double, b: Double) => {

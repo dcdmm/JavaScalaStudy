@@ -11,6 +11,7 @@ object LazyKeyWord {
         println("**********************************")
 
         println("res" + res) // 使用该变量时,才会进行初始化
+        println("res" + res) // res已经进行了初始化
     }
 
     def sum(n1: Int, n2: Int): Int = {

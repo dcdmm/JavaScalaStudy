@@ -13,7 +13,7 @@ object FunctionTransmit {
         // f0,f1为函数
         // val f = func // 报错;missing argument list for method func
         val f0 = func _ // 将函数func作为值传递给f0
-        val f1: Int => Int = func // 指定函数类型;与上等价
+        val f1: Int => Int = func // 指定f1的类型;与上等价
 
         println(f0)
         println(f1)
@@ -30,7 +30,7 @@ object FunctionTransmit {
             return f(m, n)
         }
 
-        println(func1(add, 2, 4)) // 将函数add作为参数传递给func
+        println(func1(add, 2, 4)) // 将函数add作为参数传递给func1
         println(func1((a, b) => a + b, 2, 4)) // 匿名函数的写法
         println("***************************************************")
 

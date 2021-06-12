@@ -1,3 +1,9 @@
+### 快捷键
+| 描述                      | 快捷键 |
+| ---------------------    | ------ |
+| main方法                  | main   |
+
+
 ### 关联Scala源码
 1. https://www.scala-lang.org/download/ 下载scala-sources-CurrentVersionNumber.tar.gz
 2. 解压scala-sources-CurrentVersionNumber.tar.gz-->scala-sources-CurrentVersionNumber
