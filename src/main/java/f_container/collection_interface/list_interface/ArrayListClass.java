@@ -67,11 +67,11 @@ public class ArrayListClass<E> {
     private int newCapacity(int minCapacity) {
         // overflow-conscious code
         int oldCapacity = elementData.length;
-        int newCapacity = oldCapacity + (oldCapacity >> 1); // 扩容原来容量的1.5倍
+        int newCapacity = oldCapacity + (oldCapacity >> 1);  // 扩容原来容量的1.5倍
         if (newCapacity - minCapacity <= 0) {
             if (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA)
                 return Math.max(DEFAULT_CAPACITY, minCapacity);
-            if (minCapacity < 0) // overflow
+            if (minCapacity < 0)  // overflow
                 throw new OutOfMemoryError();
             return minCapacity;
         }
@@ -90,6 +90,6 @@ public class ArrayListClass<E> {
 
 
     public static void main(String[] args) {
-        ArrayList<Integer> al = new ArrayList<>(); // 底层通过数组实现
+        ArrayList<Integer> al = new ArrayList<>();  // 底层通过数组实现
     }
 }

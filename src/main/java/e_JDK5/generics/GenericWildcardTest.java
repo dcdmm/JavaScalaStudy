@@ -9,28 +9,28 @@ import java.util.List;
  * 通配符的使用(结合多态理解)
  */
 public class GenericWildcardTest {
-    public void print0(List<?> list) { // 无限定通配符:任何类型;List<E>的父类
+    public void print0(List<?> list) {  // 无限定通配符:任何类型;List<E>的父类
         Iterator<?> iterator = list.iterator();
         while (iterator.hasNext()) {
-            Object next = iterator.next(); // 可以进行读取
+            Object next = iterator.next();  // 可以进行读取
             System.out.println(next);
         }
 
-        // list.add(new GenericWildcardPerson()); // 报错,不兼容的类型
+        // list.add(new GenericWildcardPerson());  // 报错,不兼容的类型
         list.add(null); // 只能添加null
     }
 
-    public void print1(List<? extends GenericWildcardPerson> list) { // GenericWildcardPerson或GenericWildcardPerson的子类型
+    public void print1(List<? extends GenericWildcardPerson> list) {  // GenericWildcardPerson或GenericWildcardPerson的子类型
         Iterator<? extends GenericWildcardPerson> iterator = list.iterator();
         while (iterator.hasNext()) {
-            GenericWildcardPerson next = iterator.next(); // 可以进行读取;此时类型可收缩为GenericWildcardPerson
+            GenericWildcardPerson next = iterator.next();  // 可以进行读取;此时类型可收缩为GenericWildcardPerson
             System.out.println(next);
         }
 
-        list.add(null); // 只能添加null
+        list.add(null);  // 只能添加null
     }
 
-    public void print2(List<? super GenericWildcardPerson> list) { // 超类型限定符:GenericWildcardPerson或GenericWildcardPerson的父类型
+    public void print2(List<? super GenericWildcardPerson> list) {  // 超类型限定符:GenericWildcardPerson或GenericWildcardPerson的父类型
         Iterator<? super GenericWildcardPerson> iterator = list.iterator();
         while (iterator.hasNext()) {
             Object next = iterator.next(); // 可以进行读取
@@ -68,7 +68,7 @@ public class GenericWildcardTest {
         List<GenericWildcardStudent> list2 = new ArrayList<>();
         list2.add(new GenericWildcardStudent());
 
-        // print1(list0); // 报错,不兼容的类型===>Object为GenericWildcardPerson的父类
+        // print1(list0);  // 报错,不兼容的类型===>Object为GenericWildcardPerson的父类
         print1(list1);
         print1(list2);
     }
@@ -86,7 +86,7 @@ public class GenericWildcardTest {
 
         print2(list0);
         print2(list1);
-        // print2(list2); // 报错,不兼容的类型===>GenericWildcardStudent为GenericWildcardPerson的子类
+        // print2(list2);  // 报错,不兼容的类型===>GenericWildcardStudent为GenericWildcardPerson的子类
     }
 }
 

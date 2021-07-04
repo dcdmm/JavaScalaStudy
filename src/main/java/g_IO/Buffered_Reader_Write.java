@@ -42,8 +42,8 @@ public class Buffered_Reader_Write {
             String data;
             // A String containing the contents of the line, not including any line-termination characters, or null if the end of the stream has been reached without reading any characters
             while ((data = bufferedReader.readLine()) != null) {
-                bufferedWriter.write(data); // 不包括终止符"\n"
-                bufferedWriter.newLine(); // Writes a line separator.
+                bufferedWriter.write(data);  // 不包括终止符"\n"
+                bufferedWriter.newLine();  // Writes a line separator.
             }
             System.out.println("文件复制成功");
         } catch (IOException e) {

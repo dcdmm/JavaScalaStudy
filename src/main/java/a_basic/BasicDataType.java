@@ -23,7 +23,7 @@ public class BasicDataType {
         char c = 'a';
         System.out.println(c);
 
-        boolean bo = true; // 只能为ture或false
+        boolean bo = true;  // 只能为ture或false
         System.out.println(bo);
     }
 }

@@ -5,7 +5,7 @@ package c_oop;
  */
 public class Combination {
     private String valve1, valve2, valve3, valve4;
-    private CombinationTest ct = new CombinationTest(); // CombinationTest类的对象
+    private CombinationTest ct = new CombinationTest();  // CombinationTest类的对象
     private int i;
     private float f;
 

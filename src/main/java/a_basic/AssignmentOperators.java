@@ -5,7 +5,7 @@ package a_basic;
  */
 public class AssignmentOperators {
     public static void main(String[] args) {
-        int a = 10; // 基本的赋值运运算符
+        int a = 10;  // 基本的赋值运运算符
         System.out.println("***************************");
 
         // +=,-=,/=,*=,%=;(自动进行强制类型转换)
@@ -14,7 +14,7 @@ public class AssignmentOperators {
         System.out.println("***************************");
 
         short s = 2;
-        // s = s + 1; // 报错:1是int类型数据,故s+1也是int类型数据
+        // s = s + 1;  // 报错:1是int类型数据,故s+1也是int类型数据
         /*
         解决方法如下:
         法1, s = (short)(s+1);

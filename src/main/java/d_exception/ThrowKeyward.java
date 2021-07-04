@@ -25,7 +25,7 @@ public class ThrowKeyward {
                 super(message);
             }
              */
-            throw new Exception("输入的数据非法"); // 使用throw关键字主动触发异常
+            throw new Exception("输入的数据非法");  // 使用throw关键字主动触发异常
         }
     }
 }

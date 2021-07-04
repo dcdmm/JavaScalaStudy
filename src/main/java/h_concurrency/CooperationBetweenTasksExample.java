@@ -5,7 +5,7 @@ package h_concurrency;
  */
 public class CooperationBetweenTasksExample {
     public static void main(String[] args) {
-        Cleck cl = new Cleck(); // 共享资源
+        Cleck cl = new Cleck();  // 共享资源
 
         Producer p0 = new Producer(cl);
         p0.setName("生产者-0");
@@ -35,7 +35,7 @@ public class CooperationBetweenTasksExample {
  * 店员
  */
 class Cleck {
-    private int productsNumber = 0; // 当前店员持有的产品数量
+    private int productsNumber = 0;  // 当前店员持有的产品数量
     private int step = 0;
 
     public int getStep() {
@@ -43,10 +43,10 @@ class Cleck {
     }
 
     // 生产产品
-    public synchronized void produceProduct() { // 同步监视器:cl(this)
-        if (productsNumber < 20) { // 店员最多只能持有的产品数量为20
-            productsNumber++; // 当前店员持有的产品数量+1
-            step++; // 总的生产的数量+1
+    public synchronized void produceProduct() {  // 同步监视器:cl(this)
+        if (productsNumber < 20) {  // 店员最多只能持有的产品数量为20
+            productsNumber++;  // 当前店员持有的产品数量+1
+            step++;  // 总的生产的数量+1
             System.out.println(Thread.currentThread().getName() + "开始生产第" + productsNumber + "个产品");
             notify();
         } else {
@@ -59,14 +59,14 @@ class Cleck {
     }
 
     // 消费产品
-    public synchronized void consumProduct() { // 同步监视器:cl(this)
+    public synchronized void consumProduct() {  // 同步监视器:cl(this)
         if (productsNumber > 0) {
             System.out.println(Thread.currentThread().getName() + "开始消费第" + productsNumber + "个产品");
-            productsNumber--; // 当前店员持有的产品数量-1
-            notify(); // 唤醒处于等待状态的线程
+            productsNumber--;  // 当前店员持有的产品数量-1
+            notify();  // 唤醒处于等待状态的线程
         } else {
             try {
-                wait(); // 线程的执行被挂起,对象上的锁被释放
+                wait();  // 线程的执行被挂起,对象上的锁被释放
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -87,7 +87,7 @@ class Producer extends Thread {
 
     @Override
     public void run() {
-        while (cleck.getStep() <= 100) { // 总的生产的数量不能高于100
+        while (cleck.getStep() <= 100) {  // 总的生产的数量不能高于100
             try {
                 Thread.sleep(60);
             } catch (InterruptedException e) {

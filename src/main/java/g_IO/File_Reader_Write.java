@@ -29,14 +29,14 @@ public class File_Reader_Write {
             int read = fileReader.read();
             while (read != -1) {
                 System.out.print((char) read);
-                read = fileReader.read(); // The character read, or -1 if the end of the stream has been reached
+                read = fileReader.read();  // The character read, or -1 if the end of the stream has been reached
             }
-        } catch (IOException e) { // IOException为编译时异常
+        } catch (IOException e) {  // IOException为编译时异常
             e.printStackTrace();
         } finally {
             try {
                 if (fileReader != null) {
-                    fileReader.close(); // 流的关闭操作(必须也使用try/catch进行包裹)
+                    fileReader.close();  // 流的关闭操作(必须也使用try/catch进行包裹)
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -50,7 +50,7 @@ public class File_Reader_Write {
         try {
             File file = new File("./src/main/resources/test0.txt");
             fileReader = new FileReader(file);
-            char[] charArr = new char[4]; // char类型数组
+            char[] charArr = new char[4];  // char类型数组
             int len;
             /*
              * Reads characters into an array.  This method will block until some input
@@ -65,8 +65,8 @@ public class File_Reader_Write {
              * @exception   IOException  If an I/O error occurs
              */
             // 写法一:
-            while ((len = fileReader.read(charArr)) != -1) { // len===>每次读取的字符个数
-                for (char i = 0; i < len; i++) { // 错误的写法===>for (char i = 0; i < charArr.length; i++)
+            while ((len = fileReader.read(charArr)) != -1) {  // len===>每次读取的字符个数
+                for (char i = 0; i < len; i++) {  // 错误的写法===>for (char i = 0; i < charArr.length; i++)
                     System.out.print(charArr[i]);
                 }
             }
@@ -98,9 +98,9 @@ public class File_Reader_Write {
              * 2. 若file对象对应的文件存在;if append=true, then bytes will be written to the end of the file rather than the beginning
              */
             fileWriter = new FileWriter(file, false);
-            fileWriter.write("i love python\ni love python\n"); // Writes a string
-            fileWriter.write(new char[]{'a', 'b', 'c', 'd', '\n'}); // Writes an array of characters.
-            fileWriter.write(new char[]{'e', 'f', 'g', 'h', '\n'}, 0, 3); // Writes a portion of an array of characters.
+            fileWriter.write("i love python\ni love python\n");  // Writes a string
+            fileWriter.write(new char[]{'a', 'b', 'c', 'd', '\n'});  // Writes an array of characters.
+            fileWriter.write(new char[]{'e', 'f', 'g', 'h', '\n'}, 0, 3);  // Writes a portion of an array of characters.
             fileWriter.write(65); // Writes a single character.
         } catch (IOException e) {
             e.printStackTrace();

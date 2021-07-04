@@ -22,7 +22,7 @@ public class GeneralMethod extends Thread {
             Changes the name of this thread to be equal to the argument name.
          */
         thread.setName("thread线程1");
-        Thread.currentThread().setName("主线程"); // 主线程重命名
+        Thread.currentThread().setName("主线程");  // 主线程重命名
         /*
         void start():
             Causes this thread to begin execution; the Java Virtual Machine calls the run method of this thread.
@@ -44,7 +44,7 @@ public class GeneralMethod extends Thread {
                 }
             }
         }
-        System.out.println(thread.isAlive()); // Tests if this thread is alive.
+        System.out.println(thread.isAlive());  // Tests if this thread is alive.
     }
 
     @Test

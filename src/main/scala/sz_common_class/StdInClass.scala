@@ -6,15 +6,15 @@ import scala.io.StdIn
  */
 object StdInClass {
     def main(args: Array[String]): Unit = {
-        val name = StdIn.readLine() // Read a full line from the default input. Returns null if the end of the input stream has been reached.
+        val name = StdIn.readLine()  // Read a full line from the default input. Returns null if the end of the input stream has been reached.
         println(name)
         println("*******************************************")
 
-        val age = StdIn.readInt() // Reads an int value from an entire line of the default input.
+        val age = StdIn.readInt()  // Reads an int value from an entire line of the default input.
         println(age)
         println("*******************************************")
 
-        val payment = StdIn.readDouble() // Reads a double value from an entire line of the default input.
+        val payment = StdIn.readDouble()  // Reads a double value from an entire line of the default input.
         println(payment)
 
         /*

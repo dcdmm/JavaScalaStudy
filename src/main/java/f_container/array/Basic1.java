@@ -11,8 +11,8 @@ public class Basic1 {
         arr[1] = 1;
         arr[2] = 2;
 
-        int[] arr1 = arr; // arr1与arr共享(堆)内存空间
-        arr1[2] = 9; // 修改arr1,arr对应位置也发生改变
+        int[] arr1 = arr;  // arr1与arr共享(堆)内存空间
+        arr1[2] = 9;  // 修改arr1,arr对应位置也发生改变
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }

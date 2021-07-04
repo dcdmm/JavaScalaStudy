@@ -16,9 +16,9 @@ public class UpwardTransformation {
         System.out.println("play!;父类" + age);
     }
 
-    static void tune(UpwardTransformation i) { // 接受一个UpwardTransformation的引用,同时也接受任何导出自UpwardTransformation的类(多态)
-        i.sing(); // 继承自父类的sing方法
-        i.play(); // 子类重写的play方法
+    static void tune(UpwardTransformation i) {  // 接受一个UpwardTransformation的引用,同时也接受任何导出自UpwardTransformation的类(多态)
+        i.sing();  // 继承自父类的sing方法
+        i.play();  // 子类重写的play方法
         // 继承自父类的变量
         System.out.println(i.age);
         System.out.println(i.sex);

@@ -14,7 +14,7 @@ public class Constructor {
     public static void main(String[] args) {
         Constructor c1 = new Constructor();
         Constructor c2 = new Constructor("duanchao", 25);
-        System.out.println(c1.name); // String默认值为null
+        System.out.println(c1.name);  // String默认值为null
         System.out.println(c1.age);
         System.out.println(c2.name);
         System.out.println(c1.age);
@@ -28,7 +28,7 @@ public class Constructor {
     }
 
     // 带有形式参数的构造器
-    public Constructor(String name, double age) { // 重载
+    public Constructor(String name, double age) {  // 重载
         this.name = name;
         this.age = age;
     }

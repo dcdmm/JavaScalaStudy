@@ -64,6 +64,6 @@ public class LinkedListClass<E> {
 
 
     public static void main(String[] args) {
-        LinkedList<Integer> ll = new LinkedList<>(); // 底层通过双向链表实现
+        LinkedList<Integer> ll = new LinkedList<>();  // 底层通过双向链表实现
     }
 }

@@ -6,25 +6,25 @@ package e_JDK5.enumeration;
 public class Establish {
     public static void main(String[] args) {
         EnumClass spring = EnumClass.SPRING;
-        System.out.println(spring); // 默认输出(不重写toString()方法)当前枚举类对象常量的名称
+        System.out.println(spring);  // 默认输出(不重写toString()方法)当前枚举类对象常量的名称
         System.out.println(spring.getSeasonDesc());
         System.out.println(spring.getSeasonName());
         System.out.println("***************************************************");
 
-        EnumClass[] eunmarray = EnumClass.values(); // values(String name)方法:返回枚举类对象常量组成的数组
+        EnumClass[] eunmarray = EnumClass.values();  // values(String name)方法:返回枚举类对象常量组成的数组
         for (EnumClass i : eunmarray) {
             i.show();
             System.out.println(i);
         }
         System.out.println("***************************************************");
 
-        EnumClass winter = EnumClass.valueOf("WINTER"); // valuesOf()方法:返回该字符串对应的枚举类对象常量
+        EnumClass winter = EnumClass.valueOf("WINTER");  // valuesOf()方法:返回该字符串对应的枚举类对象常量
         System.out.println(winter);
         System.out.println("***************************************************");
 
         EnumClass summary = EnumClass.SMMARY;
         switch (summary) {
-            case SPRING: // case的值为枚举类对象常量的名称
+            case SPRING:  // case的值为枚举类对象常量的名称
                 System.out.println("现在是春天了!!!");
                 break;
             case SMMARY:
@@ -96,7 +96,7 @@ enum EnumClass implements isShow { // 通过enum关键字声明;默认继承于j
     SPRING("春天", "春暖花开") {
         @Override
         public void show() {
-            System.out.println("****春天来了!****"); // 匿名实现
+            System.out.println("****春天来了!****");  // 匿名实现
         }
     },
     SMMARY("夏天", "夏日炎炎") {
@@ -106,7 +106,7 @@ enum EnumClass implements isShow { // 通过enum关键字声明;默认继承于j
         }
     },
     AUTUMN("秋天", "秋高气爽"),
-    WINTER("冬天", "冰天雪地"); // 最后以分号结尾
+    WINTER("冬天", "冰天雪地");  // 最后以分号结尾
 
     private final String seasonName;
     private final String seasonDesc;
@@ -119,7 +119,7 @@ enum EnumClass implements isShow { // 通过enum关键字声明;默认继承于j
         return seasonDesc;
     }
 
-    EnumClass(String seasonName, String seasonDesc) { // 省略了private
+    EnumClass(String seasonName, String seasonDesc) {  // 省略了private
         this.seasonName = seasonName;
         this.seasonDesc = seasonDesc;
     }

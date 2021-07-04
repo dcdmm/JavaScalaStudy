@@ -18,7 +18,7 @@ import java.io.IOException;
  * ******可选******
  * finally {
  *      // 无论异常是否被抛出,finally子句总能被执行
- *     // 一般用于释放资源,在IO流操作和数据库操作中会见到
+ *      // 一般用于释放资源,在IO流操作和数据库操作中会见到
  * }
  */
 public class TryCatchFinally {
@@ -26,7 +26,7 @@ public class TryCatchFinally {
     public void testBasic() {
         String str = "abc";
         try {
-            int num = Integer.parseInt(str); // try子句定义的变量为局部变量
+            int num = Integer.parseInt(str);  // try子句定义的变量为局部变量
             // try子句一旦出现异常,之后的语句将不再被执行
             int[] arr = {1, 2, 3};
             System.out.println(arr[3]);
@@ -38,13 +38,13 @@ public class TryCatchFinally {
         1. 某个catch子句捕获到异常时,之后的catch子句将不再进行匹配
         2. 若捕获的多个异常类之间存在父子关系时,捕获异常时必须先捕获子类,后捕获父类
          */
-        } catch (NumberFormatException | IndexOutOfBoundsException e) { // 同一个catch子句中可以捕获多个异常类型(不能是子父类关系)
+        } catch (NumberFormatException | IndexOutOfBoundsException e) {  // 同一个catch子句中可以捕获多个异常类型(不能是子父类关系)
             System.out.println("字符串转换成数字异常和数组索引越界异常");
 
             // 输出相应的异常信息
             System.out.println(e.getMessage());
-            e.printStackTrace(); // 此方式更加详细
-        } catch (Exception e) { // 捕获所有类型的异常:通过捕获异常类的基类Exception
+            e.printStackTrace();  // 此方式更加详细
+        } catch (Exception e) {  // 捕获所有类型的异常:通过捕获异常类的基类Exception
             System.out.println("异常");
         }
         System.out.println("____2____");

@@ -24,7 +24,7 @@ object Comment {
      * @return return描述
      */
     def sum(n1: Int, n2: Int): Int = {
-        return n1 + n2 // 单行注释
+        return n1 + n2  // 单行注释
     }
 }
 

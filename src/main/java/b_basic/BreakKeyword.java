@@ -10,7 +10,7 @@ public class BreakKeyword {
                 if (i * j == 21) {
                     System.out.println(i);
                     System.out.println(j);
-                    break; // 跳出当前整个循环
+                    break;  // 跳出当前整个循环
                 }
             }
         }

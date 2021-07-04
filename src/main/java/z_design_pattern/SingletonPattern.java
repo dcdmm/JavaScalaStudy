@@ -23,7 +23,7 @@ class Lazy0 {
     private Lazy0() {
     }
 
-    private static final Lazy0 instance = new Lazy0(); // 类内部创建对象实例
+    private static final Lazy0 instance = new Lazy0();  // 类内部创建对象实例
 
     public static Lazy0 getInstance() {
         return instance;
@@ -40,11 +40,11 @@ class Lazy1 {
     private Lazy1() {
     }
 
-    private static Lazy1 instance; // 类内部创建对象实例
+    private static Lazy1 instance;  // 类内部创建对象实例
 
     public static Lazy1 getInstance() {
         if (instance == null) {
-            synchronized (Lazy1.class) { // 利用synchronized关键字解决线程不安全问题
+            synchronized (Lazy1.class) {  // 利用synchronized关键字解决线程不安全问题
                 if (instance == null) {
                     instance = new Lazy1();
                 }

@@ -57,18 +57,18 @@ class NewFeaturesClass extends DefaultSupter implements NewFeaturesA, NewFeature
     }
 
     @Override
-    public void methodDefault2() { // 必须重写methodDefault2
+    public void methodDefault2() {  // 必须重写methodDefault2
     }
 
     public void showDefaultMethod() {
-        NewFeaturesA.super.methodDefault0(); // 调用接口中被重写的方法
+        NewFeaturesA.super.methodDefault0();  // 调用接口中被重写的方法
     }
 }
 
 
 class NewFeaturesTest {
     public static void main(String[] args) {
-        NewFeaturesA.methodStatic(); // 只能通过接口来调用
+        NewFeaturesA.methodStatic();  // 只能通过接口来调用
         NewFeaturesClass nfc = new NewFeaturesClass();
         nfc.methodDefault0();
         nfc.methodDefault1();

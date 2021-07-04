@@ -23,10 +23,10 @@ public class File_Input_Output_Stream {
             fileInputStream = new FileInputStream(file);
             fileOutputStream = new FileOutputStream(file1, false);
 
-            byte[] byteArr = new byte[1024]; // byte类型数组
+            byte[] byteArr = new byte[1024];  // byte类型数组
             int len;
             while ((len = fileInputStream.read(byteArr)) != -1) {
-                fileOutputStream.write(byteArr, 0, len); // 复制操作
+                fileOutputStream.write(byteArr, 0, len);  // 复制操作
             }
             System.out.println("图片复制成功!");
         } catch (IOException e) {

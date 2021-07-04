@@ -34,7 +34,7 @@ public class SetInterface<E> {
         set.add("BB");
         set.add("CC");
         set.add("DD");
-        System.out.println(set); // 无序(和添加顺序不一致)
+        System.out.println(set);  // 无序(和添加顺序不一致)
     }
 
     @Test
@@ -46,7 +46,7 @@ public class SetInterface<E> {
         }
 
         HashSet(int initialCapacity, float loadFactor, boolean dummy) {
-            map = new LinkedHashMap<>(initialCapacity, loadFactor); // 底层通过LindedHashMap进行存储
+            map = new LinkedHashMap<>(initialCapacity, loadFactor);  // 底层通过LindedHashMap进行存储
         }
          */
         Set<Object> set = new LinkedHashSet<>();
@@ -55,7 +55,7 @@ public class SetInterface<E> {
         set.add("BB");
         set.add("CC");
         set.add("DD");
-        System.out.println(set); // 与添加顺序相同,有序
+        System.out.println(set);  // 与添加顺序相同,有序
     }
 
     @Test
@@ -66,14 +66,14 @@ public class SetInterface<E> {
        private static final Object PRESENT = new Object();
 
         public TreeSet() {
-            this(new TreeMap<>()); // 底层通过LindedHashMap进行存储
+            this(new TreeMap<>());  // 底层通过LindedHashMap进行存储
         }
 
         public boolean add(E e) {
             return m.put(e, PRESENT)==null;
         }
          */
-        TreeSet<SetInterfaceTest> ts = new TreeSet<>(); // Comparator接口进行排序
+        TreeSet<SetInterfaceTest> ts = new TreeSet<>();  // Comparator接口进行排序
         ts.add(new SetInterfaceTest("duanchao", 52));
         ts.add(new SetInterfaceTest("jack", 22));
         ts.add(new SetInterfaceTest("tom", 32));
@@ -89,7 +89,7 @@ public class SetInterface<E> {
             public int compare(SetInterfaceTest o1, SetInterfaceTest o2) {
                 return o1.getName().compareTo(o2.getName());
             }
-        }); // Comparator接口进行排序
+        });  // Comparator接口进行排序
         ts1.add(new SetInterfaceTest("duanchao", 52));
         ts1.add(new SetInterfaceTest("jack", 22));
         ts1.add(new SetInterfaceTest("tom", 32));

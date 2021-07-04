@@ -17,7 +17,7 @@ public class GenericClassExtend<E, K, V> {
         // 类A是类B的父类,G<A>与G<B>不存在继承关系===>G<A>不是G<B>的父类
         List<Object> l1 = null;
         List<String> l2 = null;
-        // l1 = l2; // 报错,不兼容的类型
+        // l1 = l2;  // 报错,不兼容的类型
     }
 
     @Test
@@ -49,7 +49,7 @@ class GenericClassExtendSub0 extends GenericClassExtend<String, Integer, Float> 
 
 
 // 不指定类型
-class GenericClassExtendSub1 extends GenericClassExtend { // 此时等价于:extends GenericClassExtend<Object, Object, Object>
+class GenericClassExtendSub1 extends GenericClassExtend {  // 此时等价于:extends GenericClassExtend<Object, Object, Object>
 }
 
 
@@ -76,12 +76,12 @@ class GenericClassExtendSub5<S, K, V> extends GenericClassExtend<String, K, V> {
 
     public static void main(String[] args) {
         GenericClassExtendSub5<Integer, String, Float> ge = new GenericClassExtendSub5<>();
-        ge.showE("dc"); // 指定具体类型String
+        ge.showE("dc");  // 指定具体类型String
 
-        ge.showK("dmm"); // 保留
-        ge.showV(3.3f); // 保留
+        ge.showK("dmm");  // 保留
+        ge.showV(3.3f);  // 保留
 
-        ge.showS(100); // 新增
+        ge.showS(100);  // 新增
     }
 }
 

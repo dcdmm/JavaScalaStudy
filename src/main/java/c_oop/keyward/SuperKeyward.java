@@ -12,7 +12,7 @@ public class SuperKeyward {
     }
 
     public SuperKeyward(String name, int age) {
-        this.age = age; // 该this.age表示当前对象(父类中的)成员变量age
+        this.age = age;  // 该this.age表示当前对象(父类中的)成员变量age
         System.out.println("调用了父类的有参构造方法:name;age");
     }
 
@@ -31,7 +31,7 @@ class SubSuperKeyword extends SuperKeyward {
     int age = 24;
 
     public SubSuperKeyword() {
-        super(); // 显式地调用父类的(无参)构造方法;必须为构造器的第一条语句出现
+        super();  // 显式地调用父类的(无参)构造方法;必须为构造器的第一条语句出现
         // this("dc", 25); // 此时不能通过this调用其他构造器
         System.out.println("调用了子类的无参构造方法");
     }
@@ -41,8 +41,8 @@ class SubSuperKeyword extends SuperKeyward {
     }
 
     public SubSuperKeyword(String name, int age, String sex) {
-        super(name, age, sex); // 调用父类的有参构造方法
-        this.age = age; // 该this.age表示当前对象成员变量age
+        super(name, age, sex);  // 调用父类的有参构造方法
+        this.age = age;  // 该this.age表示当前对象成员变量age
         System.out.println("调用了子类的有参构造方法:name,age,sex");
     }
 
@@ -50,10 +50,10 @@ class SubSuperKeyword extends SuperKeyward {
     public void showAge() {
         int age = 25;
         System.out.println("调用了子类的showAge方法");
-        System.out.println(age); // 局部变量
-        System.out.println(this.age); // 当前对象的成员变量
-        System.out.println(super.age); // 当前对象(父类中的)成员变量(当子类成员变量和父类成员变量重名时)
-        super.showAge(); // 当前对象(父类中的)成员方法(当子类重写父类方法时)
+        System.out.println(age);  // 局部变量
+        System.out.println(this.age);  // 当前对象的成员变量
+        System.out.println(super.age);  // 当前对象(父类中的)成员变量(当子类成员变量和父类成员变量重名时)
+        super.showAge();  // 当前对象(父类中的)成员方法(当子类重写父类方法时)
     }
 
     public static void main(String[] args) {

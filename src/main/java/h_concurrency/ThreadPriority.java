@@ -17,9 +17,9 @@ public class ThreadPriority extends Thread {
 
     public static void main(String[] args) {
         ThreadPriority tp = new ThreadPriority();
-        tp.setPriority(8); // Changes the priority of this thread.
+        tp.setPriority(8);  // Changes the priority of this thread.
         tp.start();
-        Thread.currentThread().setPriority(Thread.MIN_PRIORITY); // 更改主线程线程优先级
+        Thread.currentThread().setPriority(Thread.MIN_PRIORITY);  // 更改主线程线程优先级
         for (int i = 0; i < 50; i++) {
             System.out.println("main:" + Thread.currentThread().getPriority() + ":   " + i);
         }

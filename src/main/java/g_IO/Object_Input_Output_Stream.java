@@ -65,7 +65,7 @@ public class Object_Input_Output_Stream {
     }
 }
 
-class Object_Input_Output_Stream_sub0 implements Serializable { // Serializable接口也叫标记型接口
+class Object_Input_Output_Stream_sub0 implements Serializable {  // Serializable接口也叫标记型接口
 
     // Java序列化机制通过在运行时判断类的serialVersionUID常量来验证版本的一致性
     // 如果没有声明serialVersionUID,JVM将使用自己的算法生成默认的SerialVersionUID,最好显式声明

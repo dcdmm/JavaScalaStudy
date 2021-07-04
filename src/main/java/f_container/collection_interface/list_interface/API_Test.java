@@ -110,7 +110,7 @@ public class API_Test {
         l0.add(456);
 
         //Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive.
-        List<Object> l1 = l0.subList(0, 3); // 左闭右开
+        List<Object> l1 = l0.subList(0, 3);  // 左闭右开
         System.out.println(l1);
     }
 }

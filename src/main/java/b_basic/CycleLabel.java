@@ -13,7 +13,7 @@ public class CycleLabel {
                     System.out.println(i);
                     System.out.println(j);
                     System.out.println();
-                    break out_b; // 跳出整个外层循环
+                    break out_b;  // 跳出整个外层循环
                 }
             }
         }
@@ -26,7 +26,7 @@ public class CycleLabel {
                     System.out.println(j);
                     System.out.println(k);
                     System.out.println();
-                    continue out_c; // 跳过本次外层循环
+                    continue out_c;  // 跳过本次外层循环
                 }
             }
         }
@@ -48,7 +48,7 @@ public class CycleLabel {
                         System.out.println(n);
                         System.out.println(v);
                         System.out.println();
-                        break mid_v; // 跳出整个中间循环
+                        break mid_v;  // 跳出整个中间循环
                     }
                 }
             }

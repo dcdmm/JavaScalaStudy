@@ -9,7 +9,7 @@ public class Overload {
 //        public boolean compare(int a, int b){
 //            return a == b;
 //        }
-        boolean x = new Overload().compare(3, 4); // 方法的调用
+        boolean x = new Overload().compare(3, 4);  // 方法的调用
         System.out.println(x);
         boolean y = compare(9, 4, 5);
         System.out.println(y);
@@ -17,7 +17,7 @@ public class Overload {
         System.out.println(z);
     }
 
-    public boolean compare(int a, int b) {  // 返回值为boolean
+    public boolean compare(int a, int b) {   // 返回值为boolean
         return a == b;
     }
 

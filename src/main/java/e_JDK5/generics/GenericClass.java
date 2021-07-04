@@ -7,7 +7,7 @@ package e_JDK5.generics;
  * @param <K>
  * @param <V>
  */
-public class GenericClass<T, K, V> { // extends Exception{
+public class GenericClass<T, K, V> {  // extends Exception{
     // 泛型类可以有多个类型参数
     // 泛型类不能为异常类===>既不能被抛出(throws)也不能被捕获(try...catch)
     String name;
@@ -16,15 +16,15 @@ public class GenericClass<T, K, V> { // extends Exception{
     K country;
     V payment;
 
-    public GenericClass() { // 泛型类的空参构造器
+    public GenericClass() {  // 泛型类的空参构造器
         /*
         创造类型参数为T的数组
          */
-        // T[] arr = new T[10]; // 编译不通过
-        T[] objects = (T[]) new Object[10]; // 正确写法
+        // T[] arr = new T[10];  // 编译不通过
+        T[] objects = (T[]) new Object[10];  // 正确写法
     }
 
-    public GenericClass(String name, int age, T school, K country, V payment) { // 泛型类的带有形式参数的构造器
+    public GenericClass(String name, int age, T school, K country, V payment) {  // 泛型类的带有形式参数的构造器
         this.name = name;
         this.age = age;
         this.school = school;

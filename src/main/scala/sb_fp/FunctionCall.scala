@@ -10,9 +10,9 @@ object FunctionCall {
             println("sayHi函数调用")
         }
 
-        sayHi() // 输出:sayHi函数调用(就近原则)
-        FunctionCall.sayHi() // 输出:sayHi方法调用(通过对象调用)
-        sayBay() // 输出:sayBay方法调用
+        sayHi()  // 输出:sayHi函数调用(就近原则)
+        FunctionCall.sayHi()  // 输出:sayHi方法调用(通过对象调用)
+        sayBay()  // 输出:sayBay方法调用
     }
 
     def sayHi(): Unit = {

@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class TreeMapClass {
     @Test
-    public void test0() { // Comparable接口进行排序
+    public void test0() {  // Comparable接口进行排序
         TreeMap<Object, Object> tm = new TreeMap<>();
         /*
         比较过程(与相近的两个进行比较;若相同,则使用后面对象的value代替之前对象的value):
@@ -94,7 +94,7 @@ class TreeMapClassTest implements Comparable<TreeMapClassTest> {
     }
 
     @Override
-    public int compareTo(@NotNull TreeMapClassTest o) { // 实现compareTo方法
+    public int compareTo(@NotNull TreeMapClassTest o) {  // 实现compareTo方法
         System.out.println(this + "  与  " + o + "进行比较!");
         return Integer.compare(this.age, o.age);
     }

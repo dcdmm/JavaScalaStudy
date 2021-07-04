@@ -7,12 +7,12 @@ import java.io.UnsupportedEncodingException;
  */
 public class StringEstablish {
     public static void main(String[] args) throws UnsupportedEncodingException {
-        String str0 = "duanchao"; // 字面量
+        String str0 = "duanchao";  // 字面量
         System.out.println("str0:" + str0);
         System.out.println("*******************************************");
 
         // Initializes a newly created String object so that it represents an empty character sequence.
-        String str1 = new String(); // 对象(new关键字)
+        String str1 = new String();  // 对象(new关键字)
         System.out.println("str1:" + str1);
         System.out.println("*******************************************");
 
@@ -38,15 +38,15 @@ public class StringEstablish {
         System.out.println("*******************************************");
 
         String name = "段萌萌dmm";
-        byte[] arrbytedefault = name.getBytes(); // 默认字符集编码
-        byte[] arrbytegbk = name.getBytes("gbk"); // gbk字符集编码
+        byte[] arrbytedefault = name.getBytes();  // 默认字符集编码
+        byte[] arrbytegbk = name.getBytes("gbk");  // gbk字符集编码
 
         // Constructs a new String by decoding the specified array of bytes using the platform's default charset.
-        System.out.println(new String(arrbytedefault)); // 默认字符集解码
-        System.out.println(new String(arrbytegbk)); // 乱码(编码集和解码集不一致)
+        System.out.println(new String(arrbytedefault));  // 默认字符集解码
+        System.out.println(new String(arrbytegbk));  // 乱码(编码集和解码集不一致)
 
         // Constructs a new String by decoding the specified array of bytes using the platform's default charset.
-        System.out.println(new String(arrbytegbk, "utf-8")); // utf-8字符集解码
-        System.out.println(new String(arrbytegbk, "gbk")); // gbk字符集解码
+        System.out.println(new String(arrbytegbk, "utf-8"));  // utf-8字符集解码
+        System.out.println(new String(arrbytegbk, "gbk"));  // gbk字符集解码
     }
 }

@@ -30,7 +30,7 @@ public class API_Test {
     @Test
     public void test_put_putAll() {
         Map<Object, Object> map = new HashMap<>();
-        map.put("AA", 123); // Associates the specified value with the specified key in this map
+        map.put("AA", 123);  // Associates the specified value with the specified key in this map
         map.put("BB", 123);
         map.put("CC", 123);
         map.put("DD", 123);
@@ -39,7 +39,7 @@ public class API_Test {
 
         Map<Object, Object> map1 = new HashMap<>();
         map1.put("EE", 123);
-        map1.putAll(map); // Copies all of the mappings from the specified map to this map
+        map1.putAll(map);  // Copies all of the mappings from the specified map to this map
         System.out.println(map1);
     }
 
@@ -51,7 +51,7 @@ public class API_Test {
         map.put("DD", 123);
         map.put("AA", 234);
         System.out.println(map);
-        map.remove("CC"); // Removes the mapping for a key from this map if it is present
+        map.remove("CC");  // Removes the mapping for a key from this map if it is present
         System.out.println(map);
     }
 
@@ -64,7 +64,7 @@ public class API_Test {
         map.put("AA", 234);
         System.out.println(map);
         map.clear();
-        System.out.println(map); // Removes all of the mappings from this map
+        System.out.println(map);  // Removes all of the mappings from this map
         System.out.println(map.size());
     }
 
@@ -75,8 +75,8 @@ public class API_Test {
         map.put("CC", 123);
         map.put("DD", 123);
         map.put("AA", 234);
-        System.out.println(map.get("BB")); // Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key.
-        System.out.println(map.get("ee")); // null
+        System.out.println(map.get("BB"));  // Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key.
+        System.out.println(map.get("ee"));  // null
     }
 
     @Test
@@ -86,9 +86,9 @@ public class API_Test {
         map.put("CC", 123);
         map.put("DD", 123);
         map.put("AA", 234);
-        System.out.println(map.containsKey("BB")); // Returns true if this map contains a mapping for the specified key.
+        System.out.println(map.containsKey("BB"));  // Returns true if this map contains a mapping for the specified key.
         System.out.println(map.containsKey("bb"));
-        System.out.println(map.containsValue(123)); // Returns true if this map maps one or more keys to the specified value.
+        System.out.println(map.containsValue(123));  // Returns true if this map maps one or more keys to the specified value.
     }
 
     @Test
@@ -98,8 +98,8 @@ public class API_Test {
         map.put("CC", 123);
         map.put("DD", 123);
         map.put("AA", 234);
-        System.out.println(map.size()); // Returns the number of key-value mappings in this map.
-        System.out.println(map.isEmpty()); // Returns true if this map contains no key-value mappings.
+        System.out.println(map.size());     // Returns the number of key-value mappings in this map.
+        System.out.println(map.isEmpty());  // Returns true if this map contains no key-value mappings.
     }
 
     @Test
@@ -114,7 +114,7 @@ public class API_Test {
         map1.put("CC", 123);
         map1.put(new String("DD"), 123);
 
-        System.out.println(map.equals(map1)); // // Compares the specified object with this map for equality.
+        System.out.println(map.equals(map1));  // Compares the specified object with this map for equality.
     }
 
     @Test
@@ -124,10 +124,10 @@ public class API_Test {
         map.put("CC", 234);
         map.put("DD", 456);
         map.put("AA", 567);
-        Set<Object> set = map.keySet(); // Returns a Set view of the keys contained in this map.
+        Set<Object> set = map.keySet();  // Returns a Set view of the keys contained in this map.
         System.out.println(set);
 
-        Collection<Object> values = map.values(); // Returns a Collection view of the values contained in this map.
+        Collection<Object> values = map.values();  // Returns a Collection view of the values contained in this map.
         System.out.println(values);
     }
 
@@ -138,7 +138,7 @@ public class API_Test {
         map.put("CC", 234);
         map.put("DD", 456);
         map.put("AA", 567);
-        Set<Map.Entry<Object, Object>> entries = map.entrySet(); // Returns a Set view of the mappings contained in this map.
+        Set<Map.Entry<Object, Object>> entries = map.entrySet();  // Returns a Set view of the mappings contained in this map.
         System.out.println(entries);
         for (Map.Entry<Object, Object> i : entries) {
             System.out.println(i);

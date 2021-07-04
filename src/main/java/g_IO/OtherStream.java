@@ -74,7 +74,7 @@ public class OtherStream {
             printStream.println();
 
             if (printStream != null) {
-                System.setOut(printStream); // 将System.out重定向为printStream.此时通过System.out.print方法将打印数据到test1.txt中
+                System.setOut(printStream);  // 将System.out重定向为printStream.此时通过System.out.print方法将打印数据到test1.txt中
             }
             for (int i = 0; i < 255; i++) {
                 System.out.print((char) i);
@@ -124,10 +124,10 @@ public class OtherStream {
             String s1 = dataInputStream.readUTF();
 
             // 读取顺序必须与DataOutputStream的写入的过程一致
-            System.out.println(str); // 25
-            System.out.println(c); // 'A'
-            System.out.println(s0); // "duanchao"
-            System.out.println(s1); // "duanmengmeng"
+            System.out.println(str);  // 25
+            System.out.println(c);    // 'A'
+            System.out.println(s0);   // "duanchao"
+            System.out.println(s1);   // "duanmengmeng"
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

@@ -5,10 +5,10 @@ package c_oop.Interface;
  */
 public interface InterfaceBasic {
     // 全局常量
-    int MAX_SPEED = 7900; // 省略了public static final
+    int MAX_SPEED = 7900;  // 省略了public static final
 
     // 抽象方法
-    void fly(); // 省略了public abstract
+    void fly();  // 省略了public abstract
 
     int stop();
 }
@@ -20,7 +20,7 @@ interface Attackable {
 
 
 // 普通类(即非抽象类)如果实现一个接口,那么必须为接口中所有的抽象方法提供方法定义
-class Plane implements InterfaceBasic { // 要让一个类遵循某个特定接口(或者一组接口),需要使用implements关键字
+class Plane implements InterfaceBasic {  // 要让一个类遵循某个特定接口(或者一组接口),需要使用implements关键字
     @Override
     public void fly() {
         System.out.println("飞机飞");
@@ -90,7 +90,7 @@ class Bullet extends Structure implements InterfaceBasic, Attackable {
 
 class InterfaceBasicTest {
     public static void main(String[] args) {
-        // InterfaceBasic ib = new InterfaceBasic(); // 报错:java: c_oop.Interface.InterfaceBasic是抽象的; 无法实例化
+        // InterfaceBasic ib = new InterfaceBasic();  // 报错:java: c_oop.Interface.InterfaceBasic是抽象的; 无法实例化
 
         // 多态性
         InterfaceBasic ib = new Bullet("穿甲弹");

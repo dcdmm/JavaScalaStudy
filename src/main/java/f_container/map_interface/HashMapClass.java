@@ -19,7 +19,7 @@ public class HashMapClass<K, V> {
             Class<?> c;
             Type[] ts, as;
             ParameterizedType p;
-            if ((c = x.getClass()) == String.class) // bypass checks
+            if ((c = x.getClass()) == String.class)  // bypass checks
                 return c;
             if ((ts = c.getGenericInterfaces()) != null) {
                 for (Type t : ts) {
@@ -27,7 +27,7 @@ public class HashMapClass<K, V> {
                             ((p = (ParameterizedType) t).getRawType() ==
                                     Comparable.class) &&
                             (as = p.getActualTypeArguments()) != null &&
-                            as.length == 1 && as[0] == c) // type arg is c
+                            as.length == 1 && as[0] == c)  // type arg is c
                         return c;
                 }
             }
@@ -469,7 +469,7 @@ public class HashMapClass<K, V> {
                     tab[index] = loHead.untreeify(map);
                 else {
                     tab[index] = loHead;
-                    if (hiHead != null) // (else is already treeified)
+                    if (hiHead != null)  // (else is already treeified)
                         loHead.treeify(tab);
                 }
             }
@@ -706,7 +706,7 @@ public class HashMapClass<K, V> {
     final float loadFactor;
 
     // The load factor used when none specified in constructor.
-    static final float DEFAULT_LOAD_FACTOR = 0.75f; // 负载因子默认为0.75
+    static final float DEFAULT_LOAD_FACTOR = 0.75f;  // 负载因子默认为0.75
 
     // The next size value at which to resize (capacity * load factor)
     int threshold; // 扩容的临界值
@@ -718,7 +718,7 @@ public class HashMapClass<K, V> {
      */
     static final int MAXIMUM_CAPACITY = 1 << 30;
 
-    //The default initial capacity - MUST be a power of two.
+    // The default initial capacity - MUST be a power of two.
     static final int DEFAULT_INITIAL_CAPACITY = 1 << 4;
 
     /**
@@ -758,7 +758,7 @@ public class HashMapClass<K, V> {
 
     // 空参构造器
     public HashMapClass() {
-        this.loadFactor = DEFAULT_LOAD_FACTOR; // all other fields defaulted
+        this.loadFactor = DEFAULT_LOAD_FACTOR;  // all other fields defaulted
     }
 
     /**
@@ -770,7 +770,7 @@ public class HashMapClass<K, V> {
         if (tab == null || (n = tab.length) < MIN_TREEIFY_CAPACITY)
             // 若数组长度小于64时,此时对数组进行扩容
             resize();
-        else if ((e = tab[index = (n - 1) & hash]) != null) { // 此时使用红黑树进行存储
+        else if ((e = tab[index = (n - 1) & hash]) != null) {  // 此时使用红黑树进行存储
             TreeNode<K,V> hd = null, tl = null;
             do {
                 TreeNode<K,V> p = replacementTreeNode(e, null);
@@ -790,7 +790,7 @@ public class HashMapClass<K, V> {
     // Computes key.hashCode() and spreads (XORs) higher bits of hash to lower
     static final int hash(Object key) {
         int h;
-        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16); // 调用了key内部的hashcode()方法
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);  // 调用了key内部的hashcode()方法
     }
 
     Node<K, V> newNode(int hash, K key, V value, Node<K, V> next) {
@@ -809,7 +809,7 @@ public class HashMapClass<K, V> {
         if ((tab = table) == null || (n = tab.length) == 0)
             // 判断数组是否为null,长度是否为0,是则初始化该数组
             n = (tab = resize()).length;
-        if ((p = tab[i = (n - 1) & hash]) == null) // p在if语句中进行了赋值
+        if ((p = tab[i = (n - 1) & hash]) == null)  // p在if语句中进行了赋值
             // 如果table处于(n-1)&hash处的值为null,则新建一个节点插入该位置
             tab[i] = newNode(hash, key, value, null);
         else {
@@ -822,22 +822,22 @@ public class HashMapClass<K, V> {
                 e = ((TreeNode<K, V>) p).putTreeVal(this, tab, hash, key, value);
             else {
                 for (int binCount = 0; ; ++binCount) {
-                    if ((e = p.next) == null) { // 若该链表只有一个元素;e在if语句中进行了赋值
-                        p.next = newNode(hash, key, value, null); // 在链表的尾部插入一个新的节点
-                        if (binCount >= TREEIFY_THRESHOLD - 1) // 若此时遍历的链表节点数量大约等于8
+                    if ((e = p.next) == null) {  // 若该链表只有一个元素;e在if语句中进行了赋值
+                        p.next = newNode(hash, key, value, null);  // 在链表的尾部插入一个新的节点
+                        if (binCount >= TREEIFY_THRESHOLD - 1)  // 若此时遍历的链表节点数量大约等于8
                             treeifyBin(tab, hash);
                         break;
                     }
                     if (e.hash == hash && ((k = e.key) == key || (key != null && key.equals(k))))
                         // 若e的哈希值与hash相等且e的key与key也相同(通过equlas方法比较),则直接覆盖
                         break;
-                    p = e; // e赋值为e,进行剩下的循环遍历
+                    p = e;  // e赋值为e,进行剩下的循环遍历
                 }
             }
-            if (e != null) { // existing mapping for key
+            if (e != null) {  // existing mapping for key
                 V oldValue = e.value;
                 if (!onlyIfAbsent || oldValue == null)
-                    e.value = value; // 值更新为新的value
+                    e.value = value;  // 值更新为新的value
                 afterNodeAccess(e);
                 return oldValue;
             }
@@ -870,11 +870,11 @@ public class HashMapClass<K, V> {
                 return oldTab;
             } else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY &&
                     oldCap >= DEFAULT_INITIAL_CAPACITY)
-                newThr = oldThr << 1; // double threshold
-        } else if (oldThr > 0) // initial capacity was placed in threshold
+                newThr = oldThr << 1;  // double threshold
+        } else if (oldThr > 0)  // initial capacity was placed in threshold
             newCap = oldThr;
-        else {               // zero initial threshold signifies using defaults
-            newCap = DEFAULT_INITIAL_CAPACITY; // 默认初始容量为16
+        else {  // zero initial threshold signifies using defaults
+            newCap = DEFAULT_INITIAL_CAPACITY;  // 默认初始容量为16
             newThr = (int) (DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
         }
         if (newThr == 0) {
@@ -895,7 +895,7 @@ public class HashMapClass<K, V> {
                         newTab[e.hash & (newCap - 1)] = e;
                     else if (e instanceof TreeNode)
                         ((TreeNode<K, V>) e).split(this, newTab, j, oldCap);
-                    else { // preserve order
+                    else {  // preserve order
                         Node<K, V> loHead = null, loTail = null;
                         Node<K, V> hiHead = null, hiTail = null;
                         Node<K, V> next;
@@ -933,12 +933,12 @@ public class HashMapClass<K, V> {
     @Test
     public void test0() {
         HashMap<Object, Object> map = new HashMap<>();
-        map.put(null, null); // key、value都可以为null
+        map.put(null, null);  // key、value都可以为null
         map.put(123, "AA");
         map.put(234, "BB");
         map.put(345, "CC");
         map.put(456, "DD");
-        System.out.println(map); // 无序(和添加顺序不一致)
+        System.out.println(map);  // 无序(和添加顺序不一致)
     }
 
     @Test

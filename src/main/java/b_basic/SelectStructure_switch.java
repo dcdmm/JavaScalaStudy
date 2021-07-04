@@ -6,7 +6,7 @@ package b_basic;
 public class SelectStructure_switch {
     public static void main(String[] args) {
         char grade = 'B';
-        switch (grade) { // 数据类型可以是:byte,short,int,char,emum,String
+        switch (grade) {  // 数据类型可以是:byte,short,int,char,emum,String
             case 'A':
                 System.out.print("A");
                 break;

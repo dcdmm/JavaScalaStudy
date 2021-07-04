@@ -21,7 +21,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *    }
  *  }
  */
-public class ReentrantLockClass implements Runnable { // 实现Runnable接口
+public class ReentrantLockClass implements Runnable {  // 实现Runnable接口
     private int ticket = 100;
     /*
     When set true, under contention, locks favor granting access to the longest-waiting thread.
@@ -29,14 +29,14 @@ public class ReentrantLockClass implements Runnable { // 实现Runnable接口
     Programs using fair locks accessed by many threads may display lower overall throughput (i.e., are slower; often much slower) than those using the default setting, but have smaller variances in times to obtain locks and guarantee lack of starvation
      */
     // 也要保证多个线程在同步中使用的是同一个同步锁
-    // private static ReentrantLock lock = new ReentrantLock(false); // 若通过继承Thread类创建线程,必须使其为静态属性(内存中只有一个副本)
-    private final ReentrantLock lock = new ReentrantLock(false); // 非公平锁(默认);若通过继承Thread类创建线程,此时徐
-    // private ReentrantLock lock = new ReentrantLock(true); // 公平锁
+    // private static ReentrantLock lock = new ReentrantLock(false);  // 若通过继承Thread类创建线程,必须使其为静态属性(内存中只有一个副本)
+    private final ReentrantLock lock = new ReentrantLock(false);  // 非公平锁(默认);若通过继承Thread类创建线程,此时徐
+    // private ReentrantLock lock = new ReentrantLock(true);  // 公平锁
 
     @Override
     public void run() {
         while (true) {
-            lock.lock(); // Acquires the lock
+            lock.lock();  // Acquires the lock
 
             // 共享资源的操作部分
             try {
@@ -54,7 +54,7 @@ public class ReentrantLockClass implements Runnable { // 实现Runnable接口
             }
 
             finally {
-                lock.unlock(); // Attempts to release this lock
+                lock.unlock();  // Attempts to release this lock
             }
         }
     }
@@ -66,6 +66,6 @@ public class ReentrantLockClass implements Runnable { // 实现Runnable接口
         Thread thread2 = new Thread(rlc);
         thread0.start();
         thread1.start();
-        thread2.start(); // 线程安全
+        thread2.start();  // 线程安全
     }
 }

@@ -14,7 +14,7 @@ object Recursion {
         println(FibonaccRecursion(12))
         println("******************************")
 
-        hanoi(3) // 3层汉诺塔
+        hanoi(3)  // 3层汉诺塔
     }
 
     // 递归实现阶乘
@@ -30,7 +30,7 @@ object Recursion {
     // *. 下一个函数不再需要上一个函数的环境
     // 尾递归实现阶乘
     def tailFact(n: Int): Int = {
-        @tailrec // 尾递归的注解(确保为尾递归)
+        @tailrec  // 尾递归的注解(确保为尾递归)
         def loop(n: Int, currResult: Int): Int = {
             if (n == 0) {
                 return currResult
@@ -55,9 +55,9 @@ object Recursion {
         if (n == 1) {
             println(x + "-->" + z)
         } else {
-            hanoi(n - 1, x, z, y) // 将前n-1个盘子移动从x移动到y上
-            println(x + "-->" + z) // 将最底下的盘子从x移动到z上
-            hanoi(n - 1, y, x, z) // 将y上的n-1个盘子移动到z上
+            hanoi(n - 1, x, z, y)  // 将前n-1个盘子移动从x移动到y上
+            println(x + "-->" + z)  // 将最底下的盘子从x移动到z上
+            hanoi(n - 1, y, x, z)  // 将y上的n-1个盘子移动到z上
         }
     }
 }

@@ -15,8 +15,8 @@ public class IteratorInterface {
         coll0.add(new String("jack"));
 
         Iterator<Object> iter = coll0.iterator();
-        while (iter.hasNext()) { // Returns true if the iteration has more elements.
-            Object obj = iter.next(); // Returns the next element in the iteration.
+        while (iter.hasNext()) {  // Returns true if the iteration has more elements.
+            Object obj = iter.next();  // Returns the next element in the iteration.
             System.out.println(obj);
         }
     }

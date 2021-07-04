@@ -39,7 +39,7 @@ public class Buffered_Input_Output_Stream {
         } finally {
             try {
                 if (bufferedInputStream != null)
-                    bufferedInputStream.close(); // 只需要关闭处理流即可,内部节点流自动关闭
+                    bufferedInputStream.close();  // 只需要关闭处理流即可,内部节点流自动关闭
             } catch (IOException e) {
                 e.printStackTrace();
             }

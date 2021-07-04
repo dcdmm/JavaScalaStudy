@@ -27,11 +27,11 @@ public abstract class AbstractClass {
         this.i = i;
     }
 
-    public abstract void printName(String name); // 抽象方法
+    public abstract void printName(String name);  // 抽象方法
 
     public abstract void adjust();
 
-    public String what() { // 非抽象方法
+    public String what() {  // 非抽象方法
         return "Instrument";
     }
 }
@@ -69,8 +69,8 @@ class Child1AbstractClass extends AbstractClass {
 
 class AbstractClassTest {
     public static void main(String[] args) {
-        // AbstractClass ac0 = new AbstractClass(); // 报错:java: oop.AbstractClass是抽象的; 无法实例化
-        AbstractClass ac = new Child1AbstractClass(332); // 向上转型
+        // AbstractClass ac0 = new AbstractClass();  // 报错:java: oop.AbstractClass是抽象的; 无法实例化
+        AbstractClass ac = new Child1AbstractClass(332);  // 向上转型
         // 多态
         ac.printName("duanchao");
         System.out.println(ac.what());

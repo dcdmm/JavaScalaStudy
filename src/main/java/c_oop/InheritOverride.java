@@ -44,7 +44,7 @@ class SubInheritOverride extends InheritOverride {
     }
 
     public static void print() {
-        System.out.println("子类的静态方法"); // 再次声明
+        System.out.println("子类的静态方法");  // 再次声明
     }
 
     /**
@@ -70,18 +70,18 @@ class SubInheritOverride extends InheritOverride {
     public static void main(String[] args) {
         SubInheritOverride sc = new SubInheritOverride();
         System.out.println(sc.height);
-        System.out.println(sc.age); // 子类成员变量和父类成员变量重名(容易造成混淆)时,采用就近原则
-        // System.out.println(sc.name); // 报错:java: name 在 oop.InheritBasic 中是 private 访问控制
+        System.out.println(sc.age);  // 子类成员变量和父类成员变量重名(容易造成混淆)时,采用就近原则
+        // System.out.println(sc.name);  // 报错:java: name 在 oop.InheritBasic 中是 private 访问控制
         System.out.println(sc.getName());
         System.out.println("**********************************");
 
-        sc.sing(); // 调用子类的sing方法(重写)
+        sc.sing();  // 调用子类的sing方法(重写)
         sc.dance();
         System.out.println("**********************************");
 
         SubInheritOverride.print();
         InheritOverride io = new SubInheritOverride();
         io.sing();
-        io.print(); // 调用的是父类的print方法,没有体现多态性
+        io.print();  // 调用的是父类的print方法,没有体现多态性
     }
 }

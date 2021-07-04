@@ -8,19 +8,19 @@ package c_oop.keyward;
  */
 public class StaticKeyward {
     int age = 22;
-    static String name = "duanchao"; // 静态变量;一般和final关键字结合使用,表示静态常量
+    static String name = "duanchao";  // 静态变量;一般和final关键字结合使用,表示静态常量
 
-    public static void showStatic() { // 静态方法
+    public static void showStatic() {  // 静态方法
         System.out.println(name);
         // System.out.println(age);
         // dance();
     }
 
     public void show() {
-        System.out.println(name); // 非静态方法可以访问静态变量
+        System.out.println(name);  // 非静态方法可以访问静态变量
         System.out.println(age);
         dance();
-        showStatic(); // 非静态方法可以调用静态方法
+        showStatic();  // 非静态方法可以调用静态方法
     }
 
     public void dance() {
@@ -32,11 +32,11 @@ public class StaticKeyward {
 class StaticKeywardTest {
     public static void main(String[] args) {
         StaticKeyward sk0 = new StaticKeyward();
-        System.out.println(sk0.name); // 通过实例名.变量名 访问静态变量
-        System.out.println(StaticKeyward.name); // 通过类名.变量名 访问静态变量(推荐)
+        System.out.println(sk0.name);  // 通过实例名.变量名 访问静态变量
+        System.out.println(StaticKeyward.name);  // 通过类名.变量名 访问静态变量(推荐)
         sk0.name = "dmm";
-        sk0.showStatic(); // 通过实例名.方法名 访问静态方法
-        StaticKeyward.showStatic(); // 通过类名.方法名 访问静态方法(推荐)
+        sk0.showStatic();  // 通过实例名.方法名 访问静态方法
+        StaticKeyward.showStatic();  // 通过类名.方法名 访问静态方法(推荐)
         System.out.println("**********************************************");
 
         StaticKeyward sk1 = new StaticKeyward();

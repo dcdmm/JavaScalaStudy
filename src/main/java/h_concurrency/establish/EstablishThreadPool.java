@@ -39,9 +39,9 @@ public class EstablishThreadPool {
         Returns:
             the newly created thread pool
          */
-        ExecutorService service = Executors.newFixedThreadPool(10);// 该池包含固定数量的线程;空闲线程会一直保留
-        ThreadPoolExecutor service1 = (ThreadPoolExecutor) service; // 向下转型
-        System.out.println(service == service1); // 同一个引用地址
+        ExecutorService service = Executors.newFixedThreadPool(10);  // 该池包含固定数量的线程;空闲线程会一直保留
+        ThreadPoolExecutor service1 = (ThreadPoolExecutor) service;  // 向下转型
+        System.out.println(service == service1);  // 同一个引用地址
         /*
         注:ThreadPoolExecutor类中定义
         public void setMaximumPoolSize(int maximumPoolSize)
@@ -50,7 +50,7 @@ public class EstablishThreadPool {
             If the new value is smaller than the current value, excess existing threads will be terminated when they next become idle.
          */
         service1.setMaximumPoolSize(21);
-        System.out.println(service1.getMaximumPoolSize()); // Returns the maximum allowed number of threads.
+        System.out.println(service1.getMaximumPoolSize());  // Returns the maximum allowed number of threads.
 
         service.execute(() -> {
             for (int i = 0; i < 100; i++) {
@@ -73,7 +73,7 @@ public class EstablishThreadPool {
                     }
                 }
             }
-        }); // 没有返回值
+        });  // 没有返回值
 
         /*
         注:ExecutorService接口中定义
@@ -97,7 +97,7 @@ public class EstablishThreadPool {
 
         int the_sum = 0;
         try {
-            the_sum = f.get(); // Waits if necessary for the computation to complete, and then retrieves its result.
+            the_sum = f.get();  // Waits if necessary for the computation to complete, and then retrieves its result.
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
@@ -109,6 +109,6 @@ public class EstablishThreadPool {
             Initiates an orderly shutdown in which previously submitted tasks are executed, but no new tasks will be accepted.
             Invocation has no additional effect if already shut down.
          */
-        service.shutdown(); // 关闭服务,会先完成已经提交的任务而不再接受新的任务
+        service.shutdown();  // 关闭服务,会先完成已经提交的任务而不再接受新的任务
     }
 }

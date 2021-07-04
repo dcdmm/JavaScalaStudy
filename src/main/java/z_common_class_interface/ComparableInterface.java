@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Comparable接口
  * Lists (and arrays) of objects that implement this interface can be sorted automatically by Collections.sort (and Arrays.sort).
  */
-public class ComparableInterface implements Comparable<ComparableInterface> { // 实现Comparable接口
+public class ComparableInterface implements Comparable<ComparableInterface> {  // 实现Comparable接口
     private String name;
     private int age;
 
@@ -42,7 +42,7 @@ public class ComparableInterface implements Comparable<ComparableInterface> { //
     }
 
     @Override
-    public int compareTo(@NotNull ComparableInterface o) { // 实现compareTo方法;类型与Comparable类型参数一致
+    public int compareTo(@NotNull ComparableInterface o) {  // 实现compareTo方法;类型与Comparable类型参数一致
         /*
         若:
         正整数表示当前对象大于object o

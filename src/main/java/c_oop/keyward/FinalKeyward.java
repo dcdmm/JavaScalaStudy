@@ -31,16 +31,16 @@ final class Sub0FinalKeyward extends FinalKeyward {
 class FinalKeywardTest {
     // final修饰的参数:这意味这无法在方法中更改参数引用所指向的对象,这一特性主要用于向匿名内部类传递数据
     public void f(final FinalKeyward g) {
-        // g = new FinalKeyward(); // 报错:java: 不能分配最终参数g
+        // g = new FinalKeyward();  // 报错:java: 不能分配最终参数g
     }
 
     public static void main(String[] args) {
-        final int AGE = 20; // 常量(必须被初始化:显式初始化,构造器初始化,代码块初始化);不能被修改;命名规范:全部大小
-        // AGE = 30; // 报错:java: 无法为最终变量AGE分配值
-        final FinalKeyward fk = new FinalKeyward(); // fk为引用数据类型
-        // fk = new FinalKeyward(); // 报错:java: 无法为最终变量fk分配值
+        final int AGE = 20;  // 常量(必须被初始化:显式初始化,构造器初始化,代码块初始化);不能被修改;命名规范:全部大小
+        // AGE = 30;  // 报错:java: 无法为最终变量AGE分配值
+        final FinalKeyward fk = new FinalKeyward();  // fk为引用数据类型
+        // fk = new FinalKeyward();  // 报错:java: 无法为最终变量fk分配值
         System.out.println(fk.age);
-        fk.age = 999; // 仍可以修改其内容
+        fk.age = 999;  // 仍可以修改其内容
         System.out.println(fk.age);
     }
 }

@@ -13,7 +13,7 @@ public class SynchronizedBlock {
         BlockModeOne mo2 = new BlockModeOne();
         mo0.start();
         mo1.start();
-        mo2.start(); // 线程安全
+        mo2.start();  // 线程安全
     }
 }
 
@@ -26,14 +26,14 @@ class SynchronizedBlockTest {
         Thread thread2 = new Thread(sk);
         thread0.start();
         thread1.start();
-        thread2.start(); // 线程安全
+        thread2.start();  // 线程安全
     }
 }
 
 
-class BlockModeOne extends Thread { // 继承Thread类
+class BlockModeOne extends Thread {  // 继承Thread类
     private static int ticket = 100;
-    private static final Object obj = new Object(); // 静态属性(内存中只有一个副本)
+    private static final Object obj = new Object();  // 静态属性(内存中只有一个副本)
 
     public void run() {
         while (true) {
@@ -57,7 +57,7 @@ class BlockModeOne extends Thread { // 继承Thread类
 }
 
 
-class BlockModeTwo implements Runnable { // 实现Runnable接口
+class BlockModeTwo implements Runnable {  // 实现Runnable接口
     private int ticket = 100;
     final Object obj = new Object();
 
@@ -66,8 +66,8 @@ class BlockModeTwo implements Runnable { // 实现Runnable接口
         while (true) {
             // 必须保证多个线程在同步中使用的是同一个同步锁
             // synchronized (this) { // 方式1(同步锁为当前对象)
-            //synchronized (SynchronizedBlock1.class) { // 方式2(同步锁为类对象)
-            synchronized (obj) { // 方式3(同步锁为莫某实例对象)
+            //synchronized (SynchronizedBlock1.class) {  // 方式2(同步锁为类对象)
+            synchronized (obj) {  // 方式3(同步锁为莫某实例对象)
                 if (ticket > 0) {
                     try {
                         Thread.sleep(100);

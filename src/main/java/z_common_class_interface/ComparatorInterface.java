@@ -56,7 +56,7 @@ public class ComparatorInterface {
                 return -o1.compareTo(o2);
             }
         });
-        System.out.println(Arrays.toString(arrString)); // 逆序输出
+        System.out.println(Arrays.toString(arrString));  // 逆序输出
         System.out.println("*****************************************************");
 
         ComparatorInterface[] arrayci = new ComparatorInterface[4];

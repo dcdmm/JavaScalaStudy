@@ -16,7 +16,7 @@ public class DeadLock { // 死锁案例1
         StringBuffer sb2 = new StringBuffer();
 
         new Thread(() -> {
-            synchronized (sb1) { // 同步监视器:sb1
+            synchronized (sb1) {  // 同步监视器:sb1
                 sb1.append('a');
                 sb2.append('1');
                 try {
@@ -24,7 +24,7 @@ public class DeadLock { // 死锁案例1
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                synchronized (sb2) { // 同步监视器:sb2
+                synchronized (sb2) {  // 同步监视器:sb2
                     sb1.append('b');
                     sb2.append('2');
 
@@ -37,7 +37,7 @@ public class DeadLock { // 死锁案例1
         new Thread(new Runnable() {
             @Override
             public void run() {
-                synchronized (sb2) { // 同步监视器:sb2
+                synchronized (sb2) {  // 同步监视器:sb2
                     sb1.append('c');
                     sb2.append('3');
                     try {
@@ -45,7 +45,7 @@ public class DeadLock { // 死锁案例1
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    synchronized (sb1) { // 同步监视器:sb1
+                    synchronized (sb1) {  // 同步监视器:sb1
                         sb1.append('d');
                         sb2.append('4');
 
@@ -59,7 +59,7 @@ public class DeadLock { // 死锁案例1
 }
 
 
-class DeadLockReentrantLock { // 死锁案例2(通过ReentrantLock类)
+class DeadLockReentrantLock {  // 死锁案例2(通过ReentrantLock类)
     public static void main(String[] args) {
         StringBuffer str1 = new StringBuffer();
         StringBuffer str2 = new StringBuffer();
@@ -123,7 +123,7 @@ class DeadLockReentrantLock { // 死锁案例2(通过ReentrantLock类)
 
 
 class DeadLockA {
-    public synchronized void foo(DeadLockB b_obj) { // 同步监视器:当前对象--->实例a
+    public synchronized void foo(DeadLockB b_obj) {  // 同步监视器:当前对象--->实例a
         System.out.println(Thread.currentThread().getName() + "进入了DeadLockA实例的foo方法");
         try {
             Thread.sleep(1000);
@@ -141,7 +141,7 @@ class DeadLockA {
 
 
 class DeadLockB {
-    public synchronized void bar(DeadLockA a_obj) { // 同步监视器:当前对象--->实例b
+    public synchronized void bar(DeadLockA a_obj) {  // 同步监视器:当前对象--->实例b
         System.out.println(Thread.currentThread().getName() + "进入了DeadLockB实例的bar方法");
         try {
             Thread.sleep(1000);
@@ -158,7 +158,7 @@ class DeadLockB {
 }
 
 
-class DeadLockABTest implements Runnable { // 死锁案例3
+class DeadLockABTest implements Runnable {  // 死锁案例3
     DeadLockA a = new DeadLockA();
     DeadLockB b = new DeadLockB();
 
@@ -182,7 +182,7 @@ class DeadLockABTest implements Runnable { // 死锁案例3
         dlt.init();
         new Thread(dlt).start();
         */
-        new Thread(dlt).start(); // Causes this thread to begin execution
+        new Thread(dlt).start();  // Causes this thread to begin execution
         dlt.init();
     }
 }

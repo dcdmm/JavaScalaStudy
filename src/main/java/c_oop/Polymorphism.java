@@ -71,7 +71,7 @@ class CatPolymorphism extends Polymorphism {
 
 class PolymorphismTest {
     public static void main(String[] args) {
-        Polymorphism mp = new MousePolymorphism("老鼠"); // 向上转型机制
+        Polymorphism mp = new MousePolymorphism("老鼠");  // 向上转型机制
         Polymorphism dp = new DogPolymorphism("狗");
         Polymorphism cp = new CatPolymorphism("猫");
         show(mp);

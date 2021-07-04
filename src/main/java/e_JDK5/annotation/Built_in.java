@@ -13,9 +13,9 @@ public class Built_in {
         "rawtypes":to suppress warnings relative to un-specific types when using generics on class params
          */
         // 关闭不当的编译器警告信息
-        @SuppressWarnings("unused") // 抑制单类型警告;
+        @SuppressWarnings("unused")  // 抑制单类型警告;
         int num = 10;
-        @SuppressWarnings({"unused", "rawtypes"}) // 抑制多类型的警告
+        @SuppressWarnings({"unused", "rawtypes"})  // 抑制多类型的警告
         ArrayList alst = new ArrayList();
     }
 

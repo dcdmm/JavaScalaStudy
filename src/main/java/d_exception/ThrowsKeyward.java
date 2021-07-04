@@ -16,7 +16,7 @@ public class ThrowsKeyward {
             e.printStackTrace();
         }
         System.out.println();
-        method3(); // method3已经method1抛出的异常,此时main方法不需要处理该异常
+        method3();  // method3已经method1抛出的异常,此时main方法不需要处理该异常
     }
 
     public static void method3() {

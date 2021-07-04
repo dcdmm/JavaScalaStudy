@@ -12,7 +12,7 @@ object CycleStructure_while {
             i <= 100
         ) {
             sum += i
-            i += 1 // 必须有控制条件语句
+            i += 1  // 必须有控制条件语句
         }
         println(i)
         println(sum)

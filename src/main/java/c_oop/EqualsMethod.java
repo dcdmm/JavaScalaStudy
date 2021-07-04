@@ -11,17 +11,17 @@ package c_oop;
  */
 public class EqualsMethod {
     public static void main(String[] args) {
-        String s1 = new String("duanchao"); // 内部重写了equals方法(类似类的还有Date,file,包装类......)
+        String s1 = new String("duanchao");  // 内部重写了equals方法(类似类的还有Date,file,包装类......)
         String s2 = new String("duanchao");
-        System.out.println(s1 == s2); // false
-        System.out.println(s1.equals(s2)); // true
+        System.out.println(s1 == s2);  // false
+        System.out.println(s1.equals(s2));  // true
         System.out.println("********************************************");
 
         EqualsMethodTest emt1 = new EqualsMethodTest("duanchao", 24);
         EqualsMethodTest emt2 = new EqualsMethodTest("duanchao", 24);
-        System.out.println(emt1 == emt2); // false
-        System.out.println(emt1.superEquals(emt2)); // false
-        System.out.println(emt1.equals(emt2)); // true
+        System.out.println(emt1 == emt2);  // false
+        System.out.println(emt1.superEquals(emt2));  // false
+        System.out.println(emt1.equals(emt2));  // true
     }
 }
 

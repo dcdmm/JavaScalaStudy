@@ -48,7 +48,7 @@ class Leaf extends Mid {
 
     // 不能访问类的非静态成员变量和非静态成员方法
     static {
-        city = "wugang"; // 初始化类属性
+        city = "wugang";  // 初始化类属性
         System.out.println("Leaf的静态代码块");
     }
 
@@ -59,11 +59,11 @@ class Leaf extends Mid {
 
     // 普通代码块可以访问静态成员变量和静态成员方法
     {
-        name = "dcdmmcomeon"; // 初始化对象属性
+        name = "dcdmmcomeon";  // 初始化对象属性
         System.out.println("Leaf的普通代码块");
     }
 
-    public static void main(String[] args) { //
+    public static void main(String[] args) {
         System.out.println("Leaf的main方法");
         new Leaf();
     }
@@ -84,6 +84,6 @@ public class CodeBlock {
         Leaf leaf1 = new Leaf();
         System.out.println("*****************************");
 
-        Leaf leaf2 = new Leaf(); // 此时类已经初始化,不会再执行静态代码块
+        Leaf leaf2 = new Leaf();  // 此时类已经初始化,不会再执行静态代码块
     }
 }

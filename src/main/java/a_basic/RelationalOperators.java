@@ -37,6 +37,6 @@ public class RelationalOperators {
 
         String s1 = new String("hello");
         String s2 = new String("hello");
-        System.out.println(s1 == s2); // false
+        System.out.println(s1 == s2);  // false
     }
 }

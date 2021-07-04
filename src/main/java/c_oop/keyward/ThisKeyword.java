@@ -11,7 +11,7 @@ public class ThisKeyword {
     private String name;
 
     public ThisKeyword() {
-        this("dc"); // 调用本类的ThisKeyword(String name)构造方法,可以实现构造器的默认参数的效果
+        this("dc");  // 调用本类的ThisKeyword(String name)构造方法,可以实现构造器的默认参数的效果
     }
 
     public ThisKeyword(String name) {
@@ -19,15 +19,15 @@ public class ThisKeyword {
     }
 
     public ThisKeyword getObject() {
-        return this; // 当前对象的引用
+        return this;  // 当前对象的引用
     }
 
     public void getMethod(String name) {
-        this.setName(name); // 当前对象的成员方法;可简写为setName(name)
+        this.setName(name);  // 当前对象的成员方法;可简写为setName(name)
     }
 
     public void setName(String name) {
-        this.name = name; // 当前对象的成员变量
+        this.name = name;  // 当前对象的成员变量
     }
 
     public String getName() {
@@ -50,9 +50,9 @@ class ThisKeywordTest {
     public static void main(String[] args) {
         ThisKeyword tk0 = new ThisKeyword();
         ThisKeyword tk1 = new ThisKeyword();
-        System.out.println(tk0.getName()); // 实现了默认参数的效果
-        System.out.println(tk0.getObject()); // tk0的引用
-        System.out.println(tk1.getObject()); // tk1的引用
+        System.out.println(tk0.getName());  // 实现了默认参数的效果
+        System.out.println(tk0.getObject());  // tk0的引用
+        System.out.println(tk1.getObject());  // tk1的引用
         System.out.println("**************************");
 
         tk0.setName("duanmengmeng");

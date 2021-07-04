@@ -23,8 +23,8 @@ public class InputStreamReader_OutputStreamWrite {
             FileInputStream fileInputStream = new FileInputStream(new File("src/main/resources/test2.txt"));
             FileOutputStream fileOutputStream = new FileOutputStream(new File("src/main/resources/test3.txt"));
 
-            inputStreamReader = new InputStreamReader(fileInputStream, "UTF-8"); // 使用UTF-8编码集进行解码(必须与文件编码的字符集相同,否则显示为乱码)
-            outputStreamWriter = new OutputStreamWriter(fileOutputStream, "gbK"); // 使用gbk编码集进行编码
+            inputStreamReader = new InputStreamReader(fileInputStream, "UTF-8");  // 使用UTF-8编码集进行解码(必须与文件编码的字符集相同,否则显示为乱码)
+            outputStreamWriter = new OutputStreamWriter(fileOutputStream, "gbK");  // 使用gbk编码集进行编码
 
             char[] charArr = new char[4];
             int len;

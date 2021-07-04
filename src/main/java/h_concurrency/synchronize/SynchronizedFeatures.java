@@ -7,15 +7,15 @@ package h_concurrency.synchronize;
  * * * *. 从执行效率的角度考虑,只需对引起线程安全问题的那一部分代码使用synchronized关键字包裹(或封装成synchronized方法)即可
  */
 public class SynchronizedFeatures {
-    private static class Counter { // 静态内部类
+    private static class Counter {  // 静态内部类
         public void count() {
-            synchronized (this) { // synchronized同步代码块;同步锁为当前对象(即Counter类的实例counter)
+            synchronized (this) {  // synchronized同步代码块;同步锁为当前对象(即Counter类的实例counter)
                 for (int i = 0; i < 100; i++) {
                     System.out.println(Thread.currentThread().getName() + "， i = " + i);
                 }
             }
 
-            for (int j = 0; j < 100; j++) { // 非synchronized同步代码块
+            for (int j = 0; j < 100; j++) {  // 非synchronized同步代码块
                 System.out.println(Thread.currentThread().getName() + "， j = " + j);
             }
         }
@@ -47,8 +47,8 @@ public class SynchronizedFeatures {
 
 
 class SynchronizedFeatures1 {
-    private static class Counter { // 静态内部类
-        public synchronized void count() { // 锁为当前对象(即Counter类的实例counter)
+    private static class Counter {  // 静态内部类
+        public synchronized void count() {  // 锁为当前对象(即Counter类的实例counter)
             System.out.println(Thread.currentThread().getName() + " sleep");
             try {
                 Thread.sleep(3000);
@@ -60,7 +60,7 @@ class SynchronizedFeatures1 {
 
         public void doOtherThings() {
             // 若下面this改为Counter.class则为全局锁(锁住整个Class)
-            synchronized (this) { // 锁为当前对象(即Counter类的实例counter)
+            synchronized (this) {  // 锁为当前对象(即Counter类的实例counter)
                 System.out.println(Thread.currentThread().getName() + " doOtherThings");
             }
         }

@@ -7,7 +7,7 @@ import java.util.Scanner; // 导包
  */
 public class ScannerClass {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in); // 对象初始化
+        Scanner sc = new Scanner(System.in);  // 对象初始化
         // nextLine()方法的结束符是Enter键,即nextLine()方法返回的是Enter键之前的所有字符串,所以nextLine()方法可以获取到带有空格的字符串
         String str = sc.nextLine();
         System.out.println(str);
@@ -20,7 +20,7 @@ public class ScannerClass {
         System.out.println(st);
         System.out.println("*********************************");
 
-        int in = sc.nextInt(); // the int scanned from the input
+        int in = sc.nextInt();  // the int scanned from the input
         System.out.println("整数:" + in);
         /*
         short a1 = sc.nextShort(); // Scans the next token of the input as a short.

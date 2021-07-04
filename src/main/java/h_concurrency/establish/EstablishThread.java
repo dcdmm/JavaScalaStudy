@@ -37,7 +37,7 @@ public class EstablishThread {
         // thread0,thread1,thread2共享eh_1(共享数据)
         thread0.start();
         thread1.start();
-        thread2.start(); // 线程不安全(当多个线程并发访问同一个资源对象时,可能会出现线程不安全的问题)
+        thread2.start();  // 线程不安全(当多个线程并发访问同一个资源对象时,可能会出现线程不安全的问题)
     }
 }
 
@@ -52,12 +52,12 @@ class TestEstablishMethodOne {
         // emo1,emo2,emo3共享EstablishMethodOne的静态变量ticketi(共享数据)
         emo1.start();
         emo2.start();
-        emo3.start(); // 线程不安全(当多个线程并发访问同一个资源对象时,可能会出现线程不安全的问题)
+        emo3.start();  // 线程不安全(当多个线程并发访问同一个资源对象时,可能会出现线程不安全的问题)
     }
 }
 
 
-class EstablishMethodOne extends Thread { // 方式1:继承Thread类
+class EstablishMethodOne extends Thread {  // 方式1:继承Thread类
     private static int ticket = 20;
 
     /*
@@ -80,7 +80,7 @@ class EstablishMethodOne extends Thread { // 方式1:继承Thread类
     }
 
     @Override
-    public void run() { // 不能抛出异常
+    public void run() {  // 不能抛出异常
         // 所要执行的任务指令
         while (ticket > 0) {
             try {

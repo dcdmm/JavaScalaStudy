@@ -17,12 +17,12 @@ object SelectStructure {
             a
             b
             // 将执行代码的最后一条语句的值作为返回值返回
-            println("最后一行内容") // println()方法没有返回值,故返回Unit的唯一实例()
+            println("最后一行内容")  // println()方法没有返回值,故返回Unit的唯一实例()
         }
         println("max:" + max)
 
         // Scala没有三元操作符
-        val min = if (a > b) b else a // 使用if/else实现Java三元运算符的功能
+        val min = if (a > b) b else a  // 使用if/else实现Java三元运算符的功能
         println("min:" + min)
         println("****************************")
 

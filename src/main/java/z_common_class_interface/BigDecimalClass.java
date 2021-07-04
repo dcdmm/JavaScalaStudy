@@ -10,7 +10,7 @@ import java.math.RoundingMode;
 public class BigDecimalClass {
     @Test
     public void test0() {
-        System.out.println(0.1 + 0.2); // 不精确
+        System.out.println(0.1 + 0.2);  // 不精确
         System.out.println(0.3 - 0.1);
         System.out.println(0.2 * 0.1);
         System.out.println(0.3 / 0.1);
@@ -18,13 +18,13 @@ public class BigDecimalClass {
 
     @Test
     public void test1() {
-        BigDecimal a = new BigDecimal("0.1"); // 字符串构造
+        BigDecimal a = new BigDecimal("0.1");  // 字符串构造
         BigDecimal b = new BigDecimal("0.2");
         BigDecimal c = new BigDecimal("0.3");
 
-        System.out.println(a.add(b)); // 加法操作
-        System.out.println(c.subtract(a)); // 减法操作
-        System.out.println(b.multiply(a)); // 乘法操作
+        System.out.println(a.add(b));       // 加法操作
+        System.out.println(c.subtract(a));  // 减法操作
+        System.out.println(b.multiply(a));  // 乘法操作
 
         BigDecimal d = new BigDecimal("0.23");
         /*
@@ -38,9 +38,9 @@ public class BigDecimalClass {
         UNNECESSARY Rounding mode to assert that the requested operation has an exact result, hence no rounding is necessary.
         UP          Rounding mode to round away from zero.
          */
-        System.out.println(a.divide(d, // a除以b
-                30, // 保留10位有效数字
-                RoundingMode.HALF_UP)); // 舍入模式:HALF_EVEN
+        System.out.println(a.divide(d,  // a除以b
+                30,   // 保留10位有效数字
+                RoundingMode.HALF_UP));  // 舍入模式:HALF_EVEN
 
         /*
         if (a > b) {

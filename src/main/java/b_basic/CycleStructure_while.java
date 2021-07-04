@@ -10,7 +10,7 @@ public class CycleStructure_while {
         int i = 0;
         while (i <= 100) {
             sum += i;
-            i++; // 必须有控制条件语句
+            i++;  // 必须有控制条件语句
         }
         /*
         执行流程:
