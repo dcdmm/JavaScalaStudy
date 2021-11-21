@@ -20,6 +20,9 @@ object FunctionTransmit {
 
         println(f0(2))
         println(f1(2))
+
+        val f2: Int => Int = a => a + 1
+        println(f2(2))
         println("***************************************************")
 
         def add(a: Int, b: Int): Int = {

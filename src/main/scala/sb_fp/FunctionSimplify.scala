@@ -27,7 +27,7 @@ object FunctionSimplify {
     }
 
     def fun_1(a: Int, b: Int): Int = {
-        a + b  // 最后一条语句的值作为返回值返回,此时可以省略return(之前没有使用return关键字返回的情况下)
+        a + b  // 最后一条语句的值作为返回值返回时,可以省略return关键字(之前没有使用return关键字返回的情况下)
     }
 
     def fun_2(a: Int, b: Int): Int = a + b  // 函数体内只有一条语句,可以省略花括号

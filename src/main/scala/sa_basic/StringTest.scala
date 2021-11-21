@@ -20,7 +20,7 @@ class StringTest {
         val s1 = "java"
         val s2 = new String("java")
         val s3 = new String("java")
-        // 使用==就可以判断字符串相等,而不需要像Java一样需要使用的equals方法来判断
+        // 使用 == 就可以判断字符串相等,而不需要像Java一样需要使用的equals方法来判断
         println(s0 == s1)  // true
         println(s2 == s3)  // true
         println(s0 == s2)  // true

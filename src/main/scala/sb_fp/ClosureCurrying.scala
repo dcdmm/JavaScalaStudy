@@ -33,7 +33,7 @@ object ClosureCurrying {
         println(line_conf_lambda(3, 2)(1))
         println("*******************************************")
 
-        // 柯里化(必定为闭包函数);与函数line_conf等价
+        // 柯里化(必须为闭包函数);与函数line_conf等价
         def line_conf_currying(a: Double, b: Double)(x: Double): Double = {
             a * x + b
         }

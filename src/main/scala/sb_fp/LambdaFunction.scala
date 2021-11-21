@@ -8,9 +8,10 @@ object LambdaFunction {
         // python中的写法为:func = lambda a, b: a + b
         val func = (a: Double, b: Double) => {
             println(a + b)
-        }  // func的类型为(Double, Double) => Double
+        }
+
         println(func)
-        println(func(1.2, 2.5))  // 输出()
+        println(func(1.2, 2.5))  // 返回值为:()
         println("*****************************************")
 
         def function(f: (Int, Int) => Int, a: Int, b: Int) {  // 形参f为函数类型;形参f的参数类型为(Int, Int) => Int
