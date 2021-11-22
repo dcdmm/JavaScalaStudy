@@ -21,7 +21,7 @@ object FunctionTransmit {
         println(f0(2))
         println(f1(2))
 
-        val f2: Int => Int = a => a + 1
+        val f2: Int => Int = a => {a + 1} // 匿名函数的写法
         println(f2(2))
         println("***************************************************")
 

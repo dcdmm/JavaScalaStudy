@@ -5,16 +5,26 @@ package sb_fp
  */
 object LambdaFunction {
     def main(args: Array[String]): Unit = {
+        def func_no_lambda(a: Double, b: Double): Int = {
+            println(a + b)
+            return 3
+        }
+
+        val func_no = func_no_lambda _
+        println(func_no)
+        println(func_no(1.2, 2.5))
+
+        // 匿名函数写法:
         // python中的写法为:func = lambda a, b: a + b
         val func = (a: Double, b: Double) => {
             println(a + b)
+            3 // 不能使用return关键字返回函数值
         }
-
         println(func)
-        println(func(1.2, 2.5))  // 返回值为:()
+        println(func(1.2, 2.5)) // 返回值为:3
         println("*****************************************")
 
-        def function(f: (Int, Int) => Int, a: Int, b: Int) {  // 形参f为函数类型;形参f的参数类型为(Int, Int) => Int
+        def function(f: (Int, Int) => Int, a: Int, b: Int): Unit = {  // 形参f为函数类型;形参f的参数类型为(Int, Int) => Int
             println(f(a, b))
         }
 

@@ -25,7 +25,7 @@ object SonClass {
 
 
 class Student extends Person {
-    // 属性定义时,"_"表示该类型的初始值
+    // 属性定义时,"_"表示属性类型的初始值
     // Byte初始值为false
     var byte_init: Byte = _
     // Boolean初始值为False
@@ -39,7 +39,7 @@ class Student extends Person {
     // String初始值为null
     var str_init: String = _
 
-    override def printInfor(): Unit = { // 方法重写
+    override def printInfor(): Unit = { // 方法重写,override关键字
         // idCard = "20310101"  // private:只有本类和伴生对象可以访问
         println("student:")
         name = "dmm"
