@@ -1,16 +1,17 @@
 package sc_oop.rights
 
-object SonClass {
+
+object Test {
     def main(args: Array[String]): Unit = {
-        val person: Person = new Person()
-        // println(person.idCard)  // private:只有本类和伴生对象可以访问
-        // println(person.name)  // protected:只有本类和子类可以访问,同包中其他类不可以访问
+        val person: RightsPerson = new RightsPerson()
+        // println(person.idCard)  // 报错;private:只有本类和伴生对象可以访问
+        // println(person.name)  // 报错;protected:只有本类和子类可以访问,同包中其他类不可以访问
         println(person.age)
         println(person.sex)
 
         println("*****************************************")
-        val student: Student = new Student()
-        // println(student.name)  // protected:只有本类和子类可以访问,同包中其他类不可以访问
+        val student: RightsStudent = new RightsStudent()
+        // println(student.name)  // 报错;protected:只有本类和子类可以访问,同包中其他类不可以访问
         println(student.age)
         println(student.sex)
         student.printInfor()
@@ -24,7 +25,7 @@ object SonClass {
 }
 
 
-class Student extends Person {
+class RightsStudent extends RightsPerson {
     // 属性定义时,"_"表示属性类型的初始值
     // Byte初始值为false
     var byte_init: Byte = _
@@ -40,7 +41,7 @@ class Student extends Person {
     var str_init: String = _
 
     override def printInfor(): Unit = { // 方法重写,override关键字
-        // idCard = "20310101"  // private:只有本类和伴生对象可以访问
+        // idCard = "20310101"  // 报错;private:只有本类和伴生对象可以访问
         println("student:")
         name = "dmm"
         sex = "woman"

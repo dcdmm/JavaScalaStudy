@@ -11,11 +11,11 @@ object NumericalDataTypeConversion {
         val a = 'a'
         val b = 20
         // 精度低数据类型自动提升为精度高数据类型
-        println(a + b)  // Char + Int --> int
+        println(a + b) // Char + Int --> int
 
         val c = 223
         val d = 2.31
-        println(c + d)  // Int + Double --> Double
+        println(c + d) // Int + Double --> Double
 
         val e: Short = 12
         // val e1:Char = e  // 报错:type mismatch;

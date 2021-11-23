@@ -13,7 +13,7 @@ object BreakFunction {
                     if (n * m == 15) {
                         println(n)
                         println(m)
-                        break()  // 跳出当前整个循环,不异常中断
+                        break() // 跳出当前整个循环,不异常中断
                     }
                 }
             }
@@ -25,7 +25,7 @@ object BreakFunction {
                 if (i * j == 21) {
                     println(i)
                     println(j)
-                    break()  // 跳出当前整个循环,并抛出异常
+                    break() // 跳出当前整个循环,并抛出异常
                 }
             }
         }

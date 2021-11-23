@@ -5,7 +5,7 @@ package sa_basic
  */
 object AssignmentOperators {
     def main(args: Array[String]): Unit = {
-        var a = 10  // 基本的赋值运运算符
+        var a = 10 // 基本的赋值运运算符
         // println("***************************")
         // a += 20 // +=,-=,/=,*=,%=;注意:Scala中没有自加(++),自减(--)操作符
         // println(a)

@@ -37,7 +37,7 @@ object ControlAbstraction1 {
         // 匿名函数的写法;与函数myWhile等价
         def myWhile1(condition: => Boolean): (=> Unit) => Unit = {
             // (op: => Unit) => {......}  // 报错
-            // op表示代码块时,此时必须省略op的数据类型
+            // op表示代码块时,必须省略op的数据类型
             op => {
                 if (condition) {
                     op

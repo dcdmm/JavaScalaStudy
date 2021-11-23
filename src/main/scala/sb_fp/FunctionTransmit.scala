@@ -12,8 +12,8 @@ object FunctionTransmit {
 
         // f0,f1为函数
         // val f = func  // 报错;missing argument list for method func
-        val f0 = func _  // 将函数func作为值传递给f0
-        val f1: Int => Int = func  // 指定f1的类型;与上等价
+        val f0 = func _ // 将函数func作为值传递给f0
+        val f1: Int => Int = func // 指定func的类型:Int => Int(此时必须省略"_");与上等价
 
         println(f0)
         println(f1)
@@ -21,7 +21,9 @@ object FunctionTransmit {
         println(f0(2))
         println(f1(2))
 
-        val f2: Int => Int = a => {a + 1} // 匿名函数的写法
+        val f2: Int => Int = n => {
+            n
+        } // 匿名函数的写法
         println(f2(2))
         println("***************************************************")
 
@@ -33,16 +35,16 @@ object FunctionTransmit {
             return f(m, n)
         }
 
-        println(func1(add, 2, 4))  // 将函数add作为参数传递给func1
+        println(func1(add, 2, 4)) // 将函数add作为参数传递给func1(add的类型:(Int, Int) => Int)
         println(func1((a, b) => a + b, 2, 4)) // 匿名函数的写法
         println("***************************************************")
 
-        def func2(s: Int): (Int, Int) => Int = {  // add的返回值类型为(Int, Int) => Int
-            def func2_inner(a: Int, b: Int): Int = {
+        def func2(s: Int): (Int, Int) => Int = {
+            def func2_inner(a: Int, b: Int): Int = { //func2_inner的类型:(Int, Int) => Int
                 return a + b + s
             }
 
-            return func2_inner  // 函数func2的返回值为func2_inner
+            return func2_inner // 返回值为函数
         }
 
         // 匿名函数的写法;与函数func2等价

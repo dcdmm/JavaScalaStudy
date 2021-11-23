@@ -45,10 +45,10 @@ object ClosureCurrying {
         // 柯里化方法与普通方法的区别
         def multiply1(x: Int, y: Int, z: Int) = x * y * z
 
-        val partialAppliedMultiply = multiply1 _  // 类型：(x: Int, y: Int, z: Int) => Int
+        val partialAppliedMultiply = multiply1 _ // 类型：(x: Int, y: Int, z: Int) => Int
 
         def multiply2(x: Int)(y: Int)(z: Int) = x * y * z
 
-        val curryingMultiply = multiply2 _  // 类型：Int => (Int => (Int => Int))
+        val curryingMultiply = multiply2 _ // 类型：Int => (Int => (Int => Int))
     }
 }

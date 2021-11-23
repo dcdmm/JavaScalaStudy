@@ -6,6 +6,7 @@ package c_oop;
  * 后期绑定(动态绑定):在运行时根据对象的类型进行绑定,如果一种语言想实现后期绑定,就必须具有某种机制,以便在运行时能判断对象的类型,从而调用恰当的方法.也就是说,编译器一直不知道对象的类型,但是方法调用机制能找到正确的方法体.
  * java中除了static和final方法(private方法属于final方法)之外,其他的方法都是后期绑定
  * java中所有的方法都是通过后期绑定实现多态
+ * java中属性是静态绑定的(Scala中属性和方法都是动态绑定的)
  */
 public class Polymorphism {
     private String name;

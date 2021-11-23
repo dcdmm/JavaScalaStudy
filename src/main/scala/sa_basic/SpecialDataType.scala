@@ -7,8 +7,8 @@ package sa_basic
 object SpecialDataType {
     def main(args: Array[String]): Unit = {
         val res: Unit = sayHello()
-        println("res=" + res)  // Unit类似于Java里的void;Unit只有一个实例:()
-        val dog: Dog = null  // Null类型只有一个实例:null
+        println("res=" + res) // Unit类似于Java里的void;Unit只有一个实例:()
+        val dog: Dog = null // Null类型只有一个实例:null
     }
 
     def sayHello(): Unit = {
