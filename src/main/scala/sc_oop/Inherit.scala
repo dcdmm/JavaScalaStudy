@@ -35,6 +35,7 @@ object Inherit {
 class InheritFather(var sex: Boolean) {
     var name: String = _
     var age: Int = _
+    val fff: Int = 34
     println("父类的主构造器调用")
 
     def this(sex: Boolean, name: String, age: Int) {
@@ -45,7 +46,7 @@ class InheritFather(var sex: Boolean) {
     }
 
     def printInfo(): Unit = {
-        print(s"Father: $sex $name $age")
+        println(s"Father: $sex $name $age")
     }
 }
 
@@ -61,6 +62,8 @@ class InheritSon(sex: Boolean) extends InheritFather(sex) { // 单继承;子类�
     }
 
     override def printInfo(): Unit = {
+        // 通过super关键字调用父类中的方法
+        super.printInfo()
         print(s"Son: $sex $stdNo")
     }
 }

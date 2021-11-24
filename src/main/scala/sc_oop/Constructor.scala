@@ -21,7 +21,7 @@ object Constructor {
     }
 }
 
-class Const0 {
+class Const0() { // 无参构造器可以省略"()"
     println("主构造器无参")
 }
 
