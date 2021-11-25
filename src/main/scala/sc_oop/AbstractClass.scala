@@ -6,45 +6,49 @@ package sc_oop
  */
 object AbstractClass {
     def main(args: Array[String]): Unit = {
-        // 实现抽象类的抽象方法
+        // 实现抽象类的抽象属性和抽象方法
         val abstractStudent = new AbstractStudent("china") {
+            override val love: String = "play computer game"
+
             override def play(): Int = {
                 return 101
             }
+
         }
     }
-}
 
 
-abstract class AbstractPerson(val location: String) {
-    // 非抽象属性
-    val name: String = "person"
+    abstract class AbstractPerson(val location: String) {
+        // 非抽象属性
+        val name: String = "person"
 
-    // 抽象属性(没有初始化)
-    var age: Int
+        // 抽象属性(没有初始化)
+        var age: Int
 
-    // 非抽象方法
-    def eat(): Unit = {
-        println("person eat")
+        val love: String
+
+        // 非抽象方法
+        def eat(): Unit = {
+            println("person eat")
+        }
+
+        // 抽象方法(没有方法体)
+        def sleep(): Unit
+
+        def play(): Int
     }
 
-    // 抽象方法(没有方法体)
-    def sleep(): Unit
 
-    def play(): Int
-}
+    abstract class AbstractStudent(location: String) extends AbstractPerson(location) {
+        override val name: String = "student"
+        var age: Int = 19
 
+        def sleep(): Unit = { // 重写抽象方法可以不加override关键字
+            println("student sleep")
+        }
 
-abstract class AbstractStudent(location: String) extends AbstractPerson(location) {
-    override val name: String = "student"
-    var age: Int = 19
-
-    def sleep(): Unit = { // 重写抽象方法可以不加override关键字
-        println("student sleep")
+        override def eat(): Unit = {
+            super.eat()
+            println("student eat")
+        }
     }
-
-    override def eat(): Unit = {
-        super.eat()
-        println("student eat")
-    }
-}
