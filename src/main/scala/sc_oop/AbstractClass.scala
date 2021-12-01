@@ -10,45 +10,46 @@ object AbstractClass {
         val abstractStudent = new AbstractStudent("china") {
             override val love: String = "play computer game"
 
-            override def play(): Int = {
-                return 101
+            override def play(): String = {
+                return "play!!!"
             }
-
         }
+        println(abstractStudent.play())
+    }
+}
+
+
+abstract class AbstractPerson(val location: String) {
+    // 非抽象属性
+    val name: String = "person"
+
+    // 抽象属性(没有初始化)
+    var age: Int
+
+    val love: String
+
+    // 非抽象方法
+    def eat(): Unit = {
+        println("person eat")
     }
 
+    // 抽象方法(没有方法体)
+    def sleep(): Unit
 
-    abstract class AbstractPerson(val location: String) {
-        // 非抽象属性
-        val name: String = "person"
+    def play(): String
+}
 
-        // 抽象属性(没有初始化)
-        var age: Int
 
-        val love: String
+abstract class AbstractStudent(location: String) extends AbstractPerson(location) {
+    override val name: String = "student"
+    var age: Int = 19
 
-        // 非抽象方法
-        def eat(): Unit = {
-            println("person eat")
-        }
-
-        // 抽象方法(没有方法体)
-        def sleep(): Unit
-
-        def play(): Int
+    def sleep(): Unit = { // 重写抽象方法可以不加override关键字
+        println("student sleep")
     }
 
-
-    abstract class AbstractStudent(location: String) extends AbstractPerson(location) {
-        override val name: String = "student"
-        var age: Int = 19
-
-        def sleep(): Unit = { // 重写抽象方法可以不加override关键字
-            println("student sleep")
-        }
-
-        override def eat(): Unit = {
-            super.eat()
-            println("student eat")
-        }
+    override def eat(): Unit = {
+        super.eat()
+        println("student eat")
     }
+}

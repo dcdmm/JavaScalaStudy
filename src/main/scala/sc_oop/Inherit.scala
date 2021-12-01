@@ -7,7 +7,7 @@ object Inherit {
     def main(args: Array[String]): Unit = {
         // 父类的主构造器调用
         // Son的主构造器调用
-        val son0 = new InheritSon(false)
+        val son0 = new InheritSon(false, "DNF")
         son0.printInfo()
         println("\n***************************************")
         // 父类的主构造器调用
@@ -35,7 +35,6 @@ object Inherit {
 class InheritFather(var sex: Boolean) {
     var name: String = _
     var age: Int = _
-    val fff: Int = 34
     println("父类的主构造器调用")
 
     def this(sex: Boolean, name: String, age: Int) {
@@ -51,12 +50,14 @@ class InheritFather(var sex: Boolean) {
 }
 
 // 继承的调用顺序:父类构造器--->子类构造器
-class InheritSon(sex: Boolean) extends InheritFather(sex) { // 单继承;子类的主构造器继承父类的主构造器
+// 单继承;子类的主构造器继承父类的主构造器
+// 子类继承自父类的形参不能使用val/var修饰
+class InheritSon(sex: Boolean, var game: String) extends InheritFather(sex) { // 形参sex不能使用var/val修饰
     var stdNo: String = _
     println("Son的主构造器调用")
 
-    def this(sex: Boolean, stdNo: String) {
-        this(sex)
+    def this(sex: Boolean, game: String, stdNo: String) {
+        this(sex, game)
         this.stdNo = stdNo
         println("Son的辅助构造器调用")
     }
@@ -64,7 +65,7 @@ class InheritSon(sex: Boolean) extends InheritFather(sex) { // 单继承;子类�
     override def printInfo(): Unit = {
         // 通过super关键字调用父类中的方法
         super.printInfo()
-        print(s"Son: $sex $stdNo")
+        print(s"Son: $sex $stdNo $game")
     }
 }
 
