@@ -12,7 +12,7 @@ import java.util.{LinkedHashMap => _, _} // 导入util下除LinkedHashMap之外�
 /**
  * 包对象
  */
-package object sc_oop_package {
+package object sc_oop {
     // 定义当前包共享的属性和方法
     val name = "duanchao"
 

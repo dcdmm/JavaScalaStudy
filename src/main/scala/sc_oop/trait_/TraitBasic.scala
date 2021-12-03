@@ -2,6 +2,8 @@ package sc_oop.trait_
 
 /**
  * 特质(类似Java中接口的概念)
+ *
+ * 父类和特质平等(Java:类优先原则)
  */
 object TraitBasic {
     def main(args: Array[String]): Unit = {
@@ -27,6 +29,8 @@ object TraitBasic {
         studentWithTalent.dating()
         studentWithTalent.increasing()
         studentWithTalent.danceing()
+        println("****************************************************")
+        studentWithTalent.RepeatFunc()
     }
 }
 
@@ -37,48 +41,68 @@ class TraitBasicPerson {
     def sayHello(): Unit = {
         println("hello from: " + name)
     }
+
+    def RepeatFunc(): Unit = {
+        println("class func")
+    }
 }
 
-// 特质的定义
+// 特质的定义(只有无参构造器)
 trait Young {
     val age: Int // 抽象属性
-    val name: String = "young"
     val classNumber: Int
 
+    // 抽象方法
+    def dating(): Unit
+
+    val name: String = "young" // 具体的属性
+
+    // 具体的方法
     def play(): Unit = {
         println(s"$name is playing")
     }
 
-    // 抽象方法
-    def dating(): Unit
+    def RepeatFunc(): Unit = {
+        println("trait Young func")
+    }
 }
 
 trait Knlowledge {
     var amount: Int = 0
 
     def increasing(): Unit
+
+    def RepeatFunc(): Unit = {
+        println("trait Knlowledge func")
+    }
 }
 
 trait Talent {
     def danceing(): Unit
 }
 
+// 没有父类:class 类名 extends 特质1 with 特质2 with 特质3
+// 有父类:class 类名 extends 父类 with 特质1 with 特质2 with 特质3
 class TraitBasicStudent extends TraitBasicPerson with Young with Knlowledge {
     // 实现特征中的抽象属性
     override val classNumber: Int = 84
 
-    // 子类继承了父类的age属性(已经初始化),故不需要实现特质中的抽象属性age
+    // 子类继承了父类TraitBasicPerson(特质同理)的age属性(已经初始化),故不需要实现特质Young中的抽象属性age
     // 方法同理
 
-    // 父类(TraitBasicPerson)和特质(Young)中都定义并初始化了name属性===>冲突(必须重写该属性)
+    // 父类TraitBasicPerson(特质同理)和特质Young中都定义并初始化了name属性===>冲突(必须重写该属性)
     // 方法同理
     override val name: String = "student"
 
-    // 实现特征中的抽象方法
+    // 重写冲突的方法
+    // 父类和特质平等,调用顺序从右往左:Knlowledge===>Young===>TraitBasicPerson
+    override def RepeatFunc(): Unit = super.RepeatFunc()
+
     override def dating(): Unit = println(s"$name is dating")
 
     override def increasing(): Unit = {
         amount += 1
         println(s"$name knowledge increased: $amount")
     }
+
 }
