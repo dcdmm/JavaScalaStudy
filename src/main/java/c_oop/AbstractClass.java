@@ -2,7 +2,7 @@ package c_oop;
 
 /**
  * 抽象类:包含抽象方法的类称为抽象类(其他特性与普通类相同)(抽象类不能被实例化);
- *      如果一个类包含一个或多个抽象方法,则该类必须被限定为抽象的(反之若类即使不含抽象方法,也可以将类声明为抽象类)
+ * 如果一个类包含一个或多个抽象方法,则该类必须被限定为抽象的(反之若类即使不含抽象方法,也可以将类声明为抽象类)
  * 注意:
  * 1. abstract关键字不能修饰成员属性,构造器
  * 2. abstract关键字不能与private,static(静态方法可以被类及其对象调用),final关键字共存
@@ -69,11 +69,25 @@ class Child1AbstractClass extends AbstractClass {
 
 class AbstractClassTest {
     public static void main(String[] args) {
-        // AbstractClass ac0 = new AbstractClass();  // 报错:java: oop.AbstractClass是抽象的; 无法实例化
+        // AbstractClass ac0 = new AbstractClass();  // 报错:java: oop.AbstractClass是抽象的;无法实例化
         AbstractClass ac = new Child1AbstractClass(332);  // 向上转型
         // 多态
         ac.printName("duanchao");
         System.out.println(ac.what());
         System.out.println(ac.getI());
+        System.out.println("*****************************************************************");
+
+        // 匿名子类
+        AbstractClass ac1 = new AbstractClass() {
+            @Override
+            public void printName(String name) {
+
+            }
+
+            @Override
+            public void adjust() {
+
+            }
+        };
     }
 }

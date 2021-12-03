@@ -6,8 +6,9 @@ package sc_oop
  */
 object AbstractClass {
     def main(args: Array[String]): Unit = {
-        // 实现抽象类的抽象属性和抽象方法
+        // 匿名子类
         val abstractStudent = new AbstractStudent("china") {
+            // 实现抽象类的抽象属性和抽象方法
             override val love: String = "play computer game"
 
             override def play(): String = {
