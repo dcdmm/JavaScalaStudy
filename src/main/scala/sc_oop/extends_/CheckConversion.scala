@@ -1,4 +1,4 @@
-package sc_oop.oop_extends
+package sc_oop.extends_
 
 /**
  * 类型检查和转换
@@ -24,6 +24,7 @@ object CheckConversion {
         if (person1.isInstanceOf[CheckConversionStudent]) {
             val person1_convert = person1.asInstanceOf[CheckConversionStudent] // 类型转换
             person1_convert.study()
+            println(person1.getClass) // 获取对象的类型
             println(person1_convert.getClass)
         }
     }

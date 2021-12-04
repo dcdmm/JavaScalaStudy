@@ -1,4 +1,4 @@
-package sc_oop.oop_extends
+package sc_oop.extends_
 
 import scala.beans.BeanProperty
 
