@@ -7,18 +7,18 @@ package c_oop.keyward;
  * 3. this.yyy(paras…):当前对象的成员方法yyy
  * 4. this:当前对象(引用)
  */
-public class ThisKeyword {
+public class KeyWord_this {
     private String name;
 
-    public ThisKeyword() {
-        this("dc");  // 调用本类的ThisKeyword(String name)构造方法,可以实现构造器的默认参数的效果
+    public KeyWord_this() {
+        this("dc");  // 调用本类的KeyWord_this(String name)构造方法,可以实现构造器的默认参数的效果
     }
 
-    public ThisKeyword(String name) {
+    public KeyWord_this(String name) {
         this.name = name;
     }
 
-    public ThisKeyword getObject() {
+    public KeyWord_this getObject() {
         return this;  // 当前对象的引用
     }
 
@@ -46,10 +46,10 @@ public class ThisKeyword {
 }
 
 
-class ThisKeywordTest {
+class KeyWord_thisTest {
     public static void main(String[] args) {
-        ThisKeyword tk0 = new ThisKeyword();
-        ThisKeyword tk1 = new ThisKeyword();
+        KeyWord_this tk0 = new KeyWord_this();
+        KeyWord_this tk1 = new KeyWord_this();
         System.out.println(tk0.getName());  // 实现了默认参数的效果
         System.out.println(tk0.getObject());  // tk0的引用
         System.out.println(tk1.getObject());  // tk1的引用

@@ -6,7 +6,7 @@ package c_oop.keyward;
  * 静态方法(类似静态变量):
  *      注意:不能访问类的非静态成员变量和非静态成员方法,因为非静态成员方法/变量都是必须依赖具体的对象才能够被调用(易知静态方法中不能使用this关键字)
  */
-public class StaticKeyward {
+public class keyWord_static {
     int age = 22;
     static String name = "duanchao";  // 静态变量;一般和final关键字结合使用,表示静态常量
 
@@ -29,18 +29,18 @@ public class StaticKeyward {
 }
 
 
-class StaticKeywardTest {
+class keyWord_staticTest {
     public static void main(String[] args) {
-        StaticKeyward sk0 = new StaticKeyward();
+        keyWord_static sk0 = new keyWord_static();
         System.out.println(sk0.name);  // 通过实例名.变量名 访问静态变量
-        System.out.println(StaticKeyward.name);  // 通过类名.变量名 访问静态变量(推荐)
+        System.out.println(keyWord_static.name);  // 通过类名.变量名 访问静态变量(推荐)
         sk0.name = "dmm";
         sk0.showStatic();  // 通过实例名.方法名 访问静态方法
-        StaticKeyward.showStatic();  // 通过类名.方法名 访问静态方法(推荐)
+        keyWord_static.showStatic();  // 通过类名.方法名 访问静态方法(推荐)
         System.out.println("**********************************************");
 
-        StaticKeyward sk1 = new StaticKeyward();
+        keyWord_static sk1 = new keyWord_static();
         System.out.println(sk1.name);
-        System.out.println(StaticKeyward.name);
+        System.out.println(keyWord_static.name);
     }
 }

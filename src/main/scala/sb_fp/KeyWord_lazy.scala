@@ -5,7 +5,7 @@ package sb_fp
  * *. lazy关键字不能修饰var类型变量
  * *. lazy关键字的的修饰变量,只有在第一次使用该变量时,才会进行初始化
  */
-object LazyKeyWord {
+object KeyWord_lazy {
     def main(args: Array[String]): Unit = {
         lazy val res = sum(10, 20) // 没有进行初始化
         println("**********************************")

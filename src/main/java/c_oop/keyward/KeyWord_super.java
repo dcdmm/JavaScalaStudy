@@ -3,20 +3,20 @@ package c_oop.keyward;
 /**
  * super关键字:是一个指示编译器调用超类(最近的那个)方法的特殊关键字
  */
-public class SuperKeyward {
+public class KeyWord_super {
     int age = 12;
 
-    public SuperKeyward() {
+    public KeyWord_super() {
         this("dc", 111);
         System.out.println("调用了父类的无参构造方法");
     }
 
-    public SuperKeyward(String name, int age) {
+    public KeyWord_super(String name, int age) {
         this.age = age;  // 该this.age表示当前对象(父类中的)成员变量age
         System.out.println("调用了父类的有参构造方法:name;age");
     }
 
-    public SuperKeyward(String name, int age, String sex) {
+    public KeyWord_super(String name, int age, String sex) {
         this("dc", 111);
         System.out.println("调用了父类的有参构造方法:name;age;sex");
     }
@@ -27,7 +27,7 @@ public class SuperKeyward {
 }
 
 
-class SubSuperKeyword extends SuperKeyward {
+class SubSuperKeyword extends KeyWord_super {
     int age = 24;
 
     public SubSuperKeyword() {
