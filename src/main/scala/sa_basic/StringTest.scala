@@ -20,7 +20,7 @@ class StringTest {
         val s1 = "java"
         val s2 = new String("java")
         val s3 = new String("java")
-        // 使用 == 就可以判断字符串相等,而不需要像Java一样需要使用的equals方法来判断
+        // 使用 == 就可以判断字符串相等,不需要像Java一样需要使用的 equals方法 来判断
         println(s0 == s1) // true
         println(s2 == s3) // true
         println(s0 == s2) // true
@@ -62,8 +62,12 @@ class StringTest {
         val school: String = "guangcai"
         val payment: Int = 11
 
-        println("年龄为:" + age + ";学校为:" + school + ";工资为:" + payment)
-        println(s"年龄为:$age;学校为:$school;工资为:$payment") // 直接输出,与上等价
+        object Test2 {
+            val name: String = "duanchao"
+        }
+
+        println("年龄为:" + age + ";学校为:" + school + ";工资为:" + payment + "姓名为:" + Test2.name)
+        println(s"年龄为:$age;学校为:$school;工资为:$payment;姓名为:${Test2.name}") // 直接输出,与上等价
 
         println(f"年龄为:$age%.2f;学校为:$school;工资为:$payment%x") // 同时进行printf格式化操作
     }

@@ -1,4 +1,4 @@
-package sc_oop.extends_
+package sc_oop
 
 /**
  * 类型检查和转换

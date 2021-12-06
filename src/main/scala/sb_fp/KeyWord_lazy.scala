@@ -16,6 +16,6 @@ object KeyWord_lazy {
 
     def sum(n1: Int, n2: Int): Int = {
         println("sum()执行!!!")
-        return n1 + n2
+        n1 + n2
     }
 }

@@ -15,10 +15,10 @@ object LambdaFunction {
         println(func_no(1.2, 2.5))
 
         // 匿名函数写法:
-        // python中的写法为:func = lambda a, b: a + b
+        // python中匿名函数的写法为:func = lambda a, b: a + b
         val func = (a: Double, b: Double) => {
             println(a + b)
-            3 // 不能使用return关键字返回函数值
+            "dcdmm" // 不能使用return关键字返回函数值
         }
         println(func)
         println(func(1.2, 2.5)) // 返回值为:3
@@ -34,10 +34,5 @@ object LambdaFunction {
         }, 2, 4)
         function((a: Int, b: Int) => a + b, 2, 4) // 匿名函数体内只有一条语句,可以省略花括号
         function((a, b) => a + b, 2, 4) // 匿名函数的参数类型可以省略(根据形参f的参数类型自动推导)
-        function(_ + _, 2, 4) // 匿名函数参数只出现一次,且参数顺序无关===>此时可将(a, b) => a + b省略为_ + _
-        println("*****************************************")
-
-        function((a, b) => b - a, 2, 4)
-        function(_ - _, 2, 4) // 与上不等价(原因:与参数顺序有关);等价于function((a, b) => a - b, 2, 4)
     }
 }

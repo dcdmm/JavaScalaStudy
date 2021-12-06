@@ -1,7 +1,7 @@
 package sc_oop
 
 /**
- * 伴生类/伴生对象
+ * 伴生类/伴生对象(类名相同)
  * 伴生对象必须与伴生类定义在同一个源文件中
  * 伴生类和伴生对象之间可以互相访问对方的私有方法和属性
  */
@@ -10,7 +10,7 @@ object Associated {
     def main(args: Array[String]): Unit = {
         val a = AssociatedStudent
         val b = AssociatedStudent
-        // 引用地址相同(伴生对象是单例对象)
+        // 引用地址相同===>伴生对象是单例对象
         println(a)
         println(b)
         println("******************************************************************")

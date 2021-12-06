@@ -5,23 +5,23 @@ package sb_fp
  */
 object ControlAbstraction0 {
     def main(args: Array[String]): Unit = {
-        f2(f1())
+        f2(init())
         println("****************************************")
 
         f3(11) // 11作为代码{11}传入函数f3
         println("****************************************")
-        f3(f1()) // f1的调用作为代码块传入函数f3
+        f3(init()) // init的调用作为代码块传入函数f3
         println("****************************************")
         f3({
             println("这是一段代码块")
             28
         })
         println("****************************************")
-        f4(f1)
+        f4(init)
     }
 
-    def f1(): Int = {
-        println("f1被调用")
+    def init(): Int = {
+        println("init被调用")
         12
     }
 
@@ -41,7 +41,7 @@ object ControlAbstraction0 {
 
     // 形参a表示函数;参数a的参数类型为:"() => Int"
     def f4(a: () => Int): Unit = {
-        println("a: " + a)
-        println("a: " + a)
+        println("a: " + a())
+        println("a: " + a())
     }
 }

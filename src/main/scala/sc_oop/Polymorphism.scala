@@ -36,7 +36,7 @@ class PolymorphismSon(sex: Boolean) extends PolymorphismFather(sex) {
     // 子类中的(val)属性覆盖父类中的(val)属性(必须加上override)
     override val localtion: String = "guangdong"
 
-    // 不能覆盖父类中的(var)属性
+    // 不能覆盖父类中的var属性(var为可变变量)
     // override var hobby = "dance" // 报错
 
     // 子类中的方法覆盖父类中的方法(必须加上override)

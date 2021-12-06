@@ -4,7 +4,7 @@ package sc_oop.basic_rights
 object Test {
     def main(args: Array[String]): Unit = {
         val person: RightsPerson = new RightsPerson() // 创建对象
-        // println(person.idCard)  // 报错;private:只有本类和伴生对象可以访问
+        // println(person.idCard)  // 报错;private:只有本类或伴生对象可以访问
         // println(person.name)  // 报错;protected:只有本类和子类可以访问,同包中其他类不可以访问
         println(person.age)
         println(person.sex)

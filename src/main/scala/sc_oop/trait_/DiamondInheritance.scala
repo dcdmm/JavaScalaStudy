@@ -32,7 +32,7 @@ trait CategoryBall extends Ball {
 class MyFootBall extends CategoryBall with ColorBall {
     override def describe(): String = {
         // 钻石继承
-        // 执行顺序:MyFootBall===>ColorBall===>CategoryBall===>Ball
+        // 执行顺序:ColorBall===>CategoryBall===>Ball(从右至左)
         "my ball is:" + super.describe()
     }
 
