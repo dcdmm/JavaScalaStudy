@@ -72,11 +72,5 @@ object CycleStucture_for {
         for (n <- 1 to 3; m = 3 - n; s = -n) { // 引入变量
             println("n=" + n + " m=" + m + " s=" + s)
         }
-        println("****************************************")
-
-        // 遍历集合
-        for (i <- Set(1, 2, 3)) {
-            println(i)
-        }
     }
 }
