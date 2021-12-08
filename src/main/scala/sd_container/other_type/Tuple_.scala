@@ -1,8 +1,11 @@
-package sd_container.Tuple_
+package sd_container.other_type
 
-object wwww {
+/**
+ * 元组
+ */
+object Tuple_ {
     def main(args: Array[String]): Unit = {
-        // 最大22个
+        // 最大数量为22个
         val tuple1: (String, Int, String, Boolean) = ("hello", 100, "a", true)
         println(tuple1)
 

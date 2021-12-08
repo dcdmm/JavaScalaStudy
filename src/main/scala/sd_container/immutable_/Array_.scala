@@ -16,7 +16,17 @@ object Array_ {
         println(arr0.length) // 数组长度
         println("*******************************************************")
 
-        val arr1 = Array(1, 2, 3, 4, 5)  // 指定元素值初始化(通过伴生对象)
+        val arr1 = Array(1, 2, 3, 4, 5) // 指定元素值初始化(通过伴生对象)
         println(arr1.mkString("Array(", ", ", ")"))
+        println("*******************************************************")
+
+        // 多维数组(最多5维)
+        val mul_arr = Array.ofDim[Int](2, 3)
+
+        mul_arr(0) = Array(1, 2, 3)
+        println(mul_arr(0).mkString("Array(", ", ", ")"))
+        println(mul_arr(0)(0)) // 索引
+
+        mul_arr.foreach((elem: Array[Int]) => elem.foreach(i => println(i)))
     }
 }
