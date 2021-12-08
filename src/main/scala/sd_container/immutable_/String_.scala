@@ -1,37 +1,44 @@
-package sa_basic
+package sd_container.immutable_
 
 import org.junit.Test
 
 /**
- * Scala字符串
+ * Like arrays, strings are not directly sequences, but they can be converted to them, and they also support all sequence operations on strings.
  */
-class StringTest {
+class String_ {
     @Test
     def test0(): Unit = {
-        val name0: String = "duan"
-        val name1: String = "chao"
-        println(name0 + name1) // 字符串的拼接
-        println(name0 * 3) // 字符串的重复
-    }
-
-    @Test
-    def test1(): Unit = {
         val s0 = "java"
         val s1 = "java"
         val s2 = new String("java")
         val s3 = new String("java")
-        // 使用 == 就可以判断字符串相等,不需要像Java一样需要使用的 equals方法 来判断
-        println(s0 == s1) // true
-        println(s2 == s3) // true
-        println(s0 == s2) // true
 
+        // 判断地址值是否相同
+        println(null eq null) // true
         println(s0.eq(s1)) // true
         println(s2.eq(s3)) // false
         println(s0.eq(s2)) // false
 
-        println(s0 equals s1) // true
-        println(s2 equals s3) // true
-        println(s0 equals s2) // true
+        /*
+        == 官方API定义:
+        final def ==(arg0: Any): Boolean
+            The expression x == that is equivalent to if (x eq null) that eq null else x.equals(that).
+         */
+        println(s0 == s1) // true
+        println(s2 == s3) // true
+        println(s0 == s2) // true
+
+        println(s0.equals(s1)) // true
+        println(s2.equals(s3)) // true
+        println(s0.equals(s2)) // true
+    }
+
+    @Test
+    def test1(): Unit = {
+        val name0: String = "duan"
+        val name1: String = "chao"
+        println(name0 + name1) // 字符串的拼接
+        println(name0 * 3) // 字符串的重复
     }
 
     @Test
@@ -69,7 +76,7 @@ class StringTest {
         println("年龄为:" + age + ";学校为:" + school + ";工资为:" + payment + "姓名为:" + Test2.name)
         println(s"年龄为:$age;学校为:$school;工资为:$payment;姓名为:${Test2.name}") // 直接输出,与上等价
 
-        println(f"年龄为:$age%.2f;学校为:$school;工资为:$payment%x") // 同时进行printf格式化操作
+        println(f"年龄为:$age%.2f;学校为:$school;工资为:$payment%x") // 同时进行 printf 格式化操作
     }
 
     @Test

@@ -41,5 +41,6 @@ object math1 {
         // 给定一组词汇,按照单词的首字母分组
         val wordList = List("china", "canada", "english", "fresh")
         println(wordList.groupBy(data => data.charAt(0)))
+
     }
 }

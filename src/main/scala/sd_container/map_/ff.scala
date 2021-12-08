@@ -26,5 +26,7 @@ object ff {
         println(map1.get("d"))
         println(map1.getOrElse("d", -1))
         println(map1("d")) // 异常
+
+        // tolist方法===================>
     }
 }

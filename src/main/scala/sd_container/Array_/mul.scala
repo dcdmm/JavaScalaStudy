@@ -1,5 +1,7 @@
 package sd_container.Array_
 
+import scala.collection.mutable
+
 object mul {
     def main(args: Array[String]): Unit = {
         // 创建二维数组
@@ -17,5 +19,6 @@ object mul {
         // foreach
         array.foreach((elem: Array[Int]) => elem.foreach(i => println(i)))
 
+        mutable.Stack
     }
 }

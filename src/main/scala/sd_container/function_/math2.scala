@@ -31,6 +31,5 @@ object math2 {
 
         // 3 - (4 - (5 - (8 - (10 -11))))
         println(list1.foldRight(11)((a, b) => a - b))
-        list.aggregate()
     }
 }

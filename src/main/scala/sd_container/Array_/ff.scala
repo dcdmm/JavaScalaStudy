@@ -54,5 +54,6 @@ object ff {
         val newArr1 = 30 +: arr0
         println(newArr1.mkString("-"))
 
+
     }
 }
