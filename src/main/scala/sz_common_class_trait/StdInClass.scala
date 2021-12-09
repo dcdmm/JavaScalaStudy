@@ -1,4 +1,4 @@
-package sz_common_class
+package sz_common_class_trait
 
 import scala.io.StdIn
 
