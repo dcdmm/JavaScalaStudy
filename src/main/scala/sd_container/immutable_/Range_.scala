@@ -9,7 +9,7 @@ object Range_ {
         println(ran0)
         for (i <- ran0) println(i)
         println("*********************************")
-
+        Predef
         val ran1 = 1 to 14 by 3
         println(ran1)
         for (i <- ran1) println(i)
