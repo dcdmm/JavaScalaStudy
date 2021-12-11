@@ -28,7 +28,7 @@ object Test {
 class RightsStudent extends RightsPerson {
     // 属性定义时,"_"表示属性类型的初始值
     // Byte初始值为false
-    var byte_init: Byte = _
+    var byte_init: Byte = _ // _ 表示某一类型的默认值
     // Boolean初始值为False
     var bool_init: Boolean = _
     // Short/Int/Long初始值为0
