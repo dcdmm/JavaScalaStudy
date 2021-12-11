@@ -1,4 +1,4 @@
-package sz_common_class_trait
+package sz_other
 
 import java.io.{File, FileWriter}
 import scala.io.Source

@@ -16,7 +16,7 @@ public class ThrowsKeyward {
             e.printStackTrace();
         }
         System.out.println();
-        method3();  // method3已经method1抛出的异常,此时main方法不需要处理该异常
+        method3();  // method3已经处理method1抛出的异常,此时main方法不需要处理该异常
     }
 
     public static void method3() {
@@ -31,7 +31,7 @@ public class ThrowsKeyward {
         method1();
     }
 
-    public static void method1() throws RuntimeException, IOException {
+    public static void method1() throws RuntimeException, IOException { // 用于提示调用该方法时产生的异常
         File file = new File("./src/main/resources/test0.txt");
         FileInputStream fis = new FileInputStream(file);
         int data = fis.read();
