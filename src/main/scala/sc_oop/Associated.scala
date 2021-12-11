@@ -26,12 +26,23 @@ object Associated {
         // 引用地址相同
         println(s1) // 饿汉式单例模式
         println(s2)
+
+        println("******************************************************************")
+        val strudent4 = AssociatedStudent("duanchao", 34, sex = true)
+        println(strudent4.sex)
     }
 }
 
 
 // 伴生类
 class AssociatedStudent private(val name: String, val age: Int) { // 构造器私有化,只能通过伴生对象实例化
+    var sex: Boolean = _
+
+    private def this(name: String, age: Int, sex: Boolean) = {
+        this(name, age)
+        this.sex = sex
+    }
+
     def printInfo(): Unit = {
         // 伴生类访问伴生对象中的属性、方法
         println(s"student: $name $age $AssociatedStudent.schook") // 通过类名.xxx进行访问
@@ -57,6 +68,12 @@ object AssociatedStudent { // 伴生对象不能声明构造器
     def apply(name: String, age: Int): AssociatedStudent = {
         println("appaly方法被调用")
         new AssociatedStudent(name, age)
+    }
+
+    // apply方法可以重载
+    def apply(name: String, age: Int, sex: Boolean): AssociatedStudent = {
+        println("appaly方法被调用")
+        new AssociatedStudent(name, age, sex)
     }
 
     private val student: AssociatedStudent = new AssociatedStudent(name = "dmm", 1)
