@@ -5,7 +5,7 @@ package sg_generics
  */
 object Features1 {
     def main(args: Array[String]): Unit = {
-        // 泛型上限
+        // 泛型上限(<:)
         def test_<:[A <: Features1Child](a: A): Unit = {
             println(a.getClass.getName)
         }
@@ -15,7 +15,7 @@ object Features1 {
         test_<:(new Features1SubChild)
         println("*****************************************************")
 
-        // 泛型下限
+        // 泛型下限(>:)
         def test_>:[A >: Features1Child](a: A): Unit = {
             println(a.getClass.getName)
         }
