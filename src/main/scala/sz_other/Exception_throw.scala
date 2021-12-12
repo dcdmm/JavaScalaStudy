@@ -11,5 +11,4 @@ object Exception_throw {
 
         test()
     }
-
 }

@@ -18,7 +18,7 @@ object ClosureCurrying {
         }
 
         val line_A = line_conf(2, 1) // y=2x+b
-        val line_B = line_conf(3, 2) //  y=3x+2
+        val line_B = line_conf(3, 2) // y=3x+2
 
         // 打印x对应y的值
         println(line_A(1)) // 3
