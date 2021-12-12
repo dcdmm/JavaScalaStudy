@@ -7,14 +7,14 @@ import scala.beans.BeanProperty
  */
 object GetSet {
     def main(args: Array[String]): Unit = {
-        val getSetTest = new GetSetTest
+        val getSetTest = new GetSetTest[String]
         println(getSetTest.name)
         getSetTest.setName("duanchao")
         print(getSetTest.getName)
     }
 }
 
-class GetSetTest {
+class GetSetTest[A] {
     @BeanProperty
-    var name: String = "hello"
+    var name: A = _
 }
