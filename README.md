@@ -1,5 +1,5 @@
 # JavaScalaStudy
-**Java/Scala学习笔记(基于maven)**
+**Java/Scala学习笔记(基于maven;后续在hadoop/spark的学习中再继续补充)**
 
 
 ### 命名规则(<font color='red'>Java</font>/Scala)
