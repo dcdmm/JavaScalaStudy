@@ -10,6 +10,17 @@ object CodeBlock {
             println("代码块")
         }
         println(a) // Unit
+
+        // 报错,代码块只在参数中可以有类型
+//        val b: (=> Unit) = {
+//            3
+//            println("代码块")
+//        }
+//        println(b)
+        def f3(a: => Int): Unit = { // 形参a表示代码块
+            println("a: " + a)
+        }
+
         println("********************************")
 
         println(1 + 2) // 3
