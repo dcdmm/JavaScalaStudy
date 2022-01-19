@@ -11,7 +11,7 @@ object CodeBlock {
         }
         println(a) // Unit
 
-        // 报错,代码块只在参数中可以有类型
+        // 报错,只有表示形参的才模块才能表明类型
 //        val b: (=> Unit) = {
 //            3
 //            println("代码块")
