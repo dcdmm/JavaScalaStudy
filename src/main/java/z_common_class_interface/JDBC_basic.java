@@ -1,9 +1,9 @@
-package z_common_class_interface.JDBC;
+package z_common_class_interface;
 
 import java.sql.*;
 
 /**
- * 通过JDBC操作数据库
+ * 通过JDBC操纵数据库
  */
 public class JDBC_basic {
     public static void main(String[] args) throws SQLException {
