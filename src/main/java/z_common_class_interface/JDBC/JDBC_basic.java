@@ -21,13 +21,13 @@ public class JDBC_basic {
         String query_sql = "select * from boys where id = ?";
 
         // 预编译的SQL语句对象:
-        // * 可以减少编译次数提高数据库性能(相比于Statement)
         // * 语句中可以包含动态参数"?",在执行时可以为"?"动态设置参数值
+        // * 可以减少编译次数提高数据库性能(相比于Statement)
         // * 可以防止sql注入,极大地提高了安全性(相比于Statement)
         // sql注入:
         // sql语句:"select*from tablename where username='"+uesrname+"' and password='"+password+"'"
         // 若用户输入ddd、aaa 'or' 1=1之后sql语句变为,select*from tablename where username='ddd' and password='aaa 'or' 1=1'
-        // 此时不管用户名和密码是否匹配,该where语句恒为true
+        // 此时不管用户名和密码是否匹配,该where语句值恒为true
         PreparedStatement preparedStatement = connection.prepareStatement(query_sql);
         // Sets the value of the designated parameter using the given object.
         preparedStatement.setObject(1, id); // 设置第一个问号处的值为id(为"?"动态设置参数值)
@@ -43,7 +43,7 @@ public class JDBC_basic {
 
         while (resultSet.next()) {
             for (int i = 1; i <= columnCount; i++) {
-                Object object = resultSet.getObject(i); // x行数据的第i列值
+                Object object = resultSet.getObject(i); // x行数据第i列的值
                 System.out.print(object + "\t");
             }
             System.out.println();
