@@ -7,9 +7,9 @@ import java.sql.*;
  */
 public class JDBC_basic {
     public static void main(String[] args) throws SQLException {
+        // 服务:本地服务器
         // 端口号:3306
         // 数据库名:girls
-        // 服务:本地服务器
         // 字符编码:utf-8
         String url = "jdbc:mysql://localhost:3306/girls?characterEncoding=utf-8";
         String user = "root";
