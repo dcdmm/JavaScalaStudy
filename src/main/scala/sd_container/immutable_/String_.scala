@@ -8,6 +8,7 @@ import org.junit.Test
 class String_ {
     @Test
     def test0(): Unit = {
+        // 实际上是Java String
         val s0 = "java"
         val s1 = "java"
         val s2 = new String("java")
