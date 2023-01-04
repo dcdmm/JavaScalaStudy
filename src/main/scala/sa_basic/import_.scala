@@ -12,6 +12,9 @@ import sc_oop.{Const0, Const1, Const2}
 // 2. scala._
 // 3. scala.Predef._
 
+/**
+ * 导包
+ */
 object import_ {
     def main(args: Array[String]): Unit = {
         var const0 = new Const0()

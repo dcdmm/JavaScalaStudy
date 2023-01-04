@@ -1,6 +1,6 @@
 package z_common_class_interface;
 
-import java.util.Scanner; // 导包
+import java.util.Scanner;
 
 /**
  * Scanner类:从键盘获取输入
