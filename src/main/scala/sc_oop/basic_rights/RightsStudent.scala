@@ -4,14 +4,14 @@ package sc_oop.basic_rights
 object Test {
     def main(args: Array[String]): Unit = {
         val person: RightsPerson = new RightsPerson() // 创建对象
-        // println(person.idCard)  // 报错;private:只有本类或伴生对象可以访问
-        // println(person.name)  // 报错;protected:只有本类和子类可以访问,同包中其他类不可以访问
-        println(person.age)
-        println(person.sex)
+        // println(person.idCard)  // 报错;===>private:只有本类或伴生对象可以访问
+        // println(person.name)  // 报错;===>protected:只有本类(伴生对象)和子类(伴生对象)可以访问,同包中其他类不可以访问
+        println(person.age) // ===>private[包名]:指定包下的其他类也可以访问
+        println(person.sex) // ===>Scala中的默认权限,所有的类都可以访问(不可以显式声明,没有public关键字)
 
         println("*****************************************")
         val student: RightsStudent = new RightsStudent()
-        // println(student.name)  // 报错;protected:只有本类和子类可以访问,同包中其他类不可以访问
+        // println(student.name)  // 报错;===>protected:只有本类(伴生对象)和子类(伴生对象)可以访问,同包中其他类不可以访问
         println(student.age)
         println(student.sex)
         student.printInfor()
@@ -41,11 +41,18 @@ class RightsStudent extends RightsPerson {
     var str_init: String = _
 
     override def printInfor(): Unit = { // 方法重写,override关键字
-        // idCard = "20310101"  // 报错;private:只有本类和伴生对象可以访问
-        println("student:")
-        name = "dmm"
+        // idCard = "20310101"  // 报错;===>private:只有本类和伴生对象可以访问
+        name = "dcdmm"
         sex = "woman"
         age = 26
-        println(s"Peson:$name $sex $age")
+        println(s"student::$name $sex $age")
+    }
+}
+
+object RightsStudent {
+    def main(args: Array[String]): Unit = {
+        val rs = new RightsStudent()
+        // protected:只有本类(伴生对象)和子类(伴生对象)可以访问,同包中其他类不可以访问
+        println(rs.name)
     }
 }
