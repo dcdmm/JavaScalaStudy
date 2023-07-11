@@ -54,7 +54,7 @@ class ClassDefineTest {
     public static void main(String[] args) {
         ClassBasic cd = new ClassBasic();  // ClassBasic对象的创建
         cd.printName();
-        System.out.println(cd.age);
+        System.out.println(cd.age);  // int类型默认初始值为0
         // System.out.println(cd.name);  // 报错:java: name 在 oop.ClassDefine 中是 private 访问控制
         System.out.println(cd.getName());  // 通过setter和getter方法,进行属性的读写
     }
