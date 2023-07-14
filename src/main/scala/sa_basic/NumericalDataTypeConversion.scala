@@ -1,6 +1,7 @@
 package sa_basic
 
 /**
+ * 数值类型之间的转换
  * 数据类型精度大小(注意:[Byte, Short]和Char之间不能自动类型转换):
  * Byte-->Short-->Int-->Long-->Float-->Double
  * Char-->Int-->Long-->Float-->Double
@@ -17,7 +18,7 @@ object NumericalDataTypeConversion {
         val d = 2.31
         println(c + d) // Int + Double --> Double
 
-        val e: Short = 12
+        val e: Short = 65
         // val e1:Char = e  // 报错:type mismatch;
         val e0: Char = 'a'
         // val e2: Short = e0  // 报错:type mismatch
@@ -37,5 +38,8 @@ object NumericalDataTypeConversion {
 
         val f7: Int = "3.14".toDouble.toInt  // 先解析为浮点型再强转为整型
         println(f7)
+
+        var f8 = e.toChar;
+        println(f8)
     }
 }
