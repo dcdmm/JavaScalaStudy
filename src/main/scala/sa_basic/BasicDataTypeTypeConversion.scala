@@ -1,12 +1,12 @@
 package sa_basic
 
 /**
- * 数值类型之间的转换
+ * 基本数据类型之间的转换
  * 数据类型精度大小(注意:[Byte, Short]和Char之间不能自动类型转换):
  * Byte-->Short-->Int-->Long-->Float-->Double
  * Char-->Int-->Long-->Float-->Double
  */
-object NumericalDataTypeConversion {
+object BasicDataTypeTypeConversion {
     def main(args: Array[String]): Unit = {
         // 自动(隐式)类型转换
         val a = 'a'

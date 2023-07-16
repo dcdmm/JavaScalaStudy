@@ -1,10 +1,10 @@
 package sa_basic
 
 /**
- * Scala数值类型:
+ * Scala基本数据类型:
  * Byte, Short, Int(默认整形), Long, Float, Double(默认浮点型), Char, Boolean
  */
-object NumericalDataType {
+object BasicDataType {
     def main(args: Array[String]): Unit = {
         val b: Byte = 10; // 8bits
         println(b)

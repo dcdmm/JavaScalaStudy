@@ -1,10 +1,10 @@
 package a_basic;
 
 /**
- * java数值类型:
+ * java基本数据类型:
  * byte, short, int(默认整形), long, float, double(默认浮点型), char, boolean
  */
-public class NumericalDataType {
+public class BasicDataType {
     public static void main(String[] args) {
         byte b = 10;  // 8bits
         System.out.println(b);

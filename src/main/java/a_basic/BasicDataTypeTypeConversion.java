@@ -1,12 +1,12 @@
 package a_basic;
 
 /**
- * 数值类型之间的转换
+ * 基本数据类型类型之间的转换
  * 数据类型精度大小(注意:[Byte, Short]和Char之间不能自动类型转换):
  * byte-->short-->int-->long-->float-->double
  * char-->int-->long-->float-->double
  */
-public class NumericalDataTypeConversion {
+public class BasicDataTypeTypeConversion {
     public static void main(String[] args) {
         // 自动(隐式)类型转换
         char a = 'a';
