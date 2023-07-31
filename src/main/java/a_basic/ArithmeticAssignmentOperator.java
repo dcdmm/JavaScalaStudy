@@ -1,12 +1,13 @@
 package a_basic;
 
 /**
- * 算术运算符
+ * 算术运算符/赋值运算符
  */
-public class ArithmeticOperator {
+public class ArithmeticAssignmentOperator {
     public static void main(String[] args) {
         int a = 5;
         int b = 3;
+        // 算数运算符:=,-,*,/,%
         System.out.println(a + b);
         System.out.println(a - b);
         System.out.println(a * b);
@@ -27,10 +28,10 @@ public class ArithmeticOperator {
         // System.out.println("hello"  * 3);  // 报错;python,scala中可以用来表示字符串的重复
         System.out.println("hello" + 100);
         // 运算顺序从左至右;
-        System.out.println("hello" + 100 + 200);  // 输出"hello100200"
-        System.out.println(100 + 200 + "hello");  // 输出"300hello"
+        System.out.println("hello" + 100 + 200);  // print->"hello100200"
+        System.out.println(100 + 200 + "hello");  // print->"300hello"
 
-        // +=,-=,/=,*=,%=;(自动进行强制类型转换)
+        // 赋值运算符:+=,-=,/=,*=,%=(自动进行强制类型转换)
         a += 20.34; // 等价于a = (int)(a + 20.34)
         System.out.println(a);
         System.out.println("***************************");
@@ -39,7 +40,7 @@ public class ArithmeticOperator {
         // s = s + 1;  // 报错:1是int类型数据,故s+1也是int类型数据
         /*
         解决方法如下:
-        法1, s = (short)(s+1);
+        法1(强制类型转换), s = (short)(s+1);
         法2, s += 1;
         */
     }
