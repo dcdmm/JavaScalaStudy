@@ -11,7 +11,7 @@ public class LogicalOperator {
         System.out.println("*******************************");
 
         System.out.println(true || true);  // print->true
-        System.out.println(true || false);   // tprint->rue
+        System.out.println(true || false);   // tprint->true
         System.out.println(false || false);   // print->false
         System.out.println("*******************************");
 
