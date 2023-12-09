@@ -5,19 +5,27 @@
 2. 安装
 
 3. 环境变量配置
-   ![img.png](../img/JAVA_HOME.png)
-   ![img.png](../img/Java系统系统变量Path设置.png)
-   ![img.png](../img/classpath.png)
+
+   <img src="../img/JAVA_HOME.png" style="zoom:40%">
+   
+   <img src="../img/Java系统系统变量Path设置.png" style="zoom:40%">
+   
+   <img src="../img/classpath.png" style="zoom:40%">
 
 4. 测试
-   ![img.png](../img/java测试.png)
-   ![img.png](../img/javac测试.png)
-   ![img.png](../img/Java版本测试.png)
+
+   <img src="../img/java测试.png" style="zoom:40%">
+   
+   <img src="../img/javac测试.png" style="zoom:40%">
+   
+   <img src="../img/Java版本测试.png" style="zoom:40%">
 
 ### IDEA配置JDK
 
 1. 配置JDK
-   ![img.png](../img/配置JDK.png)
+
+   <img src="../img/配置JDK.png" style="zoom:40%">
 
 2. 切换项目JDK
-   ![img.png](../img/切换项目JDK.png)
+
+   <img src="../img/切换项目JDK.png" style="zoom:40%">
