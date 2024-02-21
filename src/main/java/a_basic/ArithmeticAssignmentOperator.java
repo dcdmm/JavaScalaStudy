@@ -13,6 +13,14 @@ public class ArithmeticAssignmentOperator {
         System.out.println(a * b);
         System.out.println(a / b);  // 整数与整数相除仍为整数
         System.out.println(a % b);  // 取余
+
+        short s = 1;
+        // s = s + 0;  // 报错:1是int类型数据,故s+1也是int类型数据
+        /*
+        解决方法如下:
+        法0(强制类型转换), s = (short)(s+1);
+        法1, s += 1;
+        */
         System.out.println("**********************************");
 
         System.out.println(5 / 4);
@@ -21,7 +29,7 @@ public class ArithmeticAssignmentOperator {
 
         int c = 'a';  // 字符A的ASCII码是65,a的ASCII码是97
         int d = 10;
-        System.out.println(c + d);
+        System.out.println(c + d);  // print->107
         System.out.println("**********************************");
 
         System.out.println("hello" + "java");  // 字符串的拼接
@@ -32,16 +40,8 @@ public class ArithmeticAssignmentOperator {
         System.out.println(100 + 200 + "hello");  // print->"300hello"
 
         // 赋值运算符:+=,-=,/=,*=,%=(自动进行强制类型转换)
-        a += 20.34; // 等价于a = (int)(a + 20.34)
+        a += 20.34; // 即等价于:a = (int)(a + 20.34)
         System.out.println(a);
         System.out.println("***************************");
-
-        short s = 2;
-        // s = s + 1;  // 报错:1是int类型数据,故s+1也是int类型数据
-        /*
-        解决方法如下:
-        法1(强制类型转换), s = (short)(s+1);
-        法2, s += 1;
-        */
     }
 }
