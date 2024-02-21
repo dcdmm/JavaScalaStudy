@@ -31,14 +31,7 @@ public class ArithmeticAssignmentOperator {
         int d = 10;
         System.out.println(c + d);  // print->107
         System.out.println("**********************************");
-
-        System.out.println("hello" + "java");  // 字符串的拼接
-        // System.out.println("hello"  * 3);  // 报错;python,scala中可以用来表示字符串的重复
-        System.out.println("hello" + 100);
-        // 运算顺序从左至右;
-        System.out.println("hello" + 100 + 200);  // print->"hello100200"
-        System.out.println(100 + 200 + "hello");  // print->"300hello"
-
+        
         // 赋值运算符:+=,-=,/=,*=,%=(自动进行强制类型转换)
         a += 20.34; // 即等价于:a = (int)(a + 20.34)
         System.out.println(a);

@@ -57,7 +57,7 @@ class EqualsMethodTest {
     public boolean superEquals(Object obj) {
         System.out.println("=======父类Object的equals方法!=======");
         /*
-        // Object类中的equals方法
+        // Object类中的equals方法(比较两个对象的内存地址值是否相同)
         public boolean equals(Object obj) {
             return (this == obj);
         }

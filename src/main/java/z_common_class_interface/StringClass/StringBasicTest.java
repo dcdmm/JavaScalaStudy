@@ -15,6 +15,16 @@ import org.junit.Test;
 public class StringBasicTest {
     @Test
     public void test0() {
+        System.out.println("hello" + "java");  // 字符串的拼接
+        // System.out.println("hello"  * 3);  // 报错;python,scala中可以用来表示字符串的重复
+        System.out.println("hello" + 100);
+        // 运算顺序从左至右;
+        System.out.println("hello" + 100 + 200);  // print->"hello100200"
+        System.out.println(100 + 200 + "hello");  // print->"300hello"
+    }
+
+    @Test
+    public void test1() {
         String s1 = "abc";  // 字符串(字面量);元空间字符串常量池中(常量池中所有相同的字符串常量被合并,只占用一个空间,从而节约内存)
         for (byte i : s1.getBytes()) {
             System.out.println(i + ":" + (char) i);
@@ -26,12 +36,13 @@ public class StringBasicTest {
     }
 
     @Test
-    public void test1() {
+    public void test2() {
         String s1 = "javaEE";
         String s2 = "javaEE";
         String s3 = new String("javaEE");  // 字符串(new 对象);堆空间中
         String s4 = new String("javaEE");
         System.out.println(s1 == s2);  // ture
+        System.out.println(s1 == s3); // false
         System.out.println(s3 == s4);  // false
         System.out.println("**********************************************");
 
@@ -45,7 +56,7 @@ public class StringBasicTest {
     }
 
     @Test
-    public void test2() {
+    public void test3() {
         // a,b,c,d,e1字符串常量池中
         String a = "hello";
         final String a1 = "hello";  // 常量(final修饰)
