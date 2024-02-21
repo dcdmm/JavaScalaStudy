@@ -3,7 +3,7 @@ package b_basic;
 /**
  * 条件选择结构:if/else语句
  */
-public class SelectStructure_if {
+public class SelectStructure_if_else {
     public static void main(String[] args) {
         int a = 10;
         int b = 20;
