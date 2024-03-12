@@ -1,4 +1,4 @@
-package z_common_class_interface;
+package z_other_class_interface;
 
 import java.math.BigInteger;
 

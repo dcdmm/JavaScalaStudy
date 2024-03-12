@@ -77,7 +77,7 @@
 * f_container--->容器
 * g_IO--->I/O流
 * h_concurrency--->多线程
-* z_common_class_interface--->其他常见接口或类
+* z_other_class_interface--->其他常见接口/类
 * z_design_pattern--->设计模型
 
 #### Scala

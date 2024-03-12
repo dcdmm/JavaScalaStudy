@@ -1,4 +1,4 @@
-package z_common_class_interface.StringClass;
+package z_other_class_interface.StringClass;
 
 import org.junit.Test;
 import java.io.UnsupportedEncodingException;
