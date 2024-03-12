@@ -7,17 +7,17 @@
 3. 环境变量配置
 
    <img src="../img/JAVA_HOME.png" style="zoom:40%">
-   
+
    <img src="../img/Java系统系统变量Path设置.png" style="zoom:40%">
-   
+
    <img src="../img/classpath.png" style="zoom:40%">
 
 4. 测试
 
    <img src="../img/java测试.png" style="zoom:40%">
-   
+
    <img src="../img/javac测试.png" style="zoom:40%">
-   
+
    <img src="../img/Java版本测试.png" style="zoom:40%">
 
 ### IDEA配置JDK
