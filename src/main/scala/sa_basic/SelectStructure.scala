@@ -7,8 +7,9 @@ object SelectStructure {
     def main(args: Array[String]): Unit = {
         val a = 10
         val b = 20
-        if (a == b)
+        if (a == b) {
             println("相等")
+        }
         else {
             println("不相等")
         }
