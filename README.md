@@ -1,7 +1,3 @@
-# JavaScalaStudy
-
-**Java/Scala学习笔记(基于maven;后续有机会再在hadoop/spark的学习中再继续补充)**
-
 ### Java命名规则(Scala类似)
 
 1. 包名全部小写
